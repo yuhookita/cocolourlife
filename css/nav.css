@@ -1,0 +1,184 @@
+/* ============================================
+   CoColour Life — Navigation
+   ============================================ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  padding: var(--space-md) 0;
+  transition: all var(--duration-normal) var(--ease-out);
+  background: transparent;
+}
+
+.nav.scrolled {
+  background: rgba(254, 254, 254, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  padding: var(--space-sm) 0;
+}
+
+.nav-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.nav-logo-ring {
+  width: 28px;
+  height: 28px;
+}
+
+.nav-brand {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+.brand-co {
+  color: var(--teal);
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.nav-link {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--mid-grey);
+  transition: color var(--duration-fast) var(--ease-out);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--black);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--teal);
+  transition: width var(--duration-normal) var(--ease-out);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link--cta {
+  padding: 0.45rem 1.1rem;
+  background: var(--black);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+}
+
+.nav-link--cta:hover {
+  color: var(--white);
+  background: #333;
+}
+
+.nav-link--cta::after {
+  display: none;
+}
+
+/* Mobile toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--black);
+  transition: all var(--duration-normal) var(--ease-out);
+  transform-origin: center;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(4.5px, 4.5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(4.5px, -4.5px);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-mobile-menu);
+  background: rgba(254,254,254,0.98);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-link {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: var(--dark-grey);
+  transition: color var(--duration-fast);
+}
+
+.mobile-link:hover {
+  color: var(--teal);
+}
+
+.mobile-link--cta {
+  margin-top: var(--space-md);
+  padding: 0.6rem 1.75rem;
+  background: var(--black);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+}
+
+.mobile-link--cta:hover {
+  color: var(--white);
+}

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoColour Life — Colour your life through meaningful occupations</title>
+  <meta name="description" content="Research, education, consulting, and clinical platform enabling meaningful participation in life through occupation-centred practice, collaboration, and innovation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+  <!-- ============ DARK LANDING SCREEN ============ -->
+  <div id="landing-screen" class="landing-screen">
+    <div class="landing-content">
+      <div class="landing-logo" id="landing-logo">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="logo-ring">
+          <defs>
+            <linearGradient id="grad-landing-1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#00c9a7;stop-opacity:1" />
+              <stop offset="25%" style="stop-color:#ffd93d;stop-opacity:1" />
+              <stop offset="50%" style="stop-color:#ff6b6b;stop-opacity:1" />
+              <stop offset="75%" style="stop-color:#c44dff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#4da6ff;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="grad-landing-2" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#4da6ff;stop-opacity:0.7" />
+              <stop offset="50%" style="stop-color:#00c9a7;stop-opacity:0.7" />
+              <stop offset="100%" style="stop-color:#ffd93d;stop-opacity:0.7" />
+            </linearGradient>
+            <linearGradient id="grad-landing-3" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.5" />
+              <stop offset="50%" style="stop-color:#ffd93d;stop-opacity:0.5" />
+              <stop offset="100%" style="stop-color:#00c9a7;stop-opacity:0.5" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="80" fill="none" stroke="url(#grad-landing-1)" stroke-width="12" opacity="0.9" />
+          <circle cx="100" cy="100" r="66" fill="none" stroke="url(#grad-landing-2)" stroke-width="10" opacity="0.7" />
+          <circle cx="100" cy="100" r="54" fill="none" stroke="url(#grad-landing-3)" stroke-width="8" opacity="0.5" />
+        </svg>
+      </div>
+      <h1 class="landing-title">
+        <span class="title-co">Co</span><span class="title-colour">Colour</span> <span class="title-life">Life</span>
+      </h1>
+      <div class="landing-tagline">
+        <p class="tagline-mono">Monochrome days.</p>
+        <p class="tagline-colour">Colour your life through meaningful occupations.</p>
+      </div>
+      <button class="landing-cta" id="enter-site" aria-label="Enter site">
+        <span class="cta-text">Enter</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="cta-arrow">
+          <path d="M10 3L10 17M10 17L16 11M10 17L4 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180 10 10)"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Colour burst overlay for animation -->
+    <div class="colour-burst" id="colour-burst"></div>
+  </div>
+
+  <!-- ============ MAIN SITE ============ -->
+  <div id="main-site" class="main-site">
+
+    <!-- Navigation -->
+    <nav class="nav" id="main-nav">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo" aria-label="CoColour Life home">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="nav-logo-ring">
+            <defs>
+              <linearGradient id="grad-nav-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00c9a7" />
+                <stop offset="25%" style="stop-color:#ffd93d" />
+                <stop offset="50%" style="stop-color:#ff6b6b" />
+                <stop offset="75%" style="stop-color:#c44dff" />
+                <stop offset="100%" style="stop-color:#4da6ff" />
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="78" fill="none" stroke="url(#grad-nav-1)" stroke-width="14" />
+          </svg>
+          <span class="nav-brand"><span class="brand-co">Co</span>Colour Life</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#pillars" class="nav-link">Services</a>
+          <a href="#research" class="nav-link">Research</a>
+          <a href="#workshops" class="nav-link">Education</a>
+          <a href="#founder" class="nav-link">Founder</a>
+          <a href="#contact" class="nav-link nav-link--cta">Work with us</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#pillars" class="mobile-link">Services</a>
+      <a href="#research" class="mobile-link">Research</a>
+      <a href="#workshops" class="mobile-link">Education</a>
+      <a href="#founder" class="mobile-link">Founder</a>
+      <a href="#contact" class="mobile-link mobile-link--cta">Work with us</a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">Research &middot; Education &middot; Collaboration &middot; Innovation</div>
+          <h1 class="hero-title">
+            Colour your life through<br />
+            <span class="gradient-text">meaningful occupations</span>
+          </h1>
+          <p class="hero-subtitle">
+            Enabling meaningful participation in life through occupation-centred research, education, collaboration, innovation, and practice.
+          </p>
+          <div class="hero-actions">
+            <a href="#pillars" class="btn btn--primary">Explore</a>
+            <a href="#contact" class="btn btn--secondary">Work with us</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="hero-ring">
+            <defs>
+              <linearGradient id="grad-hero-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00c9a7" />
+                <stop offset="20%" style="stop-color:#4da6ff" />
+                <stop offset="40%" style="stop-color:#ffd93d" />
+                <stop offset="60%" style="stop-color:#ff6b6b" />
+                <stop offset="80%" style="stop-color:#c44dff" />
+                <stop offset="100%" style="stop-color:#4da6ff" />
+              </linearGradient>
+              <linearGradient id="grad-hero-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#4da6ff;stop-opacity:0.75" />
+                <stop offset="50%" style="stop-color:#00c9a7;stop-opacity:0.75" />
+                <stop offset="100%" style="stop-color:#ffd93d;stop-opacity:0.75" />
+              </linearGradient>
+              <linearGradient id="grad-hero-3" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.5" />
+                <stop offset="50%" style="stop-color:#ffd93d;stop-opacity:0.5" />
+                <stop offset="100%" style="stop-color:#00c9a7;stop-opacity:0.5" />
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="200" r="160" fill="none" stroke="url(#grad-hero-1)" stroke-width="20" class="ring-outer" />
+            <circle cx="200" cy="200" r="132" fill="none" stroke="url(#grad-hero-2)" stroke-width="16" class="ring-mid" />
+            <circle cx="200" cy="200" r="108" fill="none" stroke="url(#grad-hero-3)" stroke-width="12" class="ring-inner" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">About</span>
+          <h2 class="section-title">Bringing colour to<br />meaningful participation</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-main">
+            <p class="text-lg">
+              CoColour Life is a research, education, consulting, mentorship, and practice platform dedicated to enabling meaningful participation in life.
+            </p>
+            <p class="text-body">
+              Founded on the belief that meaningful occupation has the power to transform participation, identity, and wellbeing, we work across clinical practice, research, professional education, and strategic consulting to help people, organisations, and communities thrive.
+            </p>
+            <p class="text-body">
+              Operating internationally across Australia and Asia, we bridge cultures, disciplines, and perspectives to create collaborative solutions for complex challenges in health, rehabilitation, and human participation.
+            </p>
+          </div>
+          <div class="about-values">
+            <div class="value-card">
+              <div class="value-dot" style="background: #00c9a7"></div>
+              <h4>Occupation-centred</h4>
+              <p>Meaningful occupation as the foundation of participation, health, and identity.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-dot" style="background: #4da6ff"></div>
+              <h4>Collaborative</h4>
+              <p>Co-creation across disciplines, cultures, and communities to drive real change.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-dot" style="background: #ffd93d"></div>
+              <h4>Evidence-informed</h4>
+              <p>Rigorous research and knowledge translation grounding everything we do.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-dot" style="background: #ff6b6b"></div>
+              <h4>Innovative</h4>
+              <p>Embracing digital health, technology, and new models of practice and education.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MISSION / VISION ===== -->
+    <section class="section section--dark" id="mission">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Our Purpose</span>
+          <h2 class="section-title">From monochrome to colourful</h2>
+        </div>
+        <div class="mission-grid">
+          <div class="mission-story">
+            <h3>Our Story</h3>
+            <p>
+              Many people live in monochrome &mdash; disconnected from the occupations that give life meaning, colour, and connection. Whether through illness, injury, displacement, or circumstance, the loss of meaningful participation can leave people feeling invisible, isolated, and without purpose.
+            </p>
+            <p>
+              CoColour Life was born from the conviction that it doesn't have to be this way. Through occupation-centred practice, collaborative research, education, and innovation, we work to help people rediscover the occupations that bring vibrancy, belonging, and identity back into their lives.
+            </p>
+          </div>
+          <div class="mission-cards">
+            <div class="mission-card">
+              <div class="mission-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
+              </div>
+              <h4>Mission</h4>
+              <p>To enable meaningful participation in life through occupation-centred research, education, collaboration, and clinical practice that bridges cultures, disciplines, and communities.</p>
+            </div>
+            <div class="mission-card">
+              <div class="mission-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <h4>Vision</h4>
+              <p>A world where every person can access the occupations that bring colour, meaning, and connection to their life &mdash; regardless of geography, ability, or circumstance.</p>
+            </div>
+            <div class="mission-card">
+              <div class="mission-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h4>Values</h4>
+              <p>Collaboration. Diversity. Evidence. Innovation. Humanity. We believe in the transformative power of meaningful occupation and the strength of working together.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FIVE PILLARS ===== -->
+    <section class="section" id="pillars">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Our Pillars</span>
+          <h2 class="section-title">Five pillars of practice</h2>
+          <p class="section-desc">Five interconnected pillars that bring together clinical practice, mentorship, education, consulting, and research to create meaningful change.</p>
+        </div>
+        <div class="pillars-grid">
+
+          <div class="pillar-card" data-colour="#00c9a7">
+            <div class="pillar-accent" style="background: #00c9a7"></div>
+            <div class="pillar-header">
+              <span class="pillar-prefix">Co</span><span class="pillar-name">Practice</span>
+            </div>
+            <p class="pillar-type">Clinical Services</p>
+            <p class="pillar-desc">
+              Person-centred, occupation-focused clinical services including assessment, intervention, and rehabilitation. Specialising in goal-directed approaches, CO-OP, telehealth, and culturally responsive practice across Australia and Asia.
+            </p>
+          </div>
+
+          <div class="pillar-card" data-colour="#4da6ff">
+            <div class="pillar-accent" style="background: #4da6ff"></div>
+            <div class="pillar-header">
+              <span class="pillar-prefix">Co</span><span class="pillar-name">Aspire</span>
+            </div>
+            <p class="pillar-type">Mentorship &amp; Development</p>
+            <p class="pillar-desc">
+              Mentorship and professional development for interns, students, and emerging professionals. Building the next generation of globally minded, evidence-informed occupational therapy practitioners and researchers.
+            </p>
+          </div>
+
+          <div class="pillar-card" data-colour="#ffd93d">
+            <div class="pillar-accent" style="background: #ffd93d"></div>
+            <div class="pillar-header">
+              <span class="pillar-prefix">Co</span><span class="pillar-name">Academy</span>
+            </div>
+            <p class="pillar-type">Education &amp; Training</p>
+            <p class="pillar-desc">
+              Workshops, professional development programs, and training in occupation-centred approaches, CO-OP, digital health, and clinical reasoning. Designed for clinicians, educators, and organisations seeking to elevate practice.
+            </p>
+          </div>
+
+          <div class="pillar-card" data-colour="#ff6b6b">
+            <div class="pillar-accent" style="background: #ff6b6b"></div>
+            <div class="pillar-header">
+              <span class="pillar-prefix">Co</span><span class="pillar-name">Advisory</span>
+            </div>
+            <p class="pillar-type">Strategic Consulting</p>
+            <p class="pillar-desc">
+              Strategic consulting in health innovation, digital health, research translation, and organisational development. Advising healthcare organisations, startups, and institutions on occupation-centred approaches and global best practice.
+            </p>
+          </div>
+
+          <div class="pillar-card" data-colour="#c44dff">
+            <div class="pillar-accent" style="background: #c44dff"></div>
+            <div class="pillar-header">
+              <span class="pillar-prefix">Co</span><span class="pillar-name">Lab</span>
+            </div>
+            <p class="pillar-type">Research &amp; Collaboration</p>
+            <p class="pillar-desc">
+              Research, collaboration, and knowledge translation across telehealth, shared understanding, goal-directed rehabilitation, occupation-centred practice, and digital health innovation. Connecting researchers and practitioners globally.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESEARCH ===== -->
+    <section class="section section--subtle" id="research">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Research &amp; Thought Leadership</span>
+          <h2 class="section-title">Advancing knowledge,<br />translating evidence</h2>
+          <p class="section-desc">Bridging research and practice to create meaningful impact in occupational therapy, rehabilitation, and health innovation.</p>
+        </div>
+        <div class="research-grid">
+          <div class="research-card">
+            <div class="research-tag">Telehealth</div>
+            <h4>Digital Health &amp; Telehealth</h4>
+            <p>Investigating and advancing telehealth models for occupational therapy practice across diverse cultural and geographic contexts.</p>
+          </div>
+          <div class="research-card">
+            <div class="research-tag">Shared Understanding</div>
+            <h4>Shared Understanding &amp; Collaboration</h4>
+            <p>Exploring how clinicians and clients build shared understanding in therapeutic relationships and goal-setting processes.</p>
+          </div>
+          <div class="research-card">
+            <div class="research-tag">Goal-Directed</div>
+            <h4>Goal-Directed Rehabilitation</h4>
+            <p>Advancing evidence for goal-directed approaches including the Cognitive Orientation to daily Occupational Performance (CO-OP) across populations.</p>
+          </div>
+          <div class="research-card">
+            <div class="research-tag">Occupation-Centred</div>
+            <h4>Occupation-Centred Practice</h4>
+            <p>Building the evidence base for occupation as both the means and the end of therapeutic intervention and health promotion.</p>
+          </div>
+          <div class="research-card">
+            <div class="research-tag">Global</div>
+            <h4>International Collaboration</h4>
+            <p>Cross-cultural research partnerships advancing occupational therapy practice, education, and knowledge translation globally.</p>
+          </div>
+          <div class="research-card">
+            <div class="research-tag">Innovation</div>
+            <h4>Health Innovation</h4>
+            <p>Exploring new models of practice, digital tools, and systems-level approaches to enabling meaningful participation.</p>
+          </div>
+        </div>
+        <div class="research-cta">
+          <div class="research-stat-grid">
+            <div class="research-stat">
+              <span class="stat-label">Publications</span>
+              <span class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </span>
+            </div>
+            <div class="research-stat">
+              <span class="stat-label">Presentations</span>
+              <span class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+              </span>
+            </div>
+            <div class="research-stat">
+              <span class="stat-label">Projects</span>
+              <span class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </span>
+            </div>
+            <div class="research-stat">
+              <span class="stat-label">Collaborations</span>
+              <span class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GLOBAL ===== -->
+    <section class="section" id="global">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Global Reach</span>
+          <h2 class="section-title">Connected across borders</h2>
+          <p class="section-desc">Collaborating with clinicians, researchers, organisations, and communities across Australia, Japan, Asia, and beyond.</p>
+        </div>
+        <div class="global-content">
+          <div class="global-map">
+            <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" class="world-map">
+              <!-- Simplified world map dots -->
+              <!-- Australia -->
+              <circle cx="680" cy="310" r="4" class="map-dot map-dot--active" />
+              <circle cx="695" cy="300" r="3" class="map-dot map-dot--active" />
+              <circle cx="700" cy="320" r="3" class="map-dot map-dot--active" />
+              <text x="680" y="345" class="map-label">Australia</text>
+              <!-- Japan -->
+              <circle cx="710" cy="175" r="3.5" class="map-dot map-dot--active" />
+              <circle cx="715" cy="185" r="3" class="map-dot map-dot--active" />
+              <text x="720" y="180" class="map-label">Japan</text>
+              <!-- Asia region -->
+              <circle cx="640" cy="200" r="3" class="map-dot map-dot--secondary" />
+              <circle cx="660" cy="220" r="3" class="map-dot map-dot--secondary" />
+              <circle cx="620" cy="240" r="3" class="map-dot map-dot--secondary" />
+              <circle cx="650" cy="250" r="2.5" class="map-dot map-dot--secondary" />
+              <text x="610" y="270" class="map-label">Asia</text>
+              <!-- Europe -->
+              <circle cx="430" cy="140" r="2.5" class="map-dot map-dot--tertiary" />
+              <circle cx="445" cy="150" r="2.5" class="map-dot map-dot--tertiary" />
+              <circle cx="455" cy="135" r="2" class="map-dot map-dot--tertiary" />
+              <text x="425" y="120" class="map-label">Europe</text>
+              <!-- Connection lines -->
+              <line x1="680" y1="310" x2="710" y2="175" class="map-line" />
+              <line x1="710" y1="175" x2="640" y2="200" class="map-line" />
+              <line x1="680" y1="310" x2="640" y2="200" class="map-line" />
+              <line x1="640" y1="200" x2="445" y2="150" class="map-line map-line--faint" />
+            </svg>
+          </div>
+          <div class="global-details">
+            <div class="global-item">
+              <h4>Melbourne, Australia</h4>
+              <p>Home base. Clinical practice, research, and consulting across the Australian healthcare landscape.</p>
+            </div>
+            <div class="global-item">
+              <h4>Japan &amp; Asia</h4>
+              <p>Cross-cultural collaboration, research partnerships, professional education, and knowledge exchange with clinicians and institutions across the region.</p>
+            </div>
+            <div class="global-item">
+              <h4>Global Network</h4>
+              <p>Contributing to international research, professional communities, and the global advancement of occupation-centred practice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORKSHOPS ===== -->
+    <section class="section section--subtle" id="workshops">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Education &amp; Workshops</span>
+          <h2 class="section-title">Learning that transforms practice</h2>
+          <p class="section-desc">Professional development, workshops, and training designed to build communities of practice and translate knowledge into real-world impact.</p>
+        </div>
+        <div class="workshops-content">
+          <div class="workshop-feature">
+            <div class="workshop-feature-accent"></div>
+            <h3>CO-OP Workshops</h3>
+            <p>
+              Comprehensive training in the Cognitive Orientation to daily Occupational Performance (CO-OP) approach. These workshops equip clinicians with the knowledge and skills to implement evidence-based, goal-directed, occupation-centred practice.
+            </p>
+            <p>
+              Delivered internationally, our CO-OP workshops are more than technical training &mdash; they are opportunities to build communities of practice, foster cross-cultural dialogue, and strengthen the global network of occupation-centred practitioners.
+            </p>
+          </div>
+          <div class="workshop-list">
+            <div class="workshop-item">
+              <div class="workshop-dot" style="background: #00c9a7"></div>
+              <div>
+                <h4>Professional Development</h4>
+                <p>Targeted workshops for clinicians, educators, and healthcare professionals seeking to deepen their occupation-centred practice.</p>
+              </div>
+            </div>
+            <div class="workshop-item">
+              <div class="workshop-dot" style="background: #4da6ff"></div>
+              <div>
+                <h4>International Programs</h4>
+                <p>Cross-cultural education programs connecting practitioners across Australia, Japan, and Asia to share knowledge and build networks.</p>
+              </div>
+            </div>
+            <div class="workshop-item">
+              <div class="workshop-dot" style="background: #ffd93d"></div>
+              <div>
+                <h4>Community Building</h4>
+                <p>Workshops as a vehicle for creating lasting professional communities, mentorship connections, and collaborative research opportunities.</p>
+              </div>
+            </div>
+            <div class="workshop-item">
+              <div class="workshop-dot" style="background: #c44dff"></div>
+              <div>
+                <h4>Knowledge Translation</h4>
+                <p>Bridging the gap between research evidence and clinical practice through interactive, applied learning experiences.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOUNDER ===== -->
+    <section class="section" id="founder">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Founder</span>
+          <h2 class="section-title">Yuho Okita</h2>
+        </div>
+        <div class="founder-content">
+          <div class="founder-portrait">
+            <div class="founder-portrait-placeholder">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="grad-founder" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00c9a7;stop-opacity:0.15" />
+                    <stop offset="100%" style="stop-color:#c44dff;stop-opacity:0.15" />
+                  </linearGradient>
+                </defs>
+                <rect width="200" height="200" rx="16" fill="url(#grad-founder)" />
+                <circle cx="100" cy="80" r="30" fill="none" stroke="#ccc" stroke-width="1.5" />
+                <path d="M50 170c0-28 22-50 50-50s50 22 50 50" fill="none" stroke="#ccc" stroke-width="1.5" />
+              </svg>
+            </div>
+          </div>
+          <div class="founder-bio">
+            <p class="text-lg">
+              Occupational therapist, researcher, educator, and consultant working at the intersection of clinical practice, research, education, and health innovation.
+            </p>
+            <p class="text-body">
+              Yuho brings a unique global perspective to occupation-centred practice, drawing on deep experience across both Australian and Japanese healthcare systems. With a commitment to evidence-based practice, cross-cultural collaboration, and meaningful human connection, Yuho works to advance how we understand and enable participation in life.
+            </p>
+            <p class="text-body">
+              Through CoColour Life, Yuho integrates clinical expertise, research inquiry, professional mentorship, and strategic consulting to create impact across multiple levels &mdash; from individual lives to healthcare systems and international communities of practice.
+            </p>
+            <div class="founder-tags">
+              <span class="tag">Occupational Therapy</span>
+              <span class="tag">Research</span>
+              <span class="tag">Education</span>
+              <span class="tag">Telehealth</span>
+              <span class="tag">CO-OP</span>
+              <span class="tag">Digital Health</span>
+              <span class="tag">Consulting</span>
+            </div>
+            <a href="#" class="btn btn--outline">View full profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section--dark" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Collaborate</span>
+          <h2 class="section-title">Let's work together</h2>
+          <p class="section-desc">Whether you're a clinician, researcher, organisation, or educator &mdash; we'd love to connect and explore how we can collaborate.</p>
+        </div>
+        <div class="contact-content">
+          <form class="contact-form" id="contact-form" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="interest">I'm interested in</label>
+              <select id="interest" name="interest">
+                <option value="">Select an option</option>
+                <option value="practice">Clinical Services (CoPractice)</option>
+                <option value="aspire">Mentorship (CoAspire)</option>
+                <option value="academy">Workshops &amp; Education (CoAcademy)</option>
+                <option value="advisory">Consulting (CoAdvisory)</option>
+                <option value="lab">Research Collaboration (CoLab)</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your interest or project..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send message</button>
+          </form>
+          <div class="contact-info">
+            <div class="contact-detail">
+              <h4>Location</h4>
+              <p>Melbourne, Australia</p>
+            </div>
+            <div class="contact-detail">
+              <h4>Email</h4>
+              <p>hello@cocolourlife.com</p>
+            </div>
+            <div class="contact-detail">
+              <h4>Connect</h4>
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="footer-logo"><span class="brand-co">Co</span>Colour Life</span>
+            <p class="footer-tagline">Colour your life through meaningful occupations.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#pillars">Services</a>
+            <a href="#research">Research</a>
+            <a href="#workshops">Education</a>
+            <a href="#founder">Founder</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 CoColour Life. Melbourne, Australia.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

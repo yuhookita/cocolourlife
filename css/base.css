@@ -1,0 +1,223 @@
+/* ============================================
+   CoColour Life — Base Styles
+   ============================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: 1.65;
+  color: var(--dark-grey);
+  background-color: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Prevent scroll while landing is active */
+body.landing-active {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+p {
+  color: var(--mid-grey);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+::selection {
+  background: rgba(0, 201, 167, 0.15);
+  color: var(--black);
+}
+
+/* Container */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+/* Section base */
+.section {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+
+.section--dark {
+  background: var(--charcoal);
+}
+
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+  color: var(--white);
+}
+
+.section--dark p,
+.section--dark .section-desc {
+  color: rgba(255,255,255,0.6);
+}
+
+.section--dark .section-label {
+  color: var(--teal);
+}
+
+.section--subtle {
+  background: var(--bg-subtle);
+}
+
+/* Section header */
+.section-header {
+  max-width: 680px;
+  margin-bottom: var(--space-4xl);
+}
+
+.section-label {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  margin-bottom: var(--space-md);
+}
+
+.section-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-lg);
+}
+
+.section-desc {
+  font-size: var(--text-lg);
+  color: var(--mid-grey);
+  line-height: 1.6;
+}
+
+/* Text utilities */
+.text-lg {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--dark-grey);
+}
+
+.text-body {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--mid-grey);
+  margin-top: var(--space-md);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: var(--gradient-rainbow-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 0.75rem 1.75rem;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-full);
+  transition: all var(--duration-normal) var(--ease-out);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn--primary:hover {
+  background: #333;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--dark-grey);
+  border: 1px solid var(--border-grey);
+}
+
+.btn--secondary:hover {
+  border-color: var(--dark-grey);
+  transform: translateY(-1px);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--dark-grey);
+  border: 1px solid var(--border-grey);
+  padding: 0.6rem 1.5rem;
+}
+
+.btn--outline:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* Scroll reveal animation base */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
