@@ -197,23 +197,58 @@
     });
   });
 
-  // ========== Form handling ==========
-  const form = document.getElementById('contact-form');
+  // ========== Form handling (Formspree AJAX) ==========
+  var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
-      btn.textContent = 'Message sent!';
-      btn.style.background = 'var(--teal)';
-      btn.style.color = 'var(--white)';
+      var btn = form.querySelector('button[type="submit"]');
+      var originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
 
-      setTimeout(function () {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        btn.style.color = '';
-        form.reset();
-      }, 2500);
+      var data = {
+        name: form.querySelector('[name="name"]').value,
+        email: form.querySelector('[name="email"]').value,
+        interest: form.querySelector('[name="interest"]').value,
+        message: form.querySelector('[name="message"]').value
+      };
+
+      fetch(form.action, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      }).then(function (response) {
+        if (response.ok) {
+          btn.textContent = 'Message sent!';
+          btn.style.background = 'var(--teal)';
+          btn.style.color = 'var(--white)';
+          form.reset();
+        } else {
+          return response.json().then(function (json) {
+            var msg = (json.errors && json.errors.length)
+              ? json.errors.map(function (err) { return err.message; }).join(', ')
+              : 'Something went wrong';
+            btn.textContent = msg;
+            btn.style.background = 'var(--red)';
+            btn.style.color = 'var(--white)';
+          });
+        }
+      }).catch(function () {
+        btn.textContent = 'Connection error';
+        btn.style.background = 'var(--red)';
+        btn.style.color = 'var(--white)';
+      }).finally(function () {
+        setTimeout(function () {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.disabled = false;
+        }, 3000);
+      });
     });
   }
 
