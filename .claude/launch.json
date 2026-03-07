@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static-site",
+      "runtimeExecutable": "/usr/bin/ruby",
+      "runtimeArgs": ["-e", "require 'webrick';WEBrick::HTTPServer.new(Port:8000,DocumentRoot:'/Users/user/Documents/GitHub/cocolourlife',Logger:WEBrick::Log.new($stdout)).start"],
+      "port": 8000
+    }
+  ]
+}

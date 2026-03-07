@@ -15,28 +15,36 @@
   document.body.classList.add('landing-active');
 
   function enterSite(e) {
-    // Calculate burst origin from click/touch
-    let x = 50, y = 50;
-    if (e) {
-      x = (e.clientX / window.innerWidth) * 100;
-      y = (e.clientY / window.innerHeight) * 100;
-    }
+    // Prevent double-trigger
+    if (landingScreen.classList.contains('transitioning')) return;
+    landingScreen.classList.add('transitioning');
 
-    colourBurst.style.setProperty('--burst-x', x + '%');
-    colourBurst.style.setProperty('--burst-y', y + '%');
-    colourBurst.classList.add('active');
+    // Phase 1: Logo ring brightens & begins glow expansion
+    landingLogo.classList.add('glow-active');
 
-    // Start fading out landing
-    setTimeout(() => {
+    // Phase 2: After a brief moment, trigger the soft radial burst from center
+    setTimeout(function () {
+      colourBurst.style.setProperty('--burst-x', '50%');
+      colourBurst.style.setProperty('--burst-y', '50%');
+      colourBurst.classList.add('active');
+    }, 200);
+
+    // Phase 3: Screen-wide soft light overlay fades in
+    setTimeout(function () {
+      landingScreen.classList.add('light-wash');
+    }, 600);
+
+    // Phase 4: Begin fading out landing, fading in main site
+    setTimeout(function () {
       landingScreen.classList.add('hidden');
       mainSite.classList.add('visible');
       document.body.classList.remove('landing-active');
-    }, 300);
-
-    // Remove landing from DOM after animation
-    setTimeout(() => {
-      landingScreen.style.display = 'none';
     }, 1200);
+
+    // Phase 5: Remove landing from DOM after full animation
+    setTimeout(function () {
+      landingScreen.style.display = 'none';
+    }, 2200);
   }
 
   landingLogo.addEventListener('click', enterSite);

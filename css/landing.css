@@ -16,6 +16,7 @@
 .landing-screen.hidden {
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .landing-content {
@@ -147,29 +148,105 @@
   opacity: 0;
 }
 
+/* Logo glow activation — ring brightens on Enter */
+.landing-logo.glow-active {
+  animation: logoGlow 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes logoGlow {
+  0% {
+    filter: brightness(1) drop-shadow(0 0 0px transparent);
+  }
+  30% {
+    filter: brightness(1.6) drop-shadow(0 0 20px rgba(0,201,167,0.35));
+  }
+  60% {
+    filter: brightness(1.8) drop-shadow(0 0 40px rgba(77,166,255,0.3));
+  }
+  100% {
+    filter: brightness(2) drop-shadow(0 0 60px rgba(196,77,255,0.25));
+    transform: scale(1.08);
+  }
+}
+
+/* Soft radial burst — expands gently from center */
 .colour-burst.active {
-  animation: burstExpand 1s var(--ease-out) forwards;
+  animation: burstExpand 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes burstExpand {
   0% {
-    opacity: 1;
+    opacity: 0;
     background: radial-gradient(circle at var(--burst-x, 50%) var(--burst-y, 50%),
-      rgba(0,201,167,0.4) 0%,
-      rgba(77,166,255,0.3) 15%,
-      rgba(255,217,61,0.2) 30%,
-      rgba(255,107,107,0.15) 45%,
-      rgba(196,77,255,0.1) 60%,
-      transparent 80%
+      rgba(0,201,167,0.3) 0%,
+      rgba(77,166,255,0.2) 10%,
+      rgba(255,217,61,0.12) 25%,
+      rgba(255,107,107,0.08) 40%,
+      rgba(196,77,255,0.05) 55%,
+      transparent 75%
     );
-    transform: scale(0.5);
+    transform: scale(0.3);
+    filter: blur(10px);
+  }
+  20% {
+    opacity: 0.7;
+    filter: blur(6px);
   }
   50% {
-    opacity: 0.8;
-    transform: scale(2);
+    opacity: 0.5;
+    background: radial-gradient(circle at var(--burst-x, 50%) var(--burst-y, 50%),
+      rgba(0,201,167,0.2) 0%,
+      rgba(77,166,255,0.15) 15%,
+      rgba(255,217,61,0.1) 30%,
+      rgba(255,107,107,0.08) 50%,
+      rgba(196,77,255,0.04) 70%,
+      transparent 90%
+    );
+    transform: scale(1.8);
+    filter: blur(15px);
   }
   100% {
     opacity: 0;
     transform: scale(3);
+    filter: blur(30px);
+  }
+}
+
+/* Screen-wide soft light wash — subtle rainbow before fade */
+.landing-screen.light-wash::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  animation: lightWash 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes lightWash {
+  0% {
+    opacity: 0;
+    background: radial-gradient(ellipse at 50% 45%,
+      rgba(255,255,255,0.06) 0%,
+      rgba(0,201,167,0.03) 30%,
+      rgba(77,166,255,0.02) 50%,
+      transparent 80%
+    );
+  }
+  50% {
+    opacity: 1;
+    background: radial-gradient(ellipse at 50% 45%,
+      rgba(255,255,255,0.1) 0%,
+      rgba(0,201,167,0.04) 30%,
+      rgba(77,166,255,0.03) 50%,
+      transparent 80%
+    );
+  }
+  100% {
+    opacity: 0;
+    background: radial-gradient(ellipse at 50% 45%,
+      rgba(255,255,255,0.15) 0%,
+      rgba(0,201,167,0.05) 40%,
+      transparent 80%
+    );
   }
 }
