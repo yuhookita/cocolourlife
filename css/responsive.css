@@ -23,9 +23,19 @@
     order: -1;
   }
 
-  .hero-ring {
-    width: clamp(180px, 30vw, 280px);
-    height: clamp(180px, 30vw, 280px);
+  .hero-photo-wrapper {
+    width: clamp(180px, 30vw, 260px);
+    height: clamp(180px, 30vw, 260px);
+  }
+
+  .hero-story-link {
+    display: block;
+    text-align: center;
+  }
+
+  .proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
   }
 
   .about-grid {
@@ -63,13 +73,44 @@
     justify-content: center;
   }
 
-  .founder-bio .btn {
-    margin: 0 auto;
+  .founder-links {
+    justify-content: center;
+  }
+
+  .background-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-content {
     grid-template-columns: 1fr;
     gap: var(--space-3xl);
+  }
+
+  .pub-profiles {
+    justify-content: center;
+  }
+
+  .about-image {
+    height: 200px;
+  }
+
+  .global-card-image {
+    height: 120px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
   }
 }
 
@@ -97,6 +138,20 @@
     font-size: var(--text-2xl);
   }
 
+  .hero-photo-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .proof-number {
+    font-size: var(--text-lg);
+  }
+
   .about-values {
     grid-template-columns: 1fr;
   }
@@ -121,12 +176,56 @@
     margin-bottom: var(--space-3xl);
   }
 
-  .landing-title {
-    font-size: var(--text-xl);
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    text-align: center;
   }
 
-  .footer-links {
-    gap: var(--space-md);
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-nav {
+    align-items: center;
+  }
+
+  .footer-connect {
+    align-items: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .pub-profiles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pub-entry {
+    padding: var(--space-lg);
+  }
+
+  .pub-title {
+    font-size: var(--text-xs);
+  }
+
+  .about-image {
+    height: 160px;
+  }
+
+  .workshop-image {
+    height: 160px;
+  }
+
+  .global-card-image {
+    height: 100px;
+  }
+
+  .research-card-icon {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -140,11 +239,6 @@
   .hero-actions .btn {
     width: 100%;
     max-width: 280px;
-  }
-
-  .landing-logo {
-    width: 100px;
-    height: 100px;
   }
 
   .global-cards {

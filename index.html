@@ -4,73 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CoColour Life — Colour your life through meaningful occupations</title>
-  <meta name="description" content="Research, education, consulting, and clinical platform enabling meaningful participation in life through occupation-centred practice, collaboration, and innovation." />
+  <meta name="description" content="CoColour Life is a platform for practice, education, research, and collaboration enabling meaningful participation through occupation-centred practice, innovation, and cross-cultural partnership." />
+  <meta name="keywords" content="occupational therapy, occupation-centred practice, telehealth, digital health, rehabilitation, research, education, CoColour Life, Yuho Okita" />
+  <meta name="author" content="Yuho Okita" />
+  <link rel="canonical" href="https://cocolourlife.com/" />
+  <link rel="alternate" hreflang="en" href="https://cocolourlife.com/" />
+  <link rel="alternate" hreflang="ja" href="https://cocolourlife.com/ja/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CoColour Life — Colour your life through meaningful occupations" />
+  <meta property="og:description" content="Practice, education, research, and collaboration enabling meaningful participation through occupation-centred practice, innovation, and cross-cultural partnership." />
+  <meta property="og:url" content="https://cocolourlife.com/" />
+  <meta property="og:site_name" content="CoColour Life" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:image" content="https://cocolourlife.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="CoColour Life — Colour your life through meaningful occupations" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CoColour Life — Colour your life through meaningful occupations" />
+  <meta name="twitter:description" content="Practice, education, research, and collaboration enabling meaningful participation through occupation-centred practice, innovation, and cross-cultural partnership." />
+  <meta name="twitter:image" content="https://cocolourlife.com/assets/og-image.png" />
+  <meta name="twitter:image:alt" content="CoColour Life — Colour your life through meaningful occupations" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/landing.css" />
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/insights.css" />
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CoColour Life",
+    "url": "https://cocolourlife.com",
+    "logo": "https://cocolourlife.com/assets/favicon.svg",
+    "description": "A platform for practice, education, research, and collaboration enabling meaningful participation through occupation-centred practice, innovation, and cross-cultural partnership.",
+    "founder": {
+      "@type": "Person",
+      "name": "Yuho Okita",
+      "jobTitle": "Occupational Therapist, Researcher, Educator",
+      "url": "https://cocolourlife.com/#founder",
+      "image": "https://cocolourlife.com/assets/yuho.png",
+      "knowsAbout": ["Occupational Therapy", "Telehealth", "Digital Health", "Rehabilitation", "Research", "Education"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressCountry": "AU"
+    },
+    "email": "contact@cocolourlife.com",
+    "areaServed": ["Australia", "Japan", "Asia-Pacific"],
+    "knowsAbout": ["Occupation-Centred Practice", "Telehealth", "Digital Health", "Rehabilitation Research", "Health Innovation", "Education"],
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yuho Okita",
+    "url": "https://cocolourlife.com/#founder",
+    "image": "https://cocolourlife.com/assets/yuho.png",
+    "jobTitle": "Occupational Therapist, Researcher, Educator, Consultant",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "CoColour Life",
+      "url": "https://cocolourlife.com"
+    },
+    "description": "Occupational therapist, researcher, educator, and consultant working across research, education, advisory, and health innovation.",
+    "knowsAbout": ["Occupational Therapy", "Telehealth", "Digital Health", "Rehabilitation", "Research", "Education", "Advisory"],
+    "alumniOf": [],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressCountry": "AU"
+    }
+  }
+  </script>
 </head>
 <body>
 
-  <!-- ============ DARK LANDING SCREEN ============ -->
-  <div id="landing-screen" class="landing-screen">
-    <div class="landing-content">
-      <div class="landing-logo" id="landing-logo">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="logo-ring">
-          <defs>
-            <linearGradient id="grad-landing-1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#00c9a7;stop-opacity:1" />
-              <stop offset="25%" style="stop-color:#ffd93d;stop-opacity:1" />
-              <stop offset="50%" style="stop-color:#ff6b6b;stop-opacity:1" />
-              <stop offset="75%" style="stop-color:#c44dff;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#4da6ff;stop-opacity:1" />
-            </linearGradient>
-            <linearGradient id="grad-landing-2" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#4da6ff;stop-opacity:0.7" />
-              <stop offset="50%" style="stop-color:#00c9a7;stop-opacity:0.7" />
-              <stop offset="100%" style="stop-color:#ffd93d;stop-opacity:0.7" />
-            </linearGradient>
-            <linearGradient id="grad-landing-3" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.5" />
-              <stop offset="50%" style="stop-color:#ffd93d;stop-opacity:0.5" />
-              <stop offset="100%" style="stop-color:#00c9a7;stop-opacity:0.5" />
-            </linearGradient>
-          </defs>
-          <circle cx="100" cy="100" r="80" fill="none" stroke="url(#grad-landing-1)" stroke-width="12" opacity="0.9" />
-          <circle cx="100" cy="100" r="66" fill="none" stroke="url(#grad-landing-2)" stroke-width="10" opacity="0.7" />
-          <circle cx="100" cy="100" r="54" fill="none" stroke="url(#grad-landing-3)" stroke-width="8" opacity="0.5" />
-        </svg>
-      </div>
-      <h1 class="landing-title">
-        <span class="title-co">Co</span><span class="title-colour">Colour</span> <span class="title-life">Life</span>
-      </h1>
-      <div class="landing-tagline">
-        <p class="tagline-mono">Monochrome days.</p>
-        <p class="tagline-colour">Colour your life through meaningful occupations.</p>
-      </div>
-      <button class="landing-cta" id="enter-site" aria-label="Enter site">
-        <span class="cta-text">Enter</span>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="cta-arrow">
-          <path d="M10 3L10 17M10 17L16 11M10 17L4 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180 10 10)"/>
-        </svg>
-      </button>
-    </div>
-    <!-- Colour burst overlay for animation -->
-    <div class="colour-burst" id="colour-burst"></div>
-  </div>
-
   <!-- ============ MAIN SITE ============ -->
-  <div id="main-site" class="main-site">
+  <a href="#about" class="skip-to-content">Skip to content</a>
+
+  <div id="main-site" class="main-site visible">
 
     <!-- Navigation -->
-    <nav class="nav" id="main-nav">
+    <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="#" class="nav-logo" aria-label="CoColour Life home">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="nav-logo-ring">
@@ -89,10 +122,16 @@
         </a>
         <div class="nav-links" id="nav-links">
           <a href="#about" class="nav-link">About</a>
-          <a href="#pillars" class="nav-link">Services</a>
+          <a href="services.html" class="nav-link">Services</a>
           <a href="#research" class="nav-link">Research</a>
           <a href="#workshops" class="nav-link">Education</a>
-          <a href="#founder" class="nav-link">Founder</a>
+          <a href="insights.html" class="nav-link">Insights</a>
+          <a href="#founder" class="nav-link">About Yuho</a>
+          <span class="lang-switch">
+            <a href="index.html" class="lang-link active">EN</a>
+            <span class="lang-divider">|</span>
+            <a href="ja/index.html" class="lang-link">日本語</a>
+          </span>
           <a href="#contact" class="nav-link nav-link--cta">Work with us</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
@@ -104,11 +143,17 @@
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu">
       <a href="#about" class="mobile-link">About</a>
-      <a href="#pillars" class="mobile-link">Services</a>
+      <a href="services.html" class="mobile-link">Services</a>
       <a href="#research" class="mobile-link">Research</a>
       <a href="#workshops" class="mobile-link">Education</a>
-      <a href="#founder" class="mobile-link">Founder</a>
+      <a href="insights.html" class="mobile-link">Insights</a>
+      <a href="#founder" class="mobile-link">About Yuho</a>
       <a href="#contact" class="mobile-link mobile-link--cta">Work with us</a>
+      <div class="mobile-lang">
+        <a href="index.html" class="lang-link active">EN</a>
+        <span class="lang-divider">|</span>
+        <a href="ja/index.html" class="lang-link">日本語</a>
+      </div>
     </div>
 
     <!-- ===== HERO ===== -->
@@ -116,6 +161,7 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-badge">Research &middot; Education &middot; Collaboration &middot; Innovation</div>
+          <p class="hero-credential">Occupational Therapist &amp; Researcher | Melbourne, Australia &amp; Japan</p>
           <h1 class="hero-title">
             Colour your life through<br />
             <span class="gradient-text">meaningful occupations</span>
@@ -124,39 +170,42 @@
             Enabling meaningful participation through occupation-centred practice, education, and innovation.
           </p>
           <div class="hero-actions">
-            <a href="#pillars" class="btn btn--primary">Explore</a>
+            <a href="#research" class="btn btn--primary">View Our Research</a>
             <a href="#contact" class="btn btn--secondary">Work with us</a>
           </div>
+          <a href="#founder" class="hero-story-link">Read Yuho's Story →</a>
         </div>
         <div class="hero-visual">
-          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="hero-ring">
-            <defs>
-              <linearGradient id="grad-hero-1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#00c9a7" />
-                <stop offset="20%" style="stop-color:#4da6ff" />
-                <stop offset="40%" style="stop-color:#ffd93d" />
-                <stop offset="60%" style="stop-color:#ff6b6b" />
-                <stop offset="80%" style="stop-color:#c44dff" />
-                <stop offset="100%" style="stop-color:#4da6ff" />
-              </linearGradient>
-              <linearGradient id="grad-hero-2" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style="stop-color:#4da6ff;stop-opacity:0.75" />
-                <stop offset="50%" style="stop-color:#00c9a7;stop-opacity:0.75" />
-                <stop offset="100%" style="stop-color:#ffd93d;stop-opacity:0.75" />
-              </linearGradient>
-              <linearGradient id="grad-hero-3" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.5" />
-                <stop offset="50%" style="stop-color:#ffd93d;stop-opacity:0.5" />
-                <stop offset="100%" style="stop-color:#00c9a7;stop-opacity:0.5" />
-              </linearGradient>
-            </defs>
-            <circle cx="200" cy="200" r="160" fill="none" stroke="url(#grad-hero-1)" stroke-width="20" class="ring-outer" />
-            <circle cx="200" cy="200" r="132" fill="none" stroke="url(#grad-hero-2)" stroke-width="16" class="ring-mid" />
-            <circle cx="200" cy="200" r="108" fill="none" stroke="url(#grad-hero-3)" stroke-width="12" class="ring-inner" />
-          </svg>
+          <div class="hero-photo-wrapper">
+            <img src="assets/yuho.png" alt="Yuho Okita — Founder of CoColour Life" class="hero-photo" />
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- Social Proof Bar -->
+    <div class="social-proof">
+      <div class="container">
+        <div class="proof-grid">
+          <div class="proof-item">
+            <span class="proof-number">6+</span>
+            <span class="proof-label">Years in OT, Education &amp; Research</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-number">2</span>
+            <span class="proof-label">Countries: Australia &amp; Japan</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-number">29</span>
+            <span class="proof-label">Peer-Reviewed Publications</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-number">10+</span>
+            <span class="proof-label">Academic &amp; Industry Collaborations</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ===== ABOUT ===== -->
     <section class="section" id="about">
@@ -165,6 +214,11 @@
           <span class="section-label">About</span>
           <h2 class="section-title">Bringing colour to<br />meaningful participation</h2>
         </div>
+        <!-- Replace with actual photo: workshop or team collaboration session -->
+        <div class="about-image" role="img" aria-label="CoColour Life team workshop session">
+          <span class="about-image-label">Workshop / Collaboration</span>
+        </div>
+
         <div class="about-grid">
           <div class="about-main">
             <p class="text-lg">
@@ -199,6 +253,9 @@
               <p>Embracing digital health, technology, and new ways of practising, learning, and connecting.</p>
             </div>
           </div>
+        </div>
+        <div class="section-next">
+          <a href="services.html" class="section-next-link">Explore our services &rarr;</a>
         </div>
       </div>
     </section>
@@ -266,6 +323,7 @@
             <p class="pillar-desc">
               Advisory work across health innovation, digital health, research translation, and service development. Supporting organisations, startups, and institutions to build thoughtful, evidence-informed, and people-centred solutions.
             </p>
+            <a href="services.html#coadvisory" class="pillar-link">Learn more →</a>
           </div>
 
           <div class="pillar-card" data-colour="#c44dff">
@@ -277,6 +335,7 @@
             <p class="pillar-desc">
               Research, collaboration, and knowledge sharing across telehealth, rehabilitation, occupation-centred practice, and meaningful participation. Connecting people, ideas, and disciplines across borders.
             </p>
+            <a href="services.html#colab" class="pillar-link">Learn more →</a>
           </div>
 
           <div class="pillar-card" data-colour="#ffd93d">
@@ -288,6 +347,7 @@
             <p class="pillar-desc">
               Workshops, teaching, and training in occupation-centred practice, digital health, clinical reasoning, and inclusive approaches to care and education.
             </p>
+            <a href="services.html#coacademy" class="pillar-link">Learn more →</a>
           </div>
 
           <div class="pillar-card" data-colour="#4da6ff">
@@ -299,6 +359,7 @@
             <p class="pillar-desc">
               Mentorship and professional development for students and emerging professionals. Supporting reflective, confident, and globally minded growth in practice, research, and leadership.
             </p>
+            <a href="services.html#coaspire" class="pillar-link">Learn more →</a>
           </div>
 
           <div class="pillar-card" data-colour="#00c9a7">
@@ -306,10 +367,11 @@
             <div class="pillar-header">
               <span class="pillar-prefix">Co</span><span class="pillar-name">Practice</span>
             </div>
-            <p class="pillar-type">Clinical Services</p>
+            <p class="pillar-type">Consultation</p>
             <p class="pillar-desc">
-              Occupation-centred support offered through consultation, selected practice work, and service pathways.
+              Occupation-centred consultation supporting individuals, families, and organisations to navigate meaningful participation in everyday life. Offering professional guidance grounded in evidence-informed practice and cross-cultural understanding.
             </p>
+            <a href="services.html#copractice" class="pillar-link">Learn more →</a>
           </div>
 
         </div>
@@ -326,35 +388,56 @@
         </div>
         <div class="research-grid">
           <div class="research-card">
+            <div class="research-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 10h2m2 0h4"/></svg>
+            </div>
             <div class="research-tag">Telehealth</div>
             <h4>Digital Health &amp; Telehealth</h4>
             <p>Looking at how telehealth and digital health can support accessible and client-centred practice across different contexts.</p>
           </div>
           <div class="research-card">
+            <div class="research-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
             <div class="research-tag">Shared Understanding</div>
             <h4>Shared Understanding &amp; Collaboration</h4>
             <p>Examining how relationships, communication, and collaborative goal-setting shape shared understanding.</p>
           </div>
           <div class="research-card">
+            <div class="research-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
             <div class="research-tag">Goal-Directed</div>
             <h4>Goal-Directed Rehabilitation</h4>
             <p>Exploring approaches that support motivation, participation, and meaningful outcomes across different populations.</p>
           </div>
           <div class="research-card">
+            <div class="research-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
             <div class="research-tag">Occupation-Centred</div>
             <h4>Occupation-Centred Practice</h4>
             <p>Understanding occupation as a foundation for health, identity, and participation in everyday life.</p>
           </div>
           <div class="research-card">
+            <div class="research-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
+            </div>
             <div class="research-tag">Global</div>
             <h4>International Collaboration</h4>
             <p>Working across cultures, disciplines, and borders to strengthen research, education, and knowledge sharing.</p>
           </div>
           <div class="research-card">
+            <div class="research-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21h6"/><path d="M12 3a6 6 0 0 0-4 10.5V17h8v-3.5A6 6 0 0 0 12 3z"/></svg>
+            </div>
             <div class="research-tag">Innovation</div>
             <h4>Health Innovation</h4>
             <p>Exploring practical ideas, digital tools, and new models that support meaningful participation.</p>
           </div>
+        </div>
+        <div class="section-next">
+          <a href="#publications" class="section-next-link">View publications &rarr;</a>
         </div>
         <div class="research-cta">
           <div class="research-stat-grid">
@@ -387,6 +470,104 @@
       </div>
     </section>
 
+    <!-- ===== PUBLICATIONS ===== -->
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Publications</span>
+          <h2 class="section-title">Selected Publications</h2>
+          <p class="section-desc">Peer-reviewed research contributing to evidence-informed practice and meaningful participation.</p>
+        </div>
+
+        <div class="pub-profiles">
+          <a href="https://scholar.google.com/citations?user=wBDqAX0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" class="pub-profile-btn">
+            Google Scholar Profile →
+          </a>
+          <a href="https://orcid.org/0000-0002-8455-3301" target="_blank" rel="noopener noreferrer" class="pub-profile-btn">
+            ORCID →
+          </a>
+          <a href="https://www.researchgate.net/profile/Yuho-Okita-2" target="_blank" rel="noopener noreferrer" class="pub-profile-btn">
+            ResearchGate →
+          </a>
+        </div>
+
+        <div class="pub-list" id="pub-list">
+
+          <!-- 2026 -->
+          <div class="pub-year-group">
+            <div class="pub-year">2026</div>
+            <div class="pub-entries">
+              <div class="pub-entry">
+                <h4 class="pub-title">Telehealth and Goal-Setting: A Scoping Review of Mobile Phones and Computing Devices</h4>
+                <p class="pub-authors"><strong>Okita, Y.</strong>, Kendal, E., Tomori, T., &amp; McDonald, R.</p>
+                <p class="pub-journal">Disability and Rehabilitation: Assistive Technology</p>
+                <a href="https://www.tandfonline.com/doi/10.1080/17483107.2026.2632365?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed" target="_blank" rel="noopener noreferrer" class="pub-doi">DOI →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="pub-year-group">
+            <div class="pub-year">2024</div>
+            <div class="pub-entries">
+              <div class="pub-entry">
+                <h4 class="pub-title">Goal Setting Strategies and Goal-Directed Approach in Pediatric Occupational Therapy Practice: A Meta-Analysis</h4>
+                <p class="pub-authors"><strong>Okita, Y.</strong>, Abe, H., Kura, K., Kamogawa, K., &amp; Tomori, K.</p>
+                <p class="pub-journal">Asian Journal of Occupational Therapy, 20(1), 59–69.</p>
+                <a href="https://www.jstage.jst.go.jp/article/asiajot/20/1/20_59/_article/-char/ja" target="_blank" rel="noopener noreferrer" class="pub-doi">DOI →</a>
+              </div>
+              <div class="pub-entry">
+                <h4 class="pub-title">Goal setting in mental health: a scoping review to inform occupational therapy practice</h4>
+                <p class="pub-authors"><strong>Okita, Y.</strong>, Kaneko, T., Imai, H., Nair, M., &amp; Tomori, K.</p>
+                <p class="pub-journal">Irish Journal of Occupational Therapy</p>
+                <a href="https://www.emerald.com/ijot/article/52/1/3/1226373/Goal-setting-in-mental-health-a-scoping-review-to" target="_blank" rel="noopener noreferrer" class="pub-doi">DOI →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2023 -->
+          <div class="pub-year-group">
+            <div class="pub-year">2023</div>
+            <div class="pub-entries">
+              <div class="pub-entry">
+                <h4 class="pub-title">Characteristics of goal-setting tools in adult rehabilitation: A scoping review</h4>
+                <p class="pub-authors"><strong>Okita, Y.</strong>, Kawaguchi, Y., Inoue, Y., Ohno, K., Sawada, T., Levack, W., &amp; Tomori, K.</p>
+                <p class="pub-journal">Clinical Rehabilitation</p>
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10725121/" target="_blank" rel="noopener noreferrer" class="pub-doi">DOI →</a>
+              </div>
+              <div class="pub-entry">
+                <h4 class="pub-title">A scoping review of occupational therapy scoping reviews – utilisation of the WFOT proposed international occupational therapy research priority</h4>
+                <p class="pub-authors"><strong>Okita, Y.</strong>, Naga, S., Hirose, T., Takase, S., Kishi, Y., Tsukura, C., ... &amp; Tomori, K.</p>
+                <p class="pub-journal">World Federation of Occupational Therapists Bulletin</p>
+                <a href="https://www.tandfonline.com/doi/full/10.1080/14473828.2023.2193007" target="_blank" rel="noopener noreferrer" class="pub-doi">DOI →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2020 (hidden by default) -->
+          <div class="pub-year-group pub-hidden" id="pub-extra">
+            <div class="pub-year">2020</div>
+            <div class="pub-entries">
+              <div class="pub-entry">
+                <h4 class="pub-title">Japanese translated JBI Manual for Evidence Synthesis: Scoping Reviews 2020</h4>
+                <p class="pub-authors"><strong>Okita, Y.</strong>, Hirose, T., Naga, S., Takase, S., &amp; Kishi, Y.</p>
+                <p class="pub-journal">Japanese Clinical Occupational Therapy, (8), 37–42.</p>
+                <a href="https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202202290054391012" target="_blank" rel="noopener noreferrer" class="pub-doi">DOI →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pub-expand-wrapper">
+          <button class="pub-expand-btn" id="pub-expand-btn" aria-expanded="false">
+            View all publications →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ===== GLOBAL ===== -->
     <section class="section" id="global">
       <div class="container">
@@ -397,19 +578,28 @@
         </div>
         <div class="global-cards">
           <div class="global-card">
-            <div class="global-card-accent" style="background: var(--teal)"></div>
-            <h4>Melbourne, Australia</h4>
-            <p>Home base for research, education, advisory work, and collaboration within the Australian health and disability sector.</p>
+            <!-- Replace with actual photo: Melbourne cityscape or campus -->
+            <div class="global-card-image global-card-image--melbourne" role="img" aria-label="Melbourne, Australia"></div>
+            <div class="global-card-body">
+              <h4>Melbourne, Australia</h4>
+              <p>Home base for research, education, advisory work, and collaboration within the Australian health and disability sector.</p>
+            </div>
           </div>
           <div class="global-card">
-            <div class="global-card-accent" style="background: var(--blue)"></div>
-            <h4>Japan &amp; Regional Partnerships</h4>
-            <p>Ongoing collaboration in research, education, and knowledge exchange with clinicians, educators, and institutions across Japan and the wider region.</p>
+            <!-- Replace with actual photo: Japan landmark or collaboration scene -->
+            <div class="global-card-image global-card-image--japan" role="img" aria-label="Japan and regional partnerships"></div>
+            <div class="global-card-body">
+              <h4>Japan &amp; Regional Partnerships</h4>
+              <p>Ongoing collaboration in research, education, and knowledge exchange with clinicians, educators, and institutions across Japan and the wider region.</p>
+            </div>
           </div>
           <div class="global-card">
-            <div class="global-card-accent" style="background: var(--purple)"></div>
-            <h4>Global Network</h4>
-            <p>Part of a wider international network of research, education, and professional collaboration.</p>
+            <!-- Replace with actual photo: international collaboration or conference -->
+            <div class="global-card-image global-card-image--global" role="img" aria-label="Global network"></div>
+            <div class="global-card-body">
+              <h4>Global Network</h4>
+              <p>Part of a wider international network of research, education, and professional collaboration.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -426,6 +616,10 @@
         <div class="workshops-content">
           <div class="workshop-feature">
             <div class="workshop-feature-accent"></div>
+            <!-- Replace with actual photo: workshop or professional learning session -->
+            <div class="workshop-image" role="img" aria-label="Workshop and professional learning session">
+              <span class="workshop-image-label">Professional Learning</span>
+            </div>
             <h3>Workshops &amp; Professional Learning</h3>
             <p>
               We offer workshops, teaching, and professional learning experiences for clinicians, educators, researchers, and organisations working across health, rehabilitation, and inclusive practice.
@@ -465,6 +659,59 @@
             </div>
           </div>
         </div>
+        <div class="section-next">
+          <a href="insights.html" class="section-next-link">Read our insights &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LATEST INSIGHTS ===== -->
+    <section class="section" id="insights">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Latest Insights</span>
+          <h2 class="section-title">From our thinking</h2>
+          <p class="section-desc">Reflections, ideas, and updates from across our work.</p>
+        </div>
+        <div class="insights-grid">
+
+          <article class="insight-card" data-category="practice">
+            <div class="insight-card-image insight-card-image--practice"></div>
+            <div class="insight-card-body">
+              <span class="insight-tag insight-tag--practice">Practice</span>
+              <h3 class="insight-card-title">Why Meaningful Occupation Matters in Rehabilitation</h3>
+              <p class="insight-card-date">March 2026</p>
+              <p class="insight-card-excerpt">Exploring how occupation-centred approaches can transform rehabilitation outcomes and support meaningful participation in everyday life.</p>
+              <a href="posts/meaningful-occupation-rehabilitation.html" class="insight-card-link">Read more &rarr;</a>
+            </div>
+          </article>
+
+          <article class="insight-card" data-category="global">
+            <div class="insight-card-image insight-card-image--global"></div>
+            <div class="insight-card-body">
+              <span class="insight-tag insight-tag--global">Global</span>
+              <h3 class="insight-card-title">Bridging Cultures: Lessons from Cross-Cultural Collaboration in Health</h3>
+              <p class="insight-card-date">February 2026</p>
+              <p class="insight-card-excerpt">Reflections on working across Australia and Japan, and what cross-cultural partnership can teach us about inclusive practice.</p>
+              <a href="posts/bridging-cultures-cross-cultural-collaboration.html" class="insight-card-link">Read more &rarr;</a>
+            </div>
+          </article>
+
+          <article class="insight-card" data-category="innovation">
+            <div class="insight-card-image insight-card-image--innovation"></div>
+            <div class="insight-card-body">
+              <span class="insight-tag insight-tag--innovation">Innovation</span>
+              <h3 class="insight-card-title">Digital Health and the Future of Occupation-Centred Practice</h3>
+              <p class="insight-card-date">January 2026</p>
+              <p class="insight-card-excerpt">How telehealth and digital tools are reshaping the way we support meaningful participation across distances and contexts.</p>
+              <a href="posts/digital-health-future-occupation-centred.html" class="insight-card-link">Read more &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+        <div class="insights-view-all">
+          <a href="insights.html">View all insights &rarr;</a>
+        </div>
       </div>
     </section>
 
@@ -472,22 +719,23 @@
     <section class="section" id="founder">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Founder</span>
+          <span class="section-label">About Yuho</span>
           <h2 class="section-title">Yuho Okita</h2>
         </div>
+
+        <!-- Founder Intro -->
         <div class="founder-content">
           <div class="founder-portrait">
             <img src="assets/yuho.png" alt="Yuho Okita" class="founder-photo" />
           </div>
           <div class="founder-bio">
-            <p class="text-lg">
-              Occupational therapist, researcher, educator, and consultant working across research, education, advisory, and health innovation.
+            <p class="founder-role">Occupational Therapist | Researcher | Educator | Advisor</p>
+            <p class="founder-location">Melbourne, Australia</p>
+            <p class="text-body">
+              Yuho is an occupational therapist, researcher, educator, and advisor whose work spans research, education, advisory, and health innovation. With experience across Australia and Japan, he works at the intersection of occupation-centred practice, evidence-informed innovation, and cross-cultural collaboration.
             </p>
             <p class="text-body">
-              Drawing on experience across Australia and Japan, Yuho works at the intersection of occupation-centred practice, research, education, and cross-cultural collaboration. His work is grounded in evidence-informed practice and a strong commitment to meaningful participation in everyday life.
-            </p>
-            <p class="text-body">
-              Through CoColour Life, Yuho brings together research, education, mentorship, and advisory work to support meaningful participation across practice, systems, and communities.
+              Grounded in a commitment to meaningful participation in everyday life, Yuho brings together research, education, mentorship, and advisory work through CoColour Life to support more inclusive, connected, and person-centred practice across services and communities.
             </p>
             <div class="founder-tags">
               <span class="tag">Research</span>
@@ -499,11 +747,112 @@
             </div>
           </div>
         </div>
+
+        <!-- Background -->
+        <div class="founder-background">
+          <h3 class="founder-section-title">Background</h3>
+          <div class="background-grid">
+
+            <div class="background-card">
+              <div class="background-accent" style="background: var(--teal)"></div>
+              <h4 class="background-card-title">Education</h4>
+              <ul class="background-list">
+                <li>
+                  <span class="bg-degree">PhD &amp; GradCert in Research and Innovation Management (Health)</span>
+                  <span class="bg-institution">Swinburne University of Technology</span>
+                </li>
+                <li>
+                  <span class="bg-degree">Graduate Certificate in Health Professions Education</span>
+                  <span class="bg-institution">Monash University</span>
+                </li>
+                <li>
+                  <span class="bg-degree">MBA (Digital Health)</span>
+                  <span class="bg-institution">La Trobe University</span>
+                </li>
+                <li>
+                  <span class="bg-degree">Master of Occupational Therapy</span>
+                  <span class="bg-institution">Swinburne University of Technology</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="background-card">
+              <div class="background-accent" style="background: var(--blue)"></div>
+              <h4 class="background-card-title">Appointments</h4>
+              <ul class="background-list">
+                <li>
+                  <span class="bg-degree">Allied Health Services Manager / Senior OT</span>
+                  <span class="bg-institution">Autism Abilities</span>
+                </li>
+                <li>
+                  <span class="bg-degree">Teaching Associate</span>
+                  <span class="bg-institution">Monash University</span>
+                </li>
+                <li>
+                  <span class="bg-degree">Visiting Associate Professor</span>
+                  <span class="bg-institution">Hokkaido Bunkyo University</span>
+                </li>
+                <li>
+                  <span class="bg-degree">Clinical Lecturer</span>
+                  <span class="bg-institution">Tokyo University of Technology</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="background-card">
+              <div class="background-accent" style="background: var(--purple)"></div>
+              <h4 class="background-card-title">Registration &amp; Certifications</h4>
+              <ul class="background-list">
+                <li>
+                  <span class="bg-degree">AHPRA Registered Occupational Therapist</span>
+                </li>
+                <li>
+                  <span class="bg-degree">Complex Home Modification Assessor</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Academic & Social Links -->
+        <div class="founder-links">
+          <a href="https://scholar.google.com/citations?user=wBDqAX0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" class="founder-link-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            Google Scholar
+          </a>
+          <a href="https://orcid.org/0000-0002-8455-3301" target="_blank" rel="noopener noreferrer" class="founder-link-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-3.919-3.722h-2.4z"/></svg>
+            ORCID
+          </a>
+          <a href="https://www.researchgate.net/profile/Yuho-Okita-2" target="_blank" rel="noopener noreferrer" class="founder-link-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M19.586 0c-1.326 0-2.194.834-2.194 2.194 0 1.36.868 2.194 2.194 2.194 1.326 0 2.194-.834 2.194-2.194C21.78.834 20.912 0 19.586 0zM8.61 7.545C4.22 7.545 0 10.633 0 15.168c0 3.393 2.453 5.287 5.287 5.287 1.653 0 3.047-.618 4.133-1.86h.06c-.06.618-.06 1.24.06 1.86h3.393c-.308-1.055-.308-2.11-.308-3.165V12.97c0-3.454-1.653-5.425-4.015-5.425zm11.225.249h-3.76v1.795h3.76V7.794zM8.18 9.528c1.55 0 2.297 1.326 2.297 3.35v2.607c-.834 1.24-1.753 1.86-2.833 1.86-1.326 0-2.194-.988-2.194-2.916 0-3.165 1.55-4.9 2.73-4.9zm8.218.06v7.668c0 1.055.06 2.11.308 3.165h3.393c-.12-.618-.12-1.24-.06-1.86h-.06c-1.086 1.24-2.48 1.86-4.133 1.86H15.6V9.589h.798z"/></svg>
+            ResearchGate
+          </a>
+          <a href="https://www.linkedin.com/in/yuho-okita-569b8413b/" target="_blank" rel="noopener noreferrer" class="founder-link-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://x.com/OkitaYuho" target="_blank" rel="noopener noreferrer" class="founder-link-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X
+          </a>
+          <a href="https://linktr.ee/yuhookita" target="_blank" rel="noopener noreferrer" class="founder-link-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7.953 15.066l-.038.002a.975.975 0 0 1-.935-.715l-.004-.017-1.56-5.907a.975.975 0 0 1 .467-1.069l.019-.01 4.272-2.31a.975.975 0 0 1 .918.006l.016.009 4.272 2.31a.975.975 0 0 1 .505 1.063l-.003.016-1.56 5.907a.975.975 0 0 1-.928.72l-.042-.001h.002zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            Linktree
+          </a>
+        </div>
+
+        <!-- CTA -->
+        <div class="founder-cta">
+          <a href="#contact" class="btn btn--primary">Work with Yuho →</a>
+        </div>
+
       </div>
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section class="section section--dark" id="contact">
+    <section class="section section--dark" id="contact" aria-label="Contact form">
       <div class="container">
         <div class="section-header">
           <span class="section-label">Collaborate</span>
@@ -524,7 +873,7 @@
             </div>
             <div class="form-group">
               <label for="interest">Area of interest</label>
-              <select id="interest" name="interest">
+              <select id="interest" name="interest" aria-label="Select area of interest">
                 <option value="">Select an option</option>
                 <option value="advisory">Advisory (CoAdvisory)</option>
                 <option value="lab">Research Collaboration (CoLab)</option>
@@ -555,23 +904,52 @@
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
-        <div class="footer-inner">
+        <div class="footer-grid">
           <div class="footer-brand">
             <span class="footer-logo"><span class="brand-co">Co</span>Colour Life</span>
             <p class="footer-tagline">Colour your life through meaningful occupations.</p>
+            <p class="footer-location">Melbourne, Australia</p>
           </div>
-          <div class="footer-links">
+          <div class="footer-nav">
+            <h4 class="footer-heading">Quick Links</h4>
             <a href="#about">About</a>
-            <a href="#pillars">Services</a>
+            <a href="services.html">Services</a>
             <a href="#research">Research</a>
             <a href="#workshops">Education</a>
-            <a href="#founder">Founder</a>
+            <a href="insights.html">Insights</a>
+            <a href="#founder">About Yuho</a>
             <a href="#contact">Contact</a>
           </div>
-          <div class="footer-bottom">
-            <p>&copy; 2026 CoColour Life. Melbourne, Australia.</p>
+          <div class="footer-connect">
+            <h4 class="footer-heading">Connect</h4>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/in/yuho-okita-569b8413b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://x.com/OkitaYuho" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://scholar.google.com/citations?user=wBDqAX0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+              </a>
+              <a href="https://orcid.org/0000-0002-8455-3301" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-3.919-3.722h-2.4z"/></svg>
+              </a>
+              <a href="https://linktr.ee/yuhookita" target="_blank" rel="noopener noreferrer" aria-label="Linktree">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066l-.038.002a.975.975 0 0 1-.935-.715l-.004-.017-1.56-5.907a.975.975 0 0 1 .467-1.069l.019-.01 4.272-2.31a.975.975 0 0 1 .918.006l.016.009 4.272 2.31a.975.975 0 0 1 .505 1.063l-.003.016-1.56 5.907a.975.975 0 0 1-.928.72l-.042-.001h.002zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/></svg>
+              </a>
+            </div>
+            <a href="mailto:contact@cocolourlife.com" class="footer-email">contact@cocolourlife.com</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 CoColour Life. Melbourne, Australia.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <span class="footer-legal-divider">|</span>
+            <a href="#">Terms of Use</a>
           </div>
         </div>
       </div>

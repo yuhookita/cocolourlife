@@ -25,11 +25,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Prevent scroll while landing is active */
-body.landing-active {
-  overflow: hidden;
-}
-
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: var(--weight-semibold);
@@ -179,7 +174,7 @@ input, textarea, select {
 
 .btn--primary:hover {
   background: #333;
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.02);
   box-shadow: var(--shadow-md);
 }
 
@@ -191,7 +186,7 @@ input, textarea, select {
 
 .btn--secondary:hover {
   border-color: var(--dark-grey);
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .btn--outline {

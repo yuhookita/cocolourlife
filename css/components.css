@@ -65,19 +65,34 @@
   opacity: 1;
 }
 
-/* Page transition */
+/* Main site wrapper */
 .main-site {
-  opacity: 0;
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.main-site.visible {
   opacity: 1;
 }
 
 /* Smooth anchor offset for fixed nav */
 :target {
   scroll-margin-top: 80px;
+}
+
+/* Skip to content (accessibility) */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--black);
+  color: var(--white);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  transition: top var(--duration-fast);
+}
+
+.skip-to-content:focus {
+  top: var(--space-md);
+  color: var(--white);
 }
 
 /* Focus styles for accessibility */
@@ -95,15 +110,38 @@
     scroll-behavior: auto !important;
   }
 
-  .landing-logo {
-    animation: none;
-  }
-
-  .logo-ring {
-    animation: none;
-  }
-
   .hero-ring {
     animation: none;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .btn--primary:hover,
+  .btn--secondary:hover {
+    transform: none !important;
+  }
+
+  .pillar-card:hover,
+  .research-card:hover,
+  .global-card:hover,
+  .value-card:hover,
+  .insight-card:hover {
+    transform: none !important;
+  }
+
+  .footer-social a:hover {
+    transform: none !important;
+  }
+
+  .section-next-link:hover {
+    transform: none !important;
   }
 }

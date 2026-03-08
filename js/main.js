@@ -5,58 +5,6 @@
 (function () {
   'use strict';
 
-  // ========== Landing Screen ==========
-  const landingScreen = document.getElementById('landing-screen');
-  const landingLogo = document.getElementById('landing-logo');
-  const enterBtn = document.getElementById('enter-site');
-  const colourBurst = document.getElementById('colour-burst');
-  const mainSite = document.getElementById('main-site');
-
-  document.body.classList.add('landing-active');
-
-  function enterSite(e) {
-    // Prevent double-trigger
-    if (landingScreen.classList.contains('transitioning')) return;
-    landingScreen.classList.add('transitioning');
-
-    // Phase 1: Logo ring brightens & begins glow expansion
-    landingLogo.classList.add('glow-active');
-
-    // Phase 2: After a brief moment, trigger the soft radial burst from center
-    setTimeout(function () {
-      colourBurst.style.setProperty('--burst-x', '50%');
-      colourBurst.style.setProperty('--burst-y', '50%');
-      colourBurst.classList.add('active');
-    }, 200);
-
-    // Phase 3: Screen-wide soft light overlay fades in
-    setTimeout(function () {
-      landingScreen.classList.add('light-wash');
-    }, 600);
-
-    // Phase 4: Begin fading out landing, fading in main site
-    setTimeout(function () {
-      landingScreen.classList.add('hidden');
-      mainSite.classList.add('visible');
-      document.body.classList.remove('landing-active');
-    }, 1200);
-
-    // Phase 5: Remove landing from DOM after full animation
-    setTimeout(function () {
-      landingScreen.style.display = 'none';
-    }, 2200);
-  }
-
-  landingLogo.addEventListener('click', enterSite);
-  enterBtn.addEventListener('click', enterSite);
-
-  // Also allow clicking anywhere on the landing screen
-  landingScreen.addEventListener('click', function (e) {
-    if (e.target === landingScreen || e.target.closest('.landing-content')) {
-      enterSite(e);
-    }
-  });
-
   // ========== Navigation ==========
   const nav = document.getElementById('main-nav');
   const navToggle = document.getElementById('nav-toggle');
@@ -102,21 +50,28 @@
     // Add reveal class to key elements
     const revealSelectors = [
       '.section-header',
+      '.about-image',
       '.about-main',
       '.about-values',
       '.mission-story',
       '.mission-cards',
       '.pillar-card',
       '.research-card',
-      '.global-map',
-      '.global-details',
+      '.global-card',
+      '.insight-card',
       '.workshop-feature',
       '.workshop-list',
       '.founder-portrait',
       '.founder-bio',
       '.contact-form',
       '.contact-info',
-      '.research-cta'
+      '.research-cta',
+      '.pub-profiles',
+      '.pub-list',
+      '.pub-expand-wrapper',
+      '.founder-background',
+      '.founder-links',
+      '.founder-cta'
     ];
 
     revealSelectors.forEach(function (selector) {
@@ -196,6 +151,27 @@
       }
     });
   });
+
+  // ========== Publications expand/collapse ==========
+  var pubExpandBtn = document.getElementById('pub-expand-btn');
+  var pubExtra = document.getElementById('pub-extra');
+  if (pubExpandBtn && pubExtra) {
+    pubExpandBtn.addEventListener('click', function () {
+      var isExpanded = pubExpandBtn.getAttribute('aria-expanded') === 'true';
+
+      if (isExpanded) {
+        pubExtra.classList.add('pub-hidden');
+        pubExtra.classList.remove('pub-visible');
+        pubExpandBtn.textContent = 'View all publications →';
+        pubExpandBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        pubExtra.classList.remove('pub-hidden');
+        pubExtra.classList.add('pub-visible');
+        pubExpandBtn.textContent = 'Show fewer publications ←';
+        pubExpandBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  }
 
   // ========== Form handling (Formspree AJAX) ==========
   var form = document.getElementById('contact-form');
