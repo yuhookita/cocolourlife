@@ -318,15 +318,6 @@
   min-height: 280px;
 }
 
-/* Center bottom row (2 cards) */
-.pillar-card:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-
-.pillar-card:nth-child(5) {
-  grid-column: 4 / span 2;
-}
-
 .pillar-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
@@ -385,6 +376,14 @@
 
 .pillar-link:hover {
   color: var(--teal);
+}
+
+.pillar-note {
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--light-grey);
+  margin-top: var(--space-md);
+  font-style: italic;
 }
 
 /* ===== RESEARCH ===== */

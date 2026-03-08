@@ -47,9 +47,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pillar-card,
-  .pillar-card:nth-child(4),
-  .pillar-card:nth-child(5) {
+  .pillar-card {
     grid-column: auto;
   }
 
@@ -170,9 +168,7 @@
     grid-template-columns: 1fr;
   }
 
-  .pillar-card,
-  .pillar-card:nth-child(4),
-  .pillar-card:nth-child(5) {
+  .pillar-card {
     grid-column: auto;
     min-height: auto;
   }
