@@ -4,8 +4,8 @@
 
 /* Services Hero */
 .service-hero {
-  padding-top: 10rem;
-  padding-bottom: var(--space-4xl);
+  padding-top: 8rem;
+  padding-bottom: var(--space-2xl);
   background: var(--bg-white);
 }
 
@@ -15,30 +15,37 @@
 
 /* Service Sections */
 .service-section {
-  padding-top: var(--space-section);
-  padding-bottom: var(--space-section);
+  padding-top: clamp(3rem, 2.5rem + 2.5vw, 5rem);
+  padding-bottom: clamp(3rem, 2.5rem + 2.5vw, 5rem);
 }
 
 .service-section--alt {
   background: var(--bg-subtle);
 }
 
-/* Service Block */
+/* Service Block — 2-column grid */
 .service-block {
   position: relative;
-  max-width: 860px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.service-text {
+  max-width: 580px;
 }
 
 .service-block .service-accent {
   width: 48px;
   height: 3px;
   border-radius: 2px;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
 }
 
 /* Service Header */
 .service-header {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .service-name {
@@ -67,20 +74,19 @@
   font-size: var(--text-lg);
   line-height: 1.65;
   color: var(--mid-grey);
-  margin-bottom: var(--space-3xl);
-  max-width: 720px;
+  margin-bottom: var(--space-xl);
 }
 
 /* Service Details Grid */
 .service-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
-  margin-bottom: var(--space-3xl);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
 .service-detail-card {
-  padding: var(--space-xl);
+  padding: var(--space-lg);
   background: var(--white);
   border: 1px solid var(--border-grey);
   border-radius: var(--radius-lg);
@@ -152,15 +158,63 @@
   transform: translateY(-1px);
 }
 
+/* Service Image */
+.service-image {
+  position: sticky;
+  top: 120px;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  max-height: 420px;
+}
+
+/* Service Note (CoCommunity disclaimer) */
+.service-note {
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--light-grey);
+  font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
 /* Alt section card backgrounds */
 .service-section--alt .service-detail-card {
   background: var(--white);
 }
 
-/* Responsive — Tablet */
+/* ============================================
+   Responsive — Laptop / Small Desktop
+   ============================================ */
+@media (max-width: 1024px) {
+  .service-block {
+    grid-template-columns: 1fr;
+  }
+
+  .service-text {
+    max-width: none;
+  }
+
+  .service-image {
+    position: static;
+    max-width: 100%;
+  }
+
+  .service-image img {
+    max-height: 360px;
+  }
+}
+
+/* ============================================
+   Responsive — Tablet
+   ============================================ */
 @media (max-width: 768px) {
   .service-hero {
-    padding-top: 8rem;
+    padding-top: 7rem;
   }
 
   .service-details {
@@ -168,10 +222,12 @@
   }
 }
 
-/* Responsive — Mobile */
+/* ============================================
+   Responsive — Mobile
+   ============================================ */
 @media (max-width: 480px) {
   .service-hero {
-    padding-top: 7rem;
+    padding-top: 6rem;
   }
 
   .service-name {
