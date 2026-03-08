@@ -144,4 +144,9 @@
   .section-next-link:hover {
     transform: none !important;
   }
+
+  .global-card:hover .global-card-image img,
+  .insight-card:hover .insight-card-image img {
+    transform: none !important;
+  }
 }
