@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "static-site",
-      "runtimeExecutable": "/usr/bin/ruby",
-      "runtimeArgs": ["-e", "require 'webrick';WEBrick::HTTPServer.new(Port:8000,DocumentRoot:'/Users/user/Documents/GitHub/cocolourlife',Logger:WEBrick::Log.new($stdout)).start"],
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "/Users/user/Documents/GitHub/cocolourlife", "-l", "8000", "--no-clipboard"],
       "port": 8000
     }
   ]

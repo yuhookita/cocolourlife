@@ -1,4 +1,7 @@
-User-agent: *
-Allow: /
+# TODO: サイト公開時に以下を元に戻すこと
+# User-agent: *
+# Allow: /
+# Sitemap: https://cocolourlife.com/sitemap.xml
 
-Sitemap: https://cocolourlife.com/sitemap.xml
+User-agent: *
+Disallow: /
