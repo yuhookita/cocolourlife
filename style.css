@@ -334,6 +334,12 @@ button:focus-visible {
   }
 }
 
+/* ---------- Our name — closing line (kokkara) ---------- */
+.name-coda {
+  margin-top: 1.4em;
+  font-weight: 600;
+}
+
 /* ---------- motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
