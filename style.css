@@ -334,12 +334,6 @@ button:focus-visible {
   }
 }
 
-/* ---------- Our name — closing line (kokkara) ---------- */
-.name-coda {
-  margin-top: 1.4em;
-  font-weight: 600;
-}
-
 /* ---------- motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -348,4 +342,10 @@ button:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ---------- Our name — closing line (kokkara) ---------- */
+.name-coda {
+  margin-top: 1.4em;
+  font-weight: 600;
 }
