@@ -84,6 +84,23 @@ button:focus-visible {
   padding-right: var(--pad);
 }
 
+/* ---------- skip link (a11y) ---------- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--ink);
+  color: #ffffff;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0 0 8px 0;
+  font-size: var(--t-sm);
+}
+.skip-link:focus { left: 0; color: #ffffff; }
+
+/* anchor targets clear the sticky header */
+section[id] { scroll-margin-top: 78px; }
+
 /* ---------- header ---------- */
 .site-header {
   position: sticky;
@@ -108,6 +125,20 @@ button:focus-visible {
   height: clamp(30px, 1.6rem + 0.8vw, 38px);
   width: auto;
 }
+
+/* quiet in-page nav — hidden on small screens (single-page scroll suffices) */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+}
+.site-nav a {
+  font-size: var(--t-sm);
+  color: var(--muted-text);   /* 6.0:1 on white — AA */
+  transition: color 160ms ease;
+}
+.site-nav a:hover { color: var(--colour-primary); }
+@media (max-width: 767px) { .site-nav { display: none; } }
 
 .lang-toggle {
   display: inline-flex;
@@ -175,11 +206,11 @@ button:focus-visible {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: clamp(1.35rem, 2vw, 1.6rem);
+  font-size: clamp(1.5rem, 1.35rem + 1vw, 1.9rem);
   font-weight: 600;
   letter-spacing: -0.005em;
   color: var(--ink);
-  margin-bottom: 1.7rem;
+  margin-bottom: 1.8rem;
   padding-bottom: 0.9rem;
   position: relative;
   --marker: var(--teal);
