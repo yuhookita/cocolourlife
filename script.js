@@ -35,6 +35,20 @@
 
     document.documentElement.lang = lang;
 
+    var META = {
+      en: {
+        title: 'CoColour Life \u2014 Connecting research and practice for more accessible and sustainable health and rehabilitation',
+        desc: 'CoColour Life Pty Ltd is an Australian company connecting research and practice for more accessible and sustainable health and rehabilitation.'
+      },
+      ja: {
+        title: 'CoColour Life \u2014 \u7814\u7a76\u3068\u5b9f\u8df5\u3092\u3064\u306a\u304e\u3001\u3088\u308a\u30a2\u30af\u30bb\u30b9\u3057\u3084\u3059\u304f\u6301\u7d9a\u53ef\u80fd\u306a\u4fdd\u5065\u533b\u7642\u30fb\u30ea\u30cf\u30d3\u30ea\u30c6\u30fc\u30b7\u30e7\u30f3\u3078',
+        desc: 'CoColour Life Pty Ltd\u306f\u3001\u7814\u7a76\u3068\u5b9f\u8df5\u3092\u3064\u306a\u304e\u3001\u3088\u308a\u30a2\u30af\u30bb\u30b9\u3057\u3084\u3059\u304f\u6301\u7d9a\u53ef\u80fd\u306a\u4fdd\u5065\u533b\u7642\u30fb\u30ea\u30cf\u30d3\u30ea\u30c6\u30fc\u30b7\u30e7\u30f3\u306b\u8ca2\u732e\u3059\u308b\u30aa\u30fc\u30b9\u30c8\u30e9\u30ea\u30a2\u306e\u4f01\u696d\u3067\u3059\u3002'
+      }
+    };
+    document.title = META[lang].title;
+    var md = document.querySelector('meta[name="description"]');
+    if (md) md.setAttribute('content', META[lang].desc);
+
     for (var j = 0; j < buttons.length; j++) {
       var active = buttons[j].getAttribute('data-lang') === lang;
       buttons[j].classList.toggle('is-active', active);
