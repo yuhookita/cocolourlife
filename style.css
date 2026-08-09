@@ -161,8 +161,9 @@ button:focus-visible {
 .hero-tagline {
   margin-top: 1.15rem;
   max-width: 30ch;
-  font-size: var(--t-lg);
+  font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.55rem);
   font-weight: 400;
+  line-height: 1.6;
   color: var(--muted-text);
 }
 :lang(ja) .hero-tagline { max-width: 34ch; }
@@ -231,10 +232,12 @@ button:focus-visible {
   padding: 3.4rem 1.3rem 1.25rem;
   background: var(--surface);
   border: 1px solid var(--line);
+  border-top: 3px solid var(--card-accent);
   border-radius: 6px;
   color: var(--ink);
   transition: border-color 180ms ease, background-color 180ms ease;
 }
+.areas li:hover { border-top-color: var(--card-accent); }
 .areas li:hover { border-color: #ddd8cf; background: #fbfaf7; }
 /* brand motif — a decomposition of the Co mark, a different one per card */
 .areas li::before {
@@ -344,8 +347,40 @@ button:focus-visible {
   }
 }
 
-/* ---------- Our name — closing line (kokkara) ---------- */
+/* ---------- Our name — the heart of the site ---------- */
+/* warm band + multicolour rule under the title (the one section allowed
+   to carry the full brand spectrum, since it explains the name itself) */
+#name .section-title::after {
+  width: 116px;
+  background: linear-gradient(90deg, var(--teal), var(--blue), var(--amber), var(--terracotta));
+}
+#name .lead + .lead { margin-top: 1.1em; }
+
+/* dot divider — the hero ring's palette, restated in miniature.
+   Final red dot = the ring's #BC002D accent (the Japan sun). */
+.dot-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2.3rem;
+}
+.dot-divider span { width: 9px; height: 9px; border-radius: 50%; }
+.dot-divider span:nth-child(1) { background: #88b4d4; }
+.dot-divider span:nth-child(2) { background: #9ec9b7; }
+.dot-divider span:nth-child(3) { background: #fbd88f; }
+.dot-divider span:nth-child(4) { background: #ab9fda; }
+.dot-divider span:nth-child(5) { background: #bc002d; width: 11px; height: 11px; }
+
+/* closing line (kokkara) — quiet build-up, then the one loud-ish moment */
+.name-coda-intro {
+  margin-top: 1.15rem;
+  color: var(--muted-text);
+  max-width: 66ch;
+}
 .name-coda {
-  margin-top: 1.4em;
+  margin-top: 0.35rem;
   font-weight: 600;
+  font-size: clamp(1.3rem, 1.12rem + 0.9vw, 1.6rem);
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
