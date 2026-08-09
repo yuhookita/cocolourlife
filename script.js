@@ -52,3 +52,35 @@
 
   apply(detectInitial());
 })();
+
+/* ============================================================
+   Scrollspy — the section being read lights its nav item.
+   Degrades silently without IntersectionObserver or the nav.
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var links = document.querySelectorAll('.site-nav a[href^="#"]');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+
+  var sections = [];
+  for (var i = 0; i < links.length; i++) {
+    var id = links[i].getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if (el) sections.push(el);
+  }
+
+  function setCurrent(id) {
+    for (var j = 0; j < links.length; j++) {
+      links[j].classList.toggle('is-current', links[j].getAttribute('href') === '#' + id);
+    }
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    for (var k = 0; k < entries.length; k++) {
+      if (entries[k].isIntersecting) setCurrent(entries[k].target.id);
+    }
+  }, { rootMargin: '-35% 0px -55% 0px' });
+
+  for (var s = 0; s < sections.length; s++) observer.observe(sections[s]);
+})();

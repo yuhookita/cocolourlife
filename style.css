@@ -45,6 +45,9 @@
   --t-lg:   clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem);
 }
 
+/* ---------- selection — colour appears where you read ---------- */
+::selection { background: rgba(29, 110, 99, 0.16); }
+
 /* ---------- reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -138,6 +141,15 @@ section[id] { scroll-margin-top: 78px; }
   transition: color 160ms ease;
 }
 .site-nav a:hover { color: var(--colour-primary); }
+/* scrollspy — the section you are reading lights its nav item in that
+   section's colour (the accessible version of "colour follows you") */
+.site-nav a { padding-bottom: 3px; border-bottom: 2px solid transparent; }
+.site-nav a.is-current { color: var(--ink); }
+.site-nav a[href="#about"].is-current      { border-bottom-color: var(--teal); }
+.site-nav a[href="#name"].is-current       { border-bottom-color: var(--terracotta); }
+.site-nav a[href="#activities"].is-current { border-bottom-color: var(--blue); }
+.site-nav a[href="#founder"].is-current    { border-bottom-color: var(--terracotta); }
+.site-nav a[href="#contact"].is-current    { border-bottom-color: var(--amber); }
 @media (max-width: 767px) { .site-nav { display: none; } }
 
 .lang-toggle {
@@ -281,6 +293,13 @@ section[id] { scroll-margin-top: 78px; }
   background: var(--card-accent);
   -webkit-mask: var(--motif) center / contain no-repeat;
           mask: var(--motif) center / contain no-repeat;
+}
+.area-title { display: block; font-weight: 600; color: var(--ink); }
+.area-desc {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: var(--t-sm);
+  color: var(--muted-text);
 }
 .areas li:nth-child(1) { --card-accent: var(--teal);       --motif: var(--motif-co); }
 .areas li:nth-child(2) { --card-accent: var(--blue);       --motif: var(--motif-nested); }
