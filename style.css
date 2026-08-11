@@ -33,7 +33,7 @@
   --motif-union:  url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Ccircle%20cx='16'%20cy='20'%20r='9'%20fill='none'%20stroke='black'%20stroke-width='3'/%3E%3Ccircle%20cx='24'%20cy='20'%20r='9'%20fill='none'%20stroke='black'%20stroke-width='3'/%3E%3C/svg%3E");
 
   /* ---- layout ---- */
-  --wrap: 820px;
+  --wrap: 1080px;
   --pad:  clamp(1.25rem, 0.8rem + 2vw, 2.5rem);
 
   /* ---- type ---- */
@@ -376,6 +376,29 @@ section[id] { scroll-margin-top: 78px; }
 /* ---------- responsive ---------- */
 @media (min-width: 620px) {
   .areas { grid-template-columns: 1fr 1fr; }
+}
+/* wide screens — editorial two-column: section title in a left rail,
+   body in the right column. Scoped to .section so the header (flex),
+   footer and hero keep their own layout. */
+@media (min-width: 900px) {
+  .section > .wrap {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    column-gap: 3rem;
+    align-items: start;
+  }
+  /* span every implicit row so the sticky title has room to travel */
+  .section > .wrap > .section-title {
+    grid-column: 1;
+    grid-row: 1 / span 20;
+    align-self: start;
+    position: sticky;
+    top: 96px;
+    margin-bottom: 0;
+  }
+  .section > .wrap > *:not(.section-title) {
+    grid-column: 2;
+  }
 }
 @media (max-width: 560px) {
   /* brand symbol shown small in the hero's lower-right whitespace,
