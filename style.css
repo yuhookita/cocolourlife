@@ -402,7 +402,7 @@ section[id] { scroll-margin-top: 78px; }
   }
   .section > .wrap {
     display: grid;
-    grid-template-columns: 260px minmax(0, 1fr);
+    grid-template-columns: 300px minmax(0, 1fr);
     column-gap: 3rem;
     align-items: start;
   }
@@ -411,12 +411,22 @@ section[id] { scroll-margin-top: 78px; }
     grid-column: 1;
     grid-row: 1 / span 20;
     align-self: start;
+    align-items: flex-start;
     position: sticky;
     top: 96px;
     margin-bottom: 0;
   }
   .section > .wrap > *:not(.section-title) {
     grid-column: 2;
+  }
+  /* with align-items: flex-start above, the glyph top-aligns to the line
+     box, which sits well above the cap-height of CJK/Latin glyphs alike
+     (line-box top includes leading the glyph doesn't need). Nudge it down
+     onto the cap-height of the first line; measured against both "Founder"
+     and "創業者" at the max title size (30.4px) this centres the glyph on
+     the first line's ink, not the line box. */
+  .section > .wrap > .section-title::before {
+    margin-top: 16px;
   }
 }
 @media (max-width: 560px) {
