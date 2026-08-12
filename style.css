@@ -22,8 +22,8 @@
   --amber:      #dda94e;   /* secondary */
 
   /* ---- deep band (the "Our name" section) ---- */
-  --deep:       #1a5f56;   /* deep teal ground — white on this = 7.6:1 (AAA) */
-  --deep-muted: #cfe3df;   /* secondary text on --deep = 5.7:1 (AA) */
+  --deep:       #1a5f56;   /* deep teal ground — white on this = 7.46:1 (AAA) */
+  --deep-muted: #cfe3df;   /* secondary text on --deep = 5.58:1 (AA) */
 
   /* functional colour (links, focus) — deep teal. AA on white = 6.3:1 */
   --colour-primary:    #14675d;
@@ -285,7 +285,11 @@ section[id] { scroll-margin-top: 78px; }
 #activities.section--tint { background: var(--bg); }
 .areas {
   display: grid;
-  grid-template-columns: 1fr;
+  /* driven by the container's own width, not the viewport: above 900px the
+     left rail takes a fixed slice out of the body column, so a viewport-based
+     breakpoint here would make the cards narrowest exactly where the page is
+     widest. */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 0.85rem;
 }
 .areas li {
@@ -374,7 +378,9 @@ section[id] { scroll-margin-top: 78px; }
 /* ---------- soft background motifs ----------
    Just three quiet, partially-cropped circles inspired by the logo.
    Very low contrast (5–7%), off-canvas — warmth, never decoration. */
-#founder, #contact { position: relative; overflow: hidden; }
+/* clip, not hidden: `hidden` would make these sections scroll containers and
+   break the sticky section titles in the ≥900px two-column layout. */
+#founder, #contact { position: relative; overflow: clip; }
 #founder > .wrap, #contact > .wrap { position: relative; z-index: 1; }
 .hero::after,
 #founder::before,
@@ -390,9 +396,6 @@ section[id] { scroll-margin-top: 78px; }
 #contact::before { width: 380px; height: 380px; left: -165px;  bottom: -165px; background: var(--amber);      opacity: 0.07; }
 
 /* ---------- responsive ---------- */
-@media (min-width: 620px) {
-  .areas { grid-template-columns: 1fr 1fr; }
-}
 /* wide screens — editorial two-column: section title in a left rail,
    body in the right column. Scoped to .section so the header (flex),
    footer and hero keep their own layout. */
@@ -406,7 +409,9 @@ section[id] { scroll-margin-top: 78px; }
     column-gap: 3rem;
     align-items: start;
   }
-  /* span every implicit row so the sticky title has room to travel */
+  /* span every implicit row so the sticky title has room to travel; the span
+     just needs to exceed the number of children in the longest section
+     (currently 6) */
   .section > .wrap > .section-title {
     grid-column: 1;
     grid-row: 1 / span 20;
