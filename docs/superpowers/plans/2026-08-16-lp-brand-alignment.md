@@ -268,10 +268,12 @@ cd ~/Documents/GitHub/cocolourlife && python3 tools/build_logo.py && python3 too
 - [ ] **Step 5: 赤が正しいことを確認する**
 
 ```bash
-cd ~/Documents/GitHub/cocolourlife && grep -o '#BC002D' assets/*.svg | wc -l && grep -o '#BB002D' assets/logo.svg | wc -l
+cd ~/Documents/GitHub/cocolourlife && grep -o '#BC002D' assets/*.svg | wc -l && grep -o 'fill="#BB002D"' assets/logo.svg | wc -l
 ```
 
-期待: 1行目が `0`（誤った赤が消えている）、2行目が `1`（正しい赤が1箇所）。
+期待: 1行目が `0`（誤った赤が消えている）、2行目が `1`（正しい赤の塗りが1箇所）。
+
+2行目で `fill="..."` まで含めて数えるのは、生成物の先頭バナーコメント自体が `accent #BB002D` という文字列を含むため。裸の `grep -o '#BB002D'` は 2 を返す。
 
 - [ ] **Step 6: `index.html` の寸法属性を新しいアスペクト比に合わせる**
 
