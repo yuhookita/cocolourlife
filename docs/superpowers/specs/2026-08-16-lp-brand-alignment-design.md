@@ -191,7 +191,8 @@ p.11 の指定は `Amazon Ember Medium` ＋ `Noto Sans JP SemiBold`。しかし:
 
 | 現行 | → | 参照箇所 |
 |---|---|---|
-| `--teal` / `--teal-dk` / `--teal-lt` | `--navy` / `--navy-dk` / `--navy-lt` | 下線・マーカー・ラング切替 |
+| `--teal` | `--navy` | 下線・マーカー・ラング切替 |
+| `--teal-dk` / `--teal-lt` | （削除） | **参照ゼロの死んだトークン**。`grep -c "var(--teal-dk)" style.css` = 0 |
 | `--blue` | `--peri` | カード罫 |
 | `--terracotta` | `--peach` | カード罫・背景ブロブ |
 | `--amber` | `--butter` | カード罫・背景ブロブ |
