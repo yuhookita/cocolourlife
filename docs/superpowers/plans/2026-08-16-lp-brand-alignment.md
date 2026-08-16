@@ -445,7 +445,10 @@ cd ~/Documents/GitHub/cocolourlife && python3 tools/verify_brand.py
      Navy and Crimson are the only two that clear WCAG AA on white
      (15.78:1 and 6.66:1). The seven pastels top out at 2.37:1, so they are
      ground and decoration only — never a text colour. On navy they all pass.
-     tools/verify_brand.py enforces this. */
+     tools/verify_brand.py enforces this.
+     All ten are listed even where the page does not currently use one:
+     this block is the site's copy of the brand reference, and the check
+     script compares against it to catch drift from the official values. */
   --navy:    #1B1464;
   --crimson: #BB002D;
   --rose:    #D8666E;
@@ -530,10 +533,10 @@ cd ~/Documents/GitHub/cocolourlife && python3 tools/verify_brand.py
 #contact::before { width: 380px; height: 380px; left: -165px;  bottom: -165px; background: var(--butter); opacity: 0.22; }
 ```
 
-`style.css:466` — Our name の見出し罫のグラデーション。公式値ちょうどに。
+`style.css:466` — Our name の見出し罫のグラデーション。定義したトークンを使う（現行は生のhexで、しかも公式値から最大 ΔE 6 ずれている）。
 
 ```css
-  background: linear-gradient(90deg, #8FC9BB, #92A9D4, #FBD894, #EEA296);
+  background: linear-gradient(90deg, var(--mint), var(--peri), var(--butter), var(--peach));
 ```
 
 `style.css:471` のコメント中の `#BC002D` を `#BB002D` に直す。
@@ -541,12 +544,12 @@ cd ~/Documents/GitHub/cocolourlife && python3 tools/verify_brand.py
 `style.css:480-485` — dot-divider。現行4色は公式値から最大 ΔE 14 ずれており、4色目 `#aa9fd9` に至っては公式パレットに存在しない紫。
 
 ```css
-.dot-divider span:nth-child(1) { background: #8FC9BB; }
-.dot-divider span:nth-child(2) { background: #92A9D4; }
-.dot-divider span:nth-child(3) { background: #FBD894; }
-.dot-divider span:nth-child(4) { background: #83BED1; }
+.dot-divider span:nth-child(1) { background: var(--mint); }
+.dot-divider span:nth-child(2) { background: var(--peri); }
+.dot-divider span:nth-child(3) { background: var(--butter); }
+.dot-divider span:nth-child(4) { background: var(--sky); }
 .dot-divider span:nth-child(5) {
-  background: #BB002D;
+  background: var(--crimson);
 ```
 
 - [ ] **Step 5: 検証が通ることを確認する**
