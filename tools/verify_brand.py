@@ -18,7 +18,8 @@ OFFICIAL = {
 }
 PASTELS = {"rose", "peach", "apricot", "butter", "mint", "sky", "peri"}
 # Task 3 extends this with the glyph tokens once their replacements exist.
-RETIRED = ["--teal", "--teal-dk", "--teal-lt", "--blue", "--terracotta", "--amber"]
+RETIRED = ["--teal", "--teal-dk", "--teal-lt", "--blue", "--terracotta", "--amber",
+           "--co-glyph", "--motif-co", "--motif-nested", "--motif-link", "--motif-union"]
 
 # (foreground, background, label, minimum ratio)
 PAIRS = [

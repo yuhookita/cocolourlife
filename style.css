@@ -39,12 +39,13 @@
   --colour-primary:    #1B1464;   /* 15.78:1 on white */
   --colour-primary-dk: #BB002D;   /* hover — 6.66:1 on white */
 
-  /* brand glyph masks — the "Co" mark and its decompositions, reused site-wide */
-  --co-glyph: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M16.5%205%20A%209%209%200%201%200%2016.5%2019'%20fill='none'%20stroke='black'%20stroke-width='2.6'%20stroke-linecap='round'/%3E%3Ccircle%20cx='18.5'%20cy='12'%20r='3'%20fill='black'/%3E%3C/svg%3E");
-  --motif-co:     url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Cpath%20d='M27%208%20A%2015%2015%200%201%200%2027%2032'%20fill='none'%20stroke='black'%20stroke-width='4'%20stroke-linecap='round'/%3E%3Ccircle%20cx='30'%20cy='20'%20r='4.2'%20fill='black'/%3E%3C/svg%3E");
-  --motif-nested: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Cpath%20d='M25%209%20A%2013%2013%200%201%200%2025%2031'%20fill='none'%20stroke='black'%20stroke-width='3.6'%20stroke-linecap='round'/%3E%3Cpath%20d='M23%2015%20A%207%207%200%201%200%2023%2025'%20fill='none'%20stroke='black'%20stroke-width='3.6'%20stroke-linecap='round'/%3E%3C/svg%3E");
-  --motif-link:   url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Ccircle%20cx='12'%20cy='23'%20r='4.5'%20fill='black'/%3E%3Ccircle%20cx='28'%20cy='23'%20r='4.5'%20fill='black'/%3E%3Cpath%20d='M12%2023%20Q%2020%209%2028%2023'%20fill='none'%20stroke='black'%20stroke-width='3'%20stroke-linecap='round'/%3E%3C/svg%3E");
-  --motif-union:  url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Ccircle%20cx='16'%20cy='20'%20r='9'%20fill='none'%20stroke='black'%20stroke-width='3'/%3E%3Ccircle%20cx='24'%20cy='20'%20r='9'%20fill='none'%20stroke='black'%20stroke-width='3'/%3E%3C/svg%3E");
+  /* card watermarks — built from circles only, because dots are the brand's
+     drawing language. None of these is the logo mark: repeating the mark as
+     decoration is the thing the brand book forbids. */
+  --motif-series: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Cg%20fill='black'%3E%3Ccircle%20cx='7'%20cy='30'%20r='3.5'/%3E%3Ccircle%20cx='16'%20cy='26'%20r='4.5'/%3E%3Ccircle%20cx='26'%20cy='21'%20r='5.5'/%3E%3Ccircle%20cx='34'%20cy='15'%20r='6'/%3E%3C/g%3E%3C/svg%3E");
+  --motif-spread: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Cg%20fill='black'%3E%3Ccircle%20cx='12'%20cy='20'%20r='7'/%3E%3Ccircle%20cx='25'%20cy='13'%20r='3'/%3E%3Ccircle%20cx='29.5'%20cy='20'%20r='3.5'/%3E%3Ccircle%20cx='25'%20cy='27'%20r='3'/%3E%3C/g%3E%3C/svg%3E");
+  --motif-pair:   url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Cg%20fill='black'%3E%3Ccircle%20cx='13'%20cy='24'%20r='6.5'/%3E%3Ccircle%20cx='27'%20cy='24'%20r='6.5'/%3E%3Ccircle%20cx='20'%20cy='11'%20r='3.2'/%3E%3C/g%3E%3C/svg%3E");
+  --motif-bridge: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Cg%20fill='black'%3E%3Ccircle%20cx='7.5'%20cy='20'%20r='5.5'/%3E%3Ccircle%20cx='32.5'%20cy='20'%20r='5.5'/%3E%3Ccircle%20cx='15'%20cy='20'%20r='2.4'/%3E%3Ccircle%20cx='20'%20cy='20'%20r='2.4'/%3E%3Ccircle%20cx='25'%20cy='20'%20r='2.4'/%3E%3C/g%3E%3C/svg%3E");
 
   /* ---- layout ---- */
   --wrap: 820px;
@@ -237,9 +238,9 @@ section[id] { scroll-margin-top: 78px; }
   background: var(--deep);
   color: #ffffff;
 }
-/* --marker must beat the ID-based section colour cycle below, or the Co glyph
-   is drawn in that section's accent colour and disappears into the dark band. */
-.section--deep .section-title { color: #ffffff; --marker: #ffffff !important; }
+/* --marker must beat the ID-based section rules below, or the rule under the
+   heading keeps its navy and disappears into the dark band. */
+.section--deep .section-title { color: #ffffff; --marker: #ffffff !important; --dot: #ffffff; }
 .section--deep .lead { color: #ffffff; }
 .section--deep ::selection { background: rgba(255, 255, 255, 0.24); }
 .section--deep a:focus-visible,
@@ -256,16 +257,17 @@ section[id] { scroll-margin-top: 78px; }
   padding-bottom: 0.9rem;
   position: relative;
   --marker: var(--navy);
+  --dot: var(--crimson);
 }
-/* mini "Co" mark before each heading — echoes the brand symbol */
+/* the logo's accent dot, quoted — not the mark redrawn. At this size the
+   39-dot ring would only ever read as a smudge. */
 .section-title::before {
   content: "";
   flex: none;
-  width: 20px;
-  height: 20px;
-  background: var(--marker);
-  -webkit-mask: var(--co-glyph) center / contain no-repeat;
-          mask: var(--co-glyph) center / contain no-repeat;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--dot);
 }
 /* short left-aligned rule in the section's colour */
 .section-title::after {
@@ -277,7 +279,7 @@ section[id] { scroll-margin-top: 78px; }
   height: 2px;
   background: var(--marker);
 }
-/* sections cycle the 4 core colours */
+/* every section takes the same navy rule — the pastels cannot carry it on white */
 #about      .section-title { --marker: var(--navy); }
 #activities .section-title { --marker: var(--navy); }
 #founder    .section-title { --marker: var(--navy); }
@@ -316,7 +318,7 @@ section[id] { scroll-margin-top: 78px; }
 }
 .areas li:hover { border-top-color: var(--card-accent); }
 .areas li:hover { border-color: #d9d8e6; background: #fbfbfd; }
-/* brand motif — a decomposition of the Co mark, a different one per card */
+/* card watermark — a figure of circles, a different one per card */
 .areas li::before {
   content: "";
   position: absolute;
@@ -324,7 +326,9 @@ section[id] { scroll-margin-top: 78px; }
   left: 1.3rem;
   width: 30px;
   height: 30px;
-  background: var(--card-accent);
+  /* navy, not --card-accent: the pastels sink into the cool card ground */
+  background: var(--navy);
+  opacity: 0.30;
   -webkit-mask: var(--motif) center / contain no-repeat;
           mask: var(--motif) center / contain no-repeat;
 }
@@ -335,10 +339,10 @@ section[id] { scroll-margin-top: 78px; }
   font-size: var(--t-sm);
   color: var(--muted-text);
 }
-.areas li:nth-child(1) { --card-accent: var(--mint);   --motif: var(--motif-co); }
-.areas li:nth-child(2) { --card-accent: var(--peri);   --motif: var(--motif-nested); }
-.areas li:nth-child(3) { --card-accent: var(--butter); --motif: var(--motif-link); }
-.areas li:nth-child(4) { --card-accent: var(--peach);  --motif: var(--motif-union); }
+.areas li:nth-child(1) { --card-accent: var(--mint);   --motif: var(--motif-series); }
+.areas li:nth-child(2) { --card-accent: var(--peri);   --motif: var(--motif-spread); }
+.areas li:nth-child(3) { --card-accent: var(--butter); --motif: var(--motif-pair); }
+.areas li:nth-child(4) { --card-accent: var(--peach);  --motif: var(--motif-bridge); }
 
 /* ---------- founder ---------- */
 .founder-name { font-weight: 600; color: var(--ink); margin-bottom: 0.75rem; }
@@ -372,7 +376,8 @@ section[id] { scroll-margin-top: 78px; }
 }
 /* small Co monogram — brackets the page against the hero symbol */
 .footer-mark { margin-bottom: 1.6rem; }
-.footer-mark svg { display: block; width: 40px; height: 40px; }
+/* the mark is 1.0285:1, not square — let the height follow or it squashes */
+.footer-mark img { display: block; width: 42px; height: auto; }
 .footer-org { font-size: var(--t-xs); color: var(--muted-text); }
 .footer-copy { font-size: var(--t-xs); color: var(--muted-text); opacity: 0.85; margin-top: 0.4rem; }
 .footer-links {
@@ -523,7 +528,9 @@ section[id] { scroll-margin-top: 78px; }
   .section--deep .lead,
   .name-coda,
   .name-coda-intro { color: #000 !important; }
-  .section--deep .section-title { color: #000 !important; --marker: #000 !important; }
+  /* the deep band loses its ground in print, so the white rule and white dot
+     it carries would vanish — force both back to ink */
+  .section--deep .section-title { color: #000 !important; --marker: #000 !important; --dot: #000 !important; }
   .section { padding-block: 1.2rem; }
   body { color: #000; }
   a { color: #000; text-decoration: underline; }
