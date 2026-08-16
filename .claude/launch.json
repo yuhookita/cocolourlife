@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "static-site",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "/Users/user/Documents/GitHub/cocolourlife", "-l", "8000", "--no-clipboard"],
+      "runtimeExecutable": "/usr/bin/ruby",
+      "runtimeArgs": ["/Users/user/Documents/GitHub/cocolourlife/.claude/serve.rb"],
       "port": 8000
     }
   ]
