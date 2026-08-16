@@ -531,6 +531,9 @@ section[id] { scroll-margin-top: 78px; }
   /* the deep band loses its ground in print, so the white rule and white dot
      it carries would vanish — force both back to ink */
   .section--deep .section-title { color: #000 !important; --marker: #000 !important; --dot: #000 !important; }
+  /* --marker cannot reach this one: it paints a gradient, and the pastels are
+     invisible once the navy ground is gone */
+  #name .section-title::after { background: #000 !important; }
   .section { padding-block: 1.2rem; }
   body { color: #000; }
   a { color: #000; text-decoration: underline; }
