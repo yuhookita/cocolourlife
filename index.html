@@ -18,10 +18,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Carlito was only ever loaded for the old logo wordmark; the logo now
+       carries its own outlines, so it is no longer fetched. -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <!-- TODO: apple-touch-icon.png（180×180）を新ロゴから書き出して追加 -->
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 </head>
 <body id="top">
 
@@ -30,37 +32,10 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a href="#top" class="wordmark" aria-label="CoColour Life — home">
-        <!-- Official CoColour Life logo (assets/logo.svg), inlined verbatim so the
-             Carlito wordmark renders with the page-loaded font. Not recoloured/redrawn. -->
-        <svg class="wordmark-logo" viewBox="50 50 610 150" aria-hidden="true" focusable="false"><g>
-          <circle cx="109.8" cy="77.8" r="8.3" fill="#88b4d4"/>
-          <circle cx="118.4" cy="165.6" r="10.4" fill="#fbd88f"/>
-          <circle cx="84.3" cy="154.1" r="9.7" fill="#9ec9b7"/>
-          <circle cx="151.3" cy="161.4" r="9.6" fill="#eda394"/>
-          <circle cx="83.6" cy="91.6" r="9.1" fill="#83bed0"/>
-          <circle cx="83.1" cy="120.5" r="10.2" fill="#8ac6c6"/>
-          <circle cx="130.2" cy="82.0" r="9.4" fill="#93a7d8"/>
-          <circle cx="155.2" cy="87.8" r="8.3" fill="#ab9fda"/>
-          <circle cx="171.0" cy="152.0" r="8.3" fill="#eca194"/>
-          <circle cx="72.3" cy="136.8" r="5.8" fill="#97c8bc"/>
-          <circle cx="95.3" cy="169.6" r="6.1" fill="#dcd39c"/>
-          <circle cx="101.1" cy="96.9" r="5.6" fill="#83bcd1"/>
-          <circle cx="135.1" cy="179.5" r="5.8" fill="#fbce8f"/>
-          <circle cx="103.6" cy="153.0" r="4.9" fill="#bfcfa7"/>
-          <circle cx="108.6" cy="180.7" r="4.1" fill="#c3cfa5"/>
-          <circle cx="121.3" cy="65.2" r="4.0" fill="#9ba4d9"/>
-          <circle cx="148.6" cy="102.5" r="3.6" fill="#ab9fda"/>
-          <circle cx="149.2" cy="74.2" r="3.5" fill="#a6a1da"/>
-          <circle cx="154.6" cy="141.8" r="4.9" fill="#eda493"/>
-          <circle cx="66.3" cy="122.4" r="4.1" fill="#87c5c8"/>
-          <circle cx="93.3" cy="138.8" r="4.2" fill="#94c8be"/>
-          <circle cx="71.2" cy="103.2" r="4.0" fill="#82c5cc"/>
-          <circle cx="91.1" cy="78.2" r="3.5" fill="#8bb0d5"/>
-          <circle cx="135.2" cy="158.5" r="3.5" fill="#f7c091"/>
-          <circle cx="139.6" cy="68.6" r="3.6" fill="#95a6d8"/>
-          <circle cx="169.1" cy="117.7" r="15.5" fill="#BC002D"/>
-        </g>
-        <text x="256" y="142" font-family="Carlito, 'Source Sans 3', sans-serif" font-size="56" fill="#2B2D42" letter-spacing="1">CoColour Life</text></svg>
+        <!-- Official CoColour Life logo (assets/logo.svg): the master artwork's
+             39-circle mark plus the wordmark as traced outlines, so it renders
+             identically without depending on a webfont. Never recolour or redraw. -->
+        <img class="wordmark-logo" src="assets/logo.svg" alt="" width="692" height="207" />
       </a>
       <nav class="site-nav" aria-label="Page sections">
         <a href="#about" data-en="About" data-ja="会社概要">About</a>
@@ -82,35 +57,8 @@
     <!-- ===== HERO ===== -->
     <section class="hero">
       <span class="hero-mark" aria-hidden="true">
-        <!-- Official CoColour Life logo mark (from assets/logo.svg), verbatim -->
-        <svg viewBox="53 53 140 140" focusable="false">
-          <circle cx="109.8" cy="77.8" r="8.3" fill="#88b4d4"/>
-          <circle cx="118.4" cy="165.6" r="10.4" fill="#fbd88f"/>
-          <circle cx="84.3" cy="154.1" r="9.7" fill="#9ec9b7"/>
-          <circle cx="151.3" cy="161.4" r="9.6" fill="#eda394"/>
-          <circle cx="83.6" cy="91.6" r="9.1" fill="#83bed0"/>
-          <circle cx="83.1" cy="120.5" r="10.2" fill="#8ac6c6"/>
-          <circle cx="130.2" cy="82.0" r="9.4" fill="#93a7d8"/>
-          <circle cx="155.2" cy="87.8" r="8.3" fill="#ab9fda"/>
-          <circle cx="171.0" cy="152.0" r="8.3" fill="#eca194"/>
-          <circle cx="72.3" cy="136.8" r="5.8" fill="#97c8bc"/>
-          <circle cx="95.3" cy="169.6" r="6.1" fill="#dcd39c"/>
-          <circle cx="101.1" cy="96.9" r="5.6" fill="#83bcd1"/>
-          <circle cx="135.1" cy="179.5" r="5.8" fill="#fbce8f"/>
-          <circle cx="103.6" cy="153.0" r="4.9" fill="#bfcfa7"/>
-          <circle cx="108.6" cy="180.7" r="4.1" fill="#c3cfa5"/>
-          <circle cx="121.3" cy="65.2" r="4.0" fill="#9ba4d9"/>
-          <circle cx="148.6" cy="102.5" r="3.6" fill="#ab9fda"/>
-          <circle cx="149.2" cy="74.2" r="3.5" fill="#a6a1da"/>
-          <circle cx="154.6" cy="141.8" r="4.9" fill="#eda493"/>
-          <circle cx="66.3" cy="122.4" r="4.1" fill="#87c5c8"/>
-          <circle cx="93.3" cy="138.8" r="4.2" fill="#94c8be"/>
-          <circle cx="71.2" cy="103.2" r="4.0" fill="#82c5cc"/>
-          <circle cx="91.1" cy="78.2" r="3.5" fill="#8bb0d5"/>
-          <circle cx="135.2" cy="158.5" r="3.5" fill="#f7c091"/>
-          <circle cx="139.6" cy="68.6" r="3.6" fill="#95a6d8"/>
-          <circle cx="169.1" cy="117.7" r="15.5" fill="#BC002D"/>
-        </svg>
+        <!-- Official CoColour Life logo mark (assets/logo-mark.svg), verbatim -->
+        <img src="assets/logo-mark.svg" alt="" width="213" height="207" />
       </span>
       <div class="wrap hero-inner">
         <h1 class="hero-name">CoColour Life</h1>
