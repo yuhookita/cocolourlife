@@ -6,28 +6,38 @@
    ============================================================ */
 
 :root {
-  /* ---- neutrals (warmed — professional but not cold) ---- */
+  /* ---- neutrals (cooled slightly so they sit under brand navy) ---- */
   --bg:         #ffffff;
-  --surface:    #f7f5f1;   /* warm off-white */
-  --ink:        #2a2c33;   /* warm slate */
-  --muted-text: #5f6069;   /* warm gray — AA on white = 6.0:1 */
-  --line:       #e9e5df;   /* warm hairline */
+  --surface:    #f6f6fa;   /* cool off-white */
+  --ink:        #2a2c33;   /* body text — long-form legibility beats brand purity */
+  --muted-text: #5f6069;   /* AA on white = 6.24:1 */
+  --line:       #e6e5ee;   /* cool hairline */
 
-  /* ---- brand: 4 core colours (deep teal / muted blue / terracotta / amber) ---- */
-  --teal:       #1d6e63;   /* dominant */
-  --teal-dk:    #16665c;
-  --teal-lt:    #2a7c70;
-  --blue:       #5b7fb0;   /* secondary */
-  --terracotta: #bd5d43;   /* signature warm accent — the "o" of the Co mark */
-  --amber:      #dda94e;   /* secondary */
+  /* ---- official palette (BRAND BOOK p.9) ------------------------------
+     Navy and Crimson are the only two that clear WCAG AA on white
+     (15.78:1 and 6.66:1). The seven pastels top out at 2.37:1, so they are
+     ground and decoration only — never a text colour. On navy they all pass.
+     tools/verify_brand.py enforces this.
+     All ten are listed even where the page does not currently use one:
+     this block is the site's copy of the brand reference, and the check
+     script compares against it to catch drift from the official values. */
+  --navy:    #1B1464;
+  --crimson: #BB002D;
+  --rose:    #D8666E;
+  --peach:   #EEA296;
+  --apricot: #F8BD88;
+  --butter:  #FBD894;
+  --mint:    #8FC9BB;
+  --sky:     #83BED1;
+  --peri:    #92A9D4;
 
   /* ---- deep band (the "Our name" section) ---- */
-  --deep:       #1a5f56;   /* deep teal ground — white on this = 7.46:1 (AAA) */
-  --deep-muted: #cfe3df;   /* secondary text on --deep = 5.58:1 (AA) */
+  --deep:       #1B1464;   /* white on this = 15.78:1 (AAA) */
+  --deep-muted: #cbd3ec;   /* secondary text on --deep = 10.57:1 */
 
-  /* functional colour (links, focus) — deep teal. AA on white = 6.3:1 */
-  --colour-primary:    #14675d;
-  --colour-primary-dk: #0f544b;   /* hover */
+  /* functional colour (links, focus) */
+  --colour-primary:    #1B1464;   /* 15.78:1 on white */
+  --colour-primary-dk: #BB002D;   /* hover — 6.66:1 on white */
 
   /* brand glyph masks — the "Co" mark and its decompositions, reused site-wide */
   --co-glyph: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M16.5%205%20A%209%209%200%201%200%2016.5%2019'%20fill='none'%20stroke='black'%20stroke-width='2.6'%20stroke-linecap='round'/%3E%3Ccircle%20cx='18.5'%20cy='12'%20r='3'%20fill='black'/%3E%3C/svg%3E");
@@ -50,7 +60,7 @@
 }
 
 /* ---------- selection — colour appears where you read ---------- */
-::selection { background: rgba(29, 110, 99, 0.16); }
+::selection { background: rgba(27, 20, 100, 0.14); }
 
 /* ---------- reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -149,11 +159,11 @@ section[id] { scroll-margin-top: 78px; }
    section's colour (the accessible version of "colour follows you") */
 .site-nav a { padding-bottom: 3px; border-bottom: 2px solid transparent; }
 .site-nav a.is-current { color: var(--ink); }
-.site-nav a[href="#about"].is-current      { border-bottom-color: var(--teal); }
-.site-nav a[href="#name"].is-current       { border-bottom-color: var(--terracotta); }
-.site-nav a[href="#activities"].is-current { border-bottom-color: var(--blue); }
-.site-nav a[href="#founder"].is-current    { border-bottom-color: var(--terracotta); }
-.site-nav a[href="#contact"].is-current    { border-bottom-color: var(--amber); }
+.site-nav a[href="#about"].is-current      { border-bottom-color: var(--navy); }
+.site-nav a[href="#name"].is-current       { border-bottom-color: var(--navy); }
+.site-nav a[href="#activities"].is-current { border-bottom-color: var(--navy); }
+.site-nav a[href="#founder"].is-current    { border-bottom-color: var(--navy); }
+.site-nav a[href="#contact"].is-current    { border-bottom-color: var(--navy); }
 @media (max-width: 767px) { .site-nav { display: none; } }
 
 .lang-toggle {
@@ -175,7 +185,7 @@ section[id] { scroll-margin-top: 78px; }
 .lang-btn { border-bottom: 2px solid transparent; }
 .lang-btn:hover { color: var(--ink); }
 /* active language — underline only, matching the nav scrollspy language */
-.lang-btn.is-active { color: var(--ink); border-bottom-color: var(--teal); }
+.lang-btn.is-active { color: var(--ink); border-bottom-color: var(--navy); }
 .lang-sep { color: var(--line); font-size: var(--t-sm); }
 
 /* ---------- hero ---------- */
@@ -198,7 +208,9 @@ section[id] { scroll-margin-top: 78px; }
   z-index: 0;
   pointer-events: none;
 }
-.hero-mark svg { width: 100%; height: 100%; display: block; }
+/* the mark is very slightly taller than wide (200 × 194.8), so let the height
+   follow rather than stretching it to the square container */
+.hero-mark img { width: 100%; height: auto; display: block; }
 
 .hero-name {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
@@ -243,7 +255,7 @@ section[id] { scroll-margin-top: 78px; }
   margin-bottom: 1.8rem;
   padding-bottom: 0.9rem;
   position: relative;
-  --marker: var(--teal);
+  --marker: var(--navy);
 }
 /* mini "Co" mark before each heading — echoes the brand symbol */
 .section-title::before {
@@ -266,11 +278,11 @@ section[id] { scroll-margin-top: 78px; }
   background: var(--marker);
 }
 /* sections cycle the 4 core colours */
-#about      .section-title { --marker: var(--teal); }
-#activities .section-title { --marker: var(--blue); }
-#founder    .section-title { --marker: var(--terracotta); }
-#contact    .section-title { --marker: var(--amber); }
-#privacy    .section-title { --marker: var(--teal); }
+#about      .section-title { --marker: var(--navy); }
+#activities .section-title { --marker: var(--navy); }
+#founder    .section-title { --marker: var(--navy); }
+#contact    .section-title { --marker: var(--navy); }
+#privacy    .section-title { --marker: var(--navy); }
 
 .lead { color: var(--ink); max-width: 66ch; }
 .coi {
@@ -303,7 +315,7 @@ section[id] { scroll-margin-top: 78px; }
   transition: border-color 180ms ease, background-color 180ms ease;
 }
 .areas li:hover { border-top-color: var(--card-accent); }
-.areas li:hover { border-color: #ddd8cf; background: #fbfaf7; }
+.areas li:hover { border-color: #d9d8e6; background: #fbfbfd; }
 /* brand motif — a decomposition of the Co mark, a different one per card */
 .areas li::before {
   content: "";
@@ -323,10 +335,10 @@ section[id] { scroll-margin-top: 78px; }
   font-size: var(--t-sm);
   color: var(--muted-text);
 }
-.areas li:nth-child(1) { --card-accent: var(--teal);       --motif: var(--motif-co); }
-.areas li:nth-child(2) { --card-accent: var(--blue);       --motif: var(--motif-nested); }
-.areas li:nth-child(3) { --card-accent: var(--amber);      --motif: var(--motif-link); }
-.areas li:nth-child(4) { --card-accent: var(--terracotta); --motif: var(--motif-union); }
+.areas li:nth-child(1) { --card-accent: var(--mint);   --motif: var(--motif-co); }
+.areas li:nth-child(2) { --card-accent: var(--peri);   --motif: var(--motif-nested); }
+.areas li:nth-child(3) { --card-accent: var(--butter); --motif: var(--motif-link); }
+.areas li:nth-child(4) { --card-accent: var(--peach);  --motif: var(--motif-union); }
 
 /* ---------- founder ---------- */
 .founder-name { font-weight: 600; color: var(--ink); margin-bottom: 0.75rem; }
@@ -391,9 +403,9 @@ section[id] { scroll-margin-top: 78px; }
   pointer-events: none;
   z-index: 0;
 }
-.hero::after   { width: 340px; height: 340px; left: -150px; bottom: -160px; background: var(--terracotta); opacity: 0.06; }
-#founder::before { width: 430px; height: 430px; right: -190px; top: -130px;  background: var(--teal);       opacity: 0.05; }
-#contact::before { width: 380px; height: 380px; left: -165px;  bottom: -165px; background: var(--amber);      opacity: 0.07; }
+.hero::after     { width: 340px; height: 340px; left: -150px; bottom: -160px; background: var(--peach);  opacity: 0.16; }
+#founder::before { width: 430px; height: 430px; right: -190px; top: -130px;   background: var(--peri);   opacity: 0.16; }
+#contact::before { width: 380px; height: 380px; left: -165px;  bottom: -165px; background: var(--butter); opacity: 0.22; }
 
 /* ---------- responsive ---------- */
 /* wide screens — editorial two-column: section title in a left rail,
@@ -461,12 +473,12 @@ section[id] { scroll-margin-top: 78px; }
    on the deep ground (the original teal→terracotta gradient sinks into it) */
 #name .section-title::after {
   width: 116px;
-  background: linear-gradient(90deg, #9ec9b7, #88b4d4, #fbd88f, #eda394);
+  background: linear-gradient(90deg, var(--mint), var(--peri), var(--butter), var(--peach));
 }
 #name .lead + .lead { margin-top: 1.1em; }
 
 /* dot divider — the hero ring's palette, restated in miniature.
-   Final red dot = the ring's #BC002D accent (the Japan sun); on the deep
+   Final red dot = the ring's #BB002D accent (the Japan sun); on the deep
    ground it needs a hairline ring to separate from the background. */
 .dot-divider {
   display: flex;
@@ -475,12 +487,12 @@ section[id] { scroll-margin-top: 78px; }
   margin-top: 2.3rem;
 }
 .dot-divider span { width: 9px; height: 9px; border-radius: 50%; }
-.dot-divider span:nth-child(1) { background: #88b4d4; }
-.dot-divider span:nth-child(2) { background: #9ec9b7; }
-.dot-divider span:nth-child(3) { background: #fbd88f; }
-.dot-divider span:nth-child(4) { background: #ab9fda; }
+.dot-divider span:nth-child(1) { background: var(--mint); }
+.dot-divider span:nth-child(2) { background: var(--peri); }
+.dot-divider span:nth-child(3) { background: var(--butter); }
+.dot-divider span:nth-child(4) { background: var(--sky); }
 .dot-divider span:nth-child(5) {
-  background: #bc002d;
+  background: var(--crimson);
   width: 11px;
   height: 11px;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9);
