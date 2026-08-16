@@ -428,7 +428,7 @@ section[id] { scroll-margin-top: 78px; }
   }
   /* span every implicit row so the sticky title has room to travel; the span
      just needs to exceed the number of children in the longest section
-     (currently 6) */
+     (currently 7, in #name) */
   .section > .wrap > .section-title {
     grid-column: 1;
     grid-row: 1 / span 20;
@@ -481,6 +481,31 @@ section[id] { scroll-margin-top: 78px; }
   background: linear-gradient(90deg, var(--mint), var(--peri), var(--butter), var(--peach));
 }
 #name .lead + .lead { margin-top: 1.1em; }
+/* the mark shown at reading size, so the copy beside it can point at the
+   circles it describes */
+.name-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4rem;
+  margin-top: 1.1em;
+  /* the same 66ch the .lead paragraphs take, so the block's right edge lands
+     on theirs rather than overhanging the column */
+  max-width: 66ch;
+}
+.name-logo .lead { margin: 0; max-width: none; }
+/* shown straight on the navy ground: the seven pastels are at their best
+   there, and the crimson circle the copy points at is a logotype, which WCAG
+   1.4.11 exempts from the 3:1 graphics threshold (it measures 2.37:1 here). */
+.name-logo-mark {
+  flex: none;
+  width: 132px;
+  height: auto;
+}
+@media (min-width: 560px) {
+  .name-logo { flex-direction: row; gap: 1.75rem; }
+  .name-logo-mark { width: 148px; }
+}
 
 /* dot divider — the hero ring's palette, restated in miniature.
    Final red dot = the ring's #BB002D accent (the Japan sun); on the deep
