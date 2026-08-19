@@ -358,10 +358,18 @@ section[id] { scroll-margin-top: 78px; }
 /* ---------- contact ---------- */
 .contact-lead { color: var(--muted-text); }
 .contact-email { margin-top: 0.7rem; }
-.contact-email a {
+.contact-phone { margin-top: 0.45rem; }
+.contact-email a,
+.contact-phone a {
   font-size: clamp(1.3rem, 1.15rem + 0.7vw, 1.6rem);
   font-weight: 600;
   letter-spacing: -0.01em;
+}
+.contact-phone-intl {
+  margin-left: 0.5rem;
+  font-size: var(--t-sm);
+  color: var(--muted-text);
+  white-space: nowrap;
 }
 
 /* ---------- privacy ---------- */
