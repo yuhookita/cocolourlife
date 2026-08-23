@@ -10,11 +10,11 @@ import fitz
 from PIL import Image, ImageChops
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_SRC = Path.home() / "Desktop/CoColour Life logo branding/Logo Sourcefile/Logo Sourcefile.pdf"
+DEFAULT_SRC = Path.home() / "Desktop/cocolour branding rev4/Logo Sourcefile/Logo Sourcefile.pdf"
 
 # viewBox of each generated asset, in page coordinates of the master
-FULL = (153.9040, 396.2570, 692.1923, 207.4860)
-MARK = (153.9040, 396.2570, 213.4021, 207.4860)
+FULL = (176.5360, 403.8279, 646.9281, 192.3438)
+MARK = (176.5360, 403.8279, 197.8292, 192.3438)
 
 SCALE = 4          # render at 4x so sub-pixel drift shows up
 TOLERANCE = 0.004  # fraction of pixels allowed to differ strongly
@@ -192,8 +192,6 @@ def main():
                 render_svg(ROOT / "assets/logo.svg", FULL[2])),
         compare("logo-mark.svg", render_master(src, MARK),
                 render_svg(ROOT / "assets/logo-mark.svg", MARK[2])),
-        compare("favicon.svg", render_master(src, MARK),
-                render_svg(ROOT / "assets/favicon.svg", MARK[2])),
         check_logo_png(src),
         check_logo_mark_png(src),
         check_apple_touch_icon_png(src),

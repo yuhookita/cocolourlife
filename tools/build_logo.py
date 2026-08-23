@@ -15,11 +15,13 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
-DEFAULT_SRC = Path.home() / "Desktop/CoColour Life logo branding/Logo Sourcefile/Logo Sourcefile.pdf"
+DEFAULT_SRC = Path.home() / "Desktop/cocolour branding rev4/Logo Sourcefile/Logo Sourcefile.pdf"
 
-# Measured from the master: the two hidden circles are excluded from the bbox.
-FULL = (153.9040, 396.2570, 692.1923, 207.4860)   # mark + wordmark
-MARK = (153.9040, 396.2570, 213.4021, 207.4860)   # mark only
+# Measured from the rev 4 master (2026-08-22). Its ArtBox and the ink bbox of
+# page 1 agree exactly, and unlike the earlier master it carries no hidden
+# circles, so the drawing bbox is taken as-is. The mark is 41 circles.
+FULL = (176.5360, 403.8279, 646.9281, 192.3438)   # mark + wordmark
+MARK = (176.5360, 403.8279, 197.8292, 192.3438)   # mark only
 
 NAVY = "#1b1464"   # the wordmark's ink; no circle uses it, so it isolates glyphs
 
@@ -57,6 +59,9 @@ def rasterise(svg_path, width_px):
 
 
 def main():
+    # No favicon here: rev 4 ships its own .ico, a simplified 8-dot mark drawn
+    # for 16-48px where the full 41-dot mark is illegible. assets/favicon.ico
+    # holds the designer's rasters verbatim and is not generated from this master.
     src = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_SRC
     if not src.exists():
         sys.exit(f"master artwork not found: {src}\npass its path as the first argument")
@@ -66,8 +71,6 @@ def main():
         crop(svg, FULL, title="CoColour Life", what="page 1, colour horizontal lockup"))
     (ASSETS / "logo-mark.svg").write_text(
         crop(svg, MARK, drop_wordmark=True, title="CoColour Life", what="page 1, symbol only"))
-    (ASSETS / "favicon.svg").write_text(
-        crop(svg, MARK, drop_wordmark=True, what="page 1, symbol only"))
 
     # logo.png — 1400px wide artwork on a 24px transparent margin
     art = rasterise(ASSETS / "logo.svg", 1400 - 48)
@@ -88,7 +91,7 @@ def main():
     icon.paste(inner, (16, (180 - inner.height) // 2), inner)
     icon.convert("RGB").save(ASSETS / "apple-touch-icon.png")
 
-    for name in ("logo.svg", "logo-mark.svg", "favicon.svg",
+    for name in ("logo.svg", "logo-mark.svg",
                  "logo.png", "logo-mark.png", "apple-touch-icon.png"):
         print(f"wrote assets/{name} ({(ASSETS / name).stat().st_size:,} bytes)")
 
