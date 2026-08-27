@@ -454,7 +454,7 @@ section[id] { scroll-margin-top: 78px; }
    Just three quiet, partially-cropped circles inspired by the logo.
    Very low contrast (5–7%), off-canvas — warmth, never decoration. */
 /* clip, not hidden: `hidden` would make these sections scroll containers and
-   break the sticky section titles in the ≥900px two-column layout. */
+   break the sticky section titles in the ≥1040px two-column layout. */
 #activities, #founder, #contact { position: relative; overflow: clip; }
 #activities > .wrap, #founder > .wrap, #contact > .wrap { position: relative; z-index: 1; }
 .hero::after,
@@ -475,8 +475,11 @@ section[id] { scroll-margin-top: 78px; }
 /* ---------- responsive ---------- */
 /* wide screens — editorial two-column: section title in a left rail,
    body in the right column. Scoped to .section so the header (flex),
-   footer and hero keep their own layout. */
-@media (min-width: 900px) {
+   footer and hero keep their own layout.
+   1040px, not 900px: the rail takes 300px plus a 3rem gap out of the body
+   column, so between 900 and 1040 the cards drop to a single column while
+   the rail sits empty — worse than the one-column layout just below it. */
+@media (min-width: 1040px) {
   :root {
     --wrap: 1080px;
   }

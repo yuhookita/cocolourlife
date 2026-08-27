@@ -114,7 +114,8 @@ AREA_DESCS = [
 
 # ---- approved copy, spec §6.2 ------------------------------------------------
 
-ENQUIRIES_TITLE = ("Examples of past enquiries", "これまでのご相談の例")
+ENQUIRIES_TITLE = ("Examples of past enquiries to the founder",
+                   "創業者がこれまでに受けたご相談の例")
 
 # each item is (lead EN, lead JA, detail EN, detail JA). The lead is a short
 # scan line so a reader can find the case that matches theirs without reading
@@ -153,9 +154,11 @@ ENQUIRIES = [
 ]
 
 ENQUIRIES_NOTE = (
-    "Not every enquiry is a fit. Where it is not, we say so, and, where we can, "
+    "The examples above all involve both countries, but work within one country "
+    "follows the same four areas. Not every enquiry is a fit. Where it is not, we say so, and, where we can, "
     "we point to someone better placed.",
-    "すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、"
+    "上の例はいずれも二国にまたがるものですが、一方の国だけで完結する仕事も同じ4領域で"
+    "行います。すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、"
     "可能であればより適した先をお示しします。",
 )
 
