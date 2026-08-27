@@ -92,6 +92,8 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 ### 6.2 支援例ブロック（新規）
 
+**各例はリード行＋本文の2要素にする**（2026-08-27、比較検討の結果）。3例が同じ調子で始まるため、どれが自分の話か判断するのに全文を読む必要があった。本文を削って短くする案も作って比較したが、削れるのが「共同での発表や執筆」「経験から答えられる部分もあれば」といった具体性と限界の開示、つまりこのブロックが信用を作っている部分だったので却下した。リード行は濃い色（`--ink`・600）、本文は `--muted-text`。リード行は英日とも1行に収まる長さにする。
+
 **小見出し**
 
 - EN: `Examples of enquiries we receive`
@@ -99,15 +101,24 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 **例1**
 
+- リード EN: `Taking a product or service into another country.`
+- リード JA: `製品やサービスの、別の国への展開`
+
 - EN: `A company or research group whose healthcare product or service already works in one country and who want to introduce it in another. What they usually need first is a clear account of the evidence they will be asked for, and of the conditions in the setting where it would be used.`
 - JA: `ある国ですでに成果を上げている医療・ヘルスケアの製品やサービスを、別の国で展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で求められるエビデンスと、実際に使われる現場の条件を把握することです。`
 
 **例2**
 
+- リード EN: `Introducing a way of working to the other country.`
+- リード JA: `現地の人たちと組んだ、もう一方の国への紹介`
+
 - EN: `A practitioner or organisation who has seen a way of working succeed in Australia, or in Japan, and wants to bring it to the other country with colleagues there rather than on their own. In practice this often means joint presentations, co-authored writing, and rebuilding existing material together.`
 - JA: `オーストラリア（あるいは日本）の現場で評価されている取り組みを、もう一方の国に紹介したい実践者・団体から。ひとりで進めるのではなく、現地の人たちと一緒に進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を一緒に作り直すことが多くなります。`
 
 **例3**
+
+- リード EN: `Setting up an international project or study.`
+- リード JA: `海外との共同プロジェクト・研究の立ち上げ`
 
 - EN: `Researchers or clinicians with an international project or study in mind, who know the question they want to ask but not how a collaboration across two systems is set up, funded and kept going. Some of this we can answer from experience. Some of it we work out together.`
 - JA: `海外との共同プロジェクトや研究を考えている研究者・臨床家から。問いは決まっているが、二つの制度をまたぐ協働をどう立ち上げ、どう資金を得て、どう続けるかが分からない、というご相談です。経験から答えられる部分もあれば、一緒に考えながら進める部分もあります。`
@@ -186,6 +197,8 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
   margin-top: 1.6rem; max-width: 66ch;
   font-size: var(--t-sm); color: var(--muted-text);
 }
+  .enquiry-lead   { display: block; font-weight: 600; color: var(--ink); }
+  .enquiry-detail { display: block; margin-top: 0.15rem; color: var(--muted-text); }
 ```
 
 `max-width: 66ch` は `.founder-bio` と `.name-logo` が使う既存の行長。新しい数値は導入しない。

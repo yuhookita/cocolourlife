@@ -371,7 +371,19 @@ section[id] { scroll-margin-top: 78px; }
   padding-left: 1.15rem;
   color: var(--muted-text);
 }
-.enquiries li + li { margin-top: 1.15rem; }
+.enquiries li + li { margin-top: 1.35rem; }
+/* a short scan line in ink above each detail: three cases that open the same
+   way cannot be told apart without reading all of them */
+.enquiry-lead {
+  display: block;
+  font-weight: 600;
+  color: var(--ink);
+}
+.enquiry-detail {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted-text);
+}
 .enquiries li:nth-child(1) { --card-accent: var(--mint); }
 .enquiries li:nth-child(2) { --card-accent: var(--peri); }
 .enquiries li:nth-child(3) { --card-accent: var(--peach); }

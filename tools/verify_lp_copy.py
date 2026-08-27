@@ -112,15 +112,22 @@ AREA_DESCS = [
 
 ENQUIRIES_TITLE = ("Examples of enquiries we receive", "いただくご相談の例")
 
+# each item is (lead EN, lead JA, detail EN, detail JA). The lead is a short
+# scan line so a reader can find the case that matches theirs without reading
+# all three in full; the detail is the copy approved on 2026-08-27, uncut.
 ENQUIRIES = [
-    ("A company or research group whose healthcare product or service already "
+    ("Taking a product or service into another country.",
+     "製品やサービスの、別の国への展開",
+     "A company or research group whose healthcare product or service already "
      "works in one country and who want to introduce it in another. What they "
      "usually need first is a clear account of the evidence they will be asked "
      "for, and of the conditions in the setting where it would be used.",
      "ある国ですでに成果を上げている医療・ヘルスケアの製品やサービスを、別の国で"
      "展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で"
      "求められるエビデンスと、実際に使われる現場の条件を把握することです。"),
-    ("A practitioner or organisation who has seen a way of working succeed in "
+    ("Introducing a way of working to the other country.",
+     "現地の人たちと組んだ、もう一方の国への紹介",
+     "A practitioner or organisation who has seen a way of working succeed in "
      "Australia, or in Japan, and wants to bring it to the other country with "
      "colleagues there rather than on their own. In practice this often means "
      "joint presentations, co-authored writing, and rebuilding existing "
@@ -129,7 +136,9 @@ ENQUIRIES = [
      "紹介したい実践者・団体から。ひとりで進めるのではなく、現地の人たちと一緒に"
      "進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を"
      "一緒に作り直すことが多くなります。"),
-    ("Researchers or clinicians with an international project or study in mind, "
+    ("Setting up an international project or study.",
+     "海外との共同プロジェクト・研究の立ち上げ",
+     "Researchers or clinicians with an international project or study in mind, "
      "who know the question they want to ask but not how a collaboration across "
      "two systems is set up, funded and kept going. Some of this we can answer "
      "from experience. Some of it we work out together.",
@@ -204,19 +213,20 @@ def check_enquiries(nodes):
         if titles[0]["en"] != en or titles[0]["ja"] != ja:
             failures.append(".enquiries-title is not the approved copy")
 
-    items = _by_class(nodes, "enquiry")
-    if len(items) != 3:
-        failures.append("expected 3 .enquiry items, found {}".format(len(items)))
+    leads = _by_class(nodes, "enquiry-lead")
+    details = _by_class(nodes, "enquiry-detail")
+    if len(leads) != 3 or len(details) != 3:
+        failures.append(
+            "expected 3 .enquiry-lead and 3 .enquiry-detail, found {} and {}"
+            .format(len(leads), len(details)))
     else:
-        for i, (en, ja) in enumerate(ENQUIRIES):
-            if items[i]["en"] != en:
-                failures.append(
-                    "enquiry {}: data-en is not the approved copy\n    found: "
-                    "{!r}".format(i + 1, items[i]["en"]))
-            if items[i]["ja"] != ja:
-                failures.append(
-                    "enquiry {}: data-ja is not the approved copy\n    found: "
-                    "{!r}".format(i + 1, items[i]["ja"]))
+        for i, (lead_en, lead_ja, det_en, det_ja) in enumerate(ENQUIRIES):
+            for got, want, what in ((leads[i], (lead_en, lead_ja), "lead"),
+                                    (details[i], (det_en, det_ja), "detail")):
+                if got["en"] != want[0] or got["ja"] != want[1]:
+                    failures.append(
+                        "enquiry {} {}: not the approved copy\n    found EN: {!r}"
+                        .format(i + 1, what, got["en"]))
 
     notes = _by_class(nodes, "enquiries-note")
     if len(notes) != 1:
@@ -227,11 +237,14 @@ def check_enquiries(nodes):
         if notes[0]["en"] != en or notes[0]["ja"] != ja:
             failures.append(".enquiries-note is not the approved copy")
 
-    # the block must carry no call to action of any kind
-    for n in items + notes:
-        if n["children"]:
-            failures.append(
-                "the enquiries block must hold no links or other markup")
+    # the block must carry no call to action of any kind (spec §2)
+    html = HTML.read_text(encoding="utf-8")
+    start = html.find('<div class="enquiries-block">')
+    end = html.find("</div>", start)
+    if start == -1 or "<a " in html[start:end]:
+        failures.append(
+            "the enquiries block must hold no links: it is an annotation, not "
+            "a call to action")
     return failures
 
 
@@ -304,7 +317,8 @@ def main():
     failures += check_area_descs(nodes)
     failures += check_enquiries(nodes)
     failures += check_no_em_dash(
-        nodes, ["area-desc", "enquiries-title", "enquiry", "enquiries-note"])
+        nodes, ["area-desc", "enquiries-title", "enquiry-lead", "enquiry-detail",
+                "enquiries-note"])
     failures += check_css()
 
     if failures:
