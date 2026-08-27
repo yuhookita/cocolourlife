@@ -332,7 +332,7 @@ section[id] { scroll-margin-top: 78px; }
   -webkit-mask: var(--motif) center / contain no-repeat;
           mask: var(--motif) center / contain no-repeat;
 }
-.area-title { display: block; font-weight: 600; color: var(--ink); }
+.area-title { display: block; font-size: 1.2rem; font-weight: 600; color: var(--ink); }
 .area-desc {
   display: block;
   margin-top: 0.4rem;
@@ -349,25 +349,28 @@ section[id] { scroll-margin-top: 78px; }
    cut across it. Equal visual weight would read as a fifth area. The rules are
    borders, not the dot divider, because the divider is hidden in print and the
    separation has to survive the reference copy. */
+/* a label for the three below, not a peer of them: at the leads' size and
+   colour it read as a fourth item */
 .enquiries-title {
   margin-top: 2.6rem;
   padding-top: 2.6rem;
   border-top: 1px solid var(--line);
-  font-size: var(--t-sm);
+  font-size: var(--t-xs);
   font-weight: 600;
-  color: var(--ink);
+  letter-spacing: 0.04em;
+  color: var(--muted-text);
 }
 /* the size sits on the list, not on the items: 66ch resolves against the
    element's own font-size, so the list and the closing note below have to
    carry the same one or the two measures drift apart (they did: 759 vs 707
    at 880px, where the list inherited the 19px body size) */
 .enquiries {
-  margin-top: 1.2rem;
+  margin-top: 1.8rem;
   max-width: 66ch;
   font-size: var(--t-sm);
 }
 .enquiries li {
-  border-left: 2px solid var(--card-accent);
+  border-left: 2px solid var(--peri);
   padding-left: 1.15rem;
   color: var(--muted-text);
 }
@@ -384,11 +387,8 @@ section[id] { scroll-margin-top: 78px; }
   margin-top: 0.15rem;
   color: var(--muted-text);
 }
-.enquiries li:nth-child(1) { --card-accent: var(--mint); }
-.enquiries li:nth-child(2) { --card-accent: var(--peri); }
-.enquiries li:nth-child(3) { --card-accent: var(--peach); }
 .enquiries-note {
-  margin-top: 1.6rem;
+  margin-top: 2.4rem;
   max-width: 66ch;
   font-size: var(--t-sm);
   color: var(--muted-text);
@@ -468,7 +468,7 @@ section[id] { scroll-margin-top: 78px; }
   z-index: 0;
 }
 .hero::after     { width: 340px; height: 340px; left: -150px; bottom: -160px; background: var(--peach);  opacity: 0.16; }
-#activities::before { width: 420px; height: 420px; left: -180px; top: 120px;  background: var(--mint);   opacity: 0.16; }
+#activities::before { width: 460px; height: 460px; left: -215px; top: -70px;  background: var(--mint);   opacity: 0.16; }
 #founder::before { width: 430px; height: 430px; right: -190px; top: -130px;   background: var(--peri);   opacity: 0.16; }
 #contact::before { width: 380px; height: 380px; left: -165px;  bottom: -165px; background: var(--butter); opacity: 0.22; }
 
@@ -622,7 +622,11 @@ section[id] { scroll-margin-top: 78px; }
   .section { padding-block: 1.2rem; }
   /* the pastel rules go grey on a mono printer; force ink so the three
      enquiries stay visibly separate on paper */
-  .enquiries li { border-left-color: #000; }
+  /* with background graphics off (the browser default) the card fills go,
+     and a 2px black rule would become the heaviest mark on the page. Hold
+     the cards' outline instead, and soften the rules. */
+  .enquiries li { border-left-color: #444; }
+  .areas li { border-color: #999; }
   /* the closing line qualifies the three examples, so a printed page must
      never carry them without it. Chrome ignores break-before: avoid here,
      so the whole block is kept together instead. */

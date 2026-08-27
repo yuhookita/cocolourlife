@@ -82,28 +82,32 @@ def parse(path):
 # ---- approved copy, spec §6.1 ------------------------------------------------
 
 AREA_DESCS = [
-    ("Programme and service evaluation, health workforce and cost analysis, and "
+    ("Program and service evaluation, health workforce and cost analysis, and "
      "implementation research. Evaluation work is delivered as a report setting "
-     "out what worked, what did not, and what the evidence does not yet cover.",
+     "out what worked for the people using the service, what did not, and what "
+     "the evidence does not yet cover.",
      "プログラム・サービスの評価、保健医療人材と費用の分析、実装研究。評価の成果物は、"
-     "何が機能し、何が機能しなかったか、そしてエビデンスがまだ及んでいない範囲を"
+     "サービスを使う人にとって何が機能し、何が機能しなかったか、そしてエビデンスが"
+     "まだ及んでいない範囲を"
      "書いた報告書です。"),
-    ("Lectures, workshops and teaching materials, in English and Japanese. "
+    ("Lectures, workshops and teaching materials for health professionals and "
+     "students, in English and Japanese. "
      "Existing material is rebuilt for the setting where it will be used rather "
      "than translated as it stands.",
-     "講義・研修・教材の作成。英語と日本語の両方で行います。既存の教材は、そのまま"
+     "保健医療専門職と学生を対象とした講義・研修・教材の作成。英語と日本語の両方で行います。既存の教材は、そのまま"
      "訳すのではなく、使われる現場に合わせて作り直します。"),
     ("Advisory work with health services, universities and industry: shaping a "
      "project before it starts, or reviewing one already running. The "
      "number we take on at a time is limited.",
-     "医療サービス・大学・企業への助言。企画が始まる前の設計や、進行中の案件の点検を"
+     "保健医療サービス・大学・企業への助言。企画が始まる前の設計や、進行中の案件の点検を"
      "行います。同時にお受けする件数は限られます。"),
     ("Exchange of evidence, models of care and technology in both directions. "
      "Most of the effort goes into working out what has to change for something "
      "that works in one country to work under the funding and service "
      "arrangements of the other.",
      "エビデンス・ケアモデル・テクノロジーの双方向の交流。労力の大半は、一方の国で"
-     "機能しているものが、もう一方の国の制度と資金の仕組みの下でも機能するには何を"
+     "機能しているものが、もう一方の国の資金とサービス提供の仕組みの下でも機能する"
+     "には何を"
      "変える必要があるかを詰めることに使われます。"),
 ]
 
@@ -122,13 +126,13 @@ ENQUIRIES = [
      "in use in one country, looking to introduce it in another. What "
      "they usually need first is a clear account of the evidence they will be "
      "asked for, and of the conditions in the setting where it would be used.",
-     "ある国ですでに使われている医療・ヘルスケアの製品やサービスを、別の国で"
+     "ある国ですでに使われている保健医療の製品やサービスを、別の国で"
      "展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で"
      "求められるエビデンスと、実際に使われる現場の条件を把握することです。"),
     ("Introducing a way of working to the other country.",
      "取り組みの、もう一方の国への紹介",
-     "A practitioner or organisation who has seen a way of working take hold in "
-     "Australia, or in Japan, and wants to bring it to the other country with "
+     "A practitioner or organisation that has seen a way of working take hold in "
+     "Australia or in Japan, and wants to bring it to the other country with "
      "colleagues there rather than on their own. In practice this often means "
      "joint presentations, co-authored writing, and rebuilding existing "
      "material together.",
@@ -142,7 +146,7 @@ ENQUIRIES = [
      "who know the question they want to ask but not how a collaboration across "
      "two systems is set up and kept going. We can answer some of this from "
      "experience. Some of it we work out together.",
-     "海外との共同プロジェクトや研究を考えている研究者・臨床家から。問いは決まって"
+     "国際的なプロジェクトや研究を考えている研究者・臨床家から。問いは決まって"
      "いるが、二つの制度をまたぐ協働をどう立ち上げ、どう続けるかが分からない、という"
      "ご相談です。経験から答えられる部分もあれば、一緒に考えながら進める部分も"
      "あります。"),
@@ -254,13 +258,15 @@ def check_css():
 
     required = [
         (".enquiries-title", "border-top: 1px solid var(--line)"),
-        (".enquiries li", "border-left: 2px solid var(--card-accent)"),
+        # one colour for all three: repeating the card accents in order read
+        # as a one-to-one mapping onto the four areas
+        (".enquiries li", "border-left: 2px solid var(--peri)"),
         # 66ch resolves against the element's own font-size, so the list
         # and the note must declare the same one or their measures drift
         (".enquiries {", "font-size: var(--t-sm)"),
-        (".enquiries li:nth-child(1)", "--card-accent: var(--mint)"),
-        (".enquiries li:nth-child(2)", "--card-accent: var(--peri)"),
-        (".enquiries li:nth-child(3)", "--card-accent: var(--peach)"),
+        # the h3 must not share the leads' size and colour, or it reads as a
+        # fourth item rather than the label for the three
+        (".enquiries-title", "font-size: var(--t-xs)"),
     ]
     for selector, declaration in required:
         if selector not in css:
@@ -272,10 +278,15 @@ def check_css():
     # the separator and the rules have to survive the print stylesheet, which is
     # why they are borders and not the dot divider (spec §7.1)
     print_block = css.split("@media print")[-1]
-    if "border-left-color: #000" not in print_block:
+    if "border-left-color: #444" not in print_block:
         failures.append(
             "style.css: @media print must force .enquiries li border-left-color "
-            "to #000")
+            "to #444 — dark enough for a mono printer, light enough not to "
+            "outweigh the cards once their fills are dropped")
+    if ".areas li { border-color: #999" not in print_block:
+        failures.append(
+            "style.css: @media print must hold the cards' outline, or with "
+            "background graphics off they lose to the enquiry rules")
     # the closing line qualifies the three examples, so a printed page must
     # never carry them without it
     if "break-inside: avoid" not in print_block:

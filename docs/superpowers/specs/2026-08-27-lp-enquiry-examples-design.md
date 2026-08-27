@@ -68,36 +68,38 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 **① Research and evaluation**
 
-- EN: `Programme and service evaluation, health workforce and cost analysis, and implementation research. Evaluation work is delivered as a report setting out what worked, what did not, and what the evidence does not yet cover.`
-- JA: `プログラム・サービスの評価、保健医療人材と費用の分析、実装研究。評価の成果物は、何が機能し、何が機能しなかったか、そしてエビデンスがまだ及んでいない範囲を書いた報告書です。`
+- EN: `Program and service evaluation, health workforce and cost analysis, and implementation research. Evaluation work is delivered as a report setting out what worked for the people using the service, what did not, and what the evidence does not yet cover.`
+- JA: `プログラム・サービスの評価、保健医療人材と費用の分析、実装研究。評価の成果物は、サービスを使う人にとって何が機能し、何が機能しなかったか、そしてエビデンスがまだ及んでいない範囲を書いた報告書です。`
 
 **② Education and knowledge translation**
 
-- EN: `Lectures, workshops and teaching materials, in English and Japanese. Existing material is rebuilt for the setting where it will be used rather than translated as it stands.`
-- JA: `講義・研修・教材の作成。英語と日本語の両方で行います。既存の教材は、そのまま訳すのではなく、使われる現場に合わせて作り直します。`
+- EN: `Lectures, workshops and teaching materials for health professionals and students, in English and Japanese. Existing material is rebuilt for the setting where it will be used rather than translated as it stands.`
+- JA: `保健医療専門職と学生を対象とした講義・研修・教材の作成。英語と日本語の両方で行います。既存の教材は、そのまま訳すのではなく、使われる現場に合わせて作り直します。`
 
 **③ Advisory and collaborative projects**
 
 - EN: `Advisory work with health services, universities and industry: shaping a project before it starts, or reviewing one already running. The number we take on at a time is limited.`
-- JA: `医療サービス・大学・企業への助言。企画が始まる前の設計や、進行中の案件の点検を行います。同時にお受けする件数は限られます。`
+- JA: `保健医療サービス・大学・企業への助言。企画が始まる前の設計や、進行中の案件の点検を行います。同時にお受けする件数は限られます。`
 
 **④ Australia–Japan collaboration in health and rehabilitation**
 
 - EN: `Exchange of evidence, models of care and technology in both directions. Most of the effort goes into working out what has to change for something that works in one country to work under the funding and service arrangements of the other.`
-- JA: `エビデンス・ケアモデル・テクノロジーの双方向の交流。労力の大半は、一方の国で機能しているものが、もう一方の国の制度と資金の仕組みの下でも機能するには何を変える必要があるかを詰めることに使われます。`
+- JA: `エビデンス・ケアモデル・テクノロジーの双方向の交流。労力の大半は、一方の国で機能しているものが、もう一方の国の資金とサービス提供の仕組みの下でも機能するには何を変える必要があるかを詰めることに使われます。`
 
-「同時にお受けする件数は限られます」は実態と一致することを Yuho が確認済み（2026-08-27）。「医療サービス」への助言実績があることも確認済み（2026-08-27）。
+「同時にお受けする件数は限られます」と「保健医療サービス」への助言実績は、いずれも Yuho が確認済み（2026-08-27）。
+
+綴りは豪州式（Australian Government Style Manual）に従い `Program`。`Programme` は英国式で、ページ内の `organisational` 等と揃わない。
 
 カテゴリ名（`.area-title`）は4つとも変更しない。
 
 ### 6.2 支援例ブロック（新規）
 
-**各例はリード行＋本文の2要素にする**（2026-08-27）。3例が同じ調子で始まるため、どれが自分の話か判断するのに全文を読む必要があった。本文を削って短くする案も作って比較したが、削れるのが「共同での発表や執筆」「経験から答えられる部分もあれば」といった具体性と限界の開示、つまりこのブロックが信用を作っている部分だったので却下した。リード行は濃い色（`--ink`・600）、本文は `--muted-text`。リード行は英日とも1行に収まる長さにする。
+**各例はリード行＋本文の2要素にする**（2026-08-27）。3例が同じ調子で始まるため、どれが自分の話か判断するのに全文を読む必要があった。本文を削って短くする案も比較したが、削れるのが「共同での発表や執筆」「経験から答えられる部分もあれば」といった具体性と限界の開示、つまりこのブロックが信用を作っている部分だったので却下した。
 
 **小見出し**
 
-- EN: `Examples of enquiries this work has begun with`
-- JA: `これまでに受けてきたご相談の例`
+- EN: `Examples of past enquiries`
+- JA: `これまでのご相談の例`
 
 見出しに現在習慣形（`we receive` /「いただく」）を使わない。**3例は Yuho 個人としての経験であり、会社（2026年設立）としての受任実績ではない**ことを本人が確認済み（2026-08-27）。会社が現に相談を受けていると読める表現は overstatement になる。
 
@@ -106,21 +108,21 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 - リード EN: `Taking a product or service into another country.`
 - リード JA: `製品やサービスの、別の国への展開`
 - 本文 EN: `A company or research group with a healthcare product or service already in use in one country, looking to introduce it in another. What they usually need first is a clear account of the evidence they will be asked for, and of the conditions in the setting where it would be used.`
-- 本文 JA: `ある国ですでに使われている医療・ヘルスケアの製品やサービスを、別の国で展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で求められるエビデンスと、実際に使われる現場の条件を把握することです。`
+- 本文 JA: `ある国ですでに使われている保健医療の製品やサービスを、別の国で展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で求められるエビデンスと、実際に使われる現場の条件を把握することです。`
 
 **例2**
 
 - リード EN: `Introducing a way of working to the other country.`
 - リード JA: `取り組みの、もう一方の国への紹介`
-- 本文 EN: `A practitioner or organisation who has seen a way of working take hold in Australia, or in Japan, and wants to bring it to the other country with colleagues there rather than on their own. In practice this often means joint presentations, co-authored writing, and rebuilding existing material together.`
+- 本文 EN: `A practitioner or organisation that has seen a way of working take hold in Australia or in Japan, and wants to bring it to the other country with colleagues there rather than on their own. In practice this often means joint presentations, co-authored writing, and rebuilding existing material together.`
 - 本文 JA: `オーストラリア（あるいは日本）の現場で定着している取り組みを、もう一方の国に紹介したい実践者・団体から。ひとりで進めるのではなく、現地の人たちと一緒に進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を一緒に作り直すことが多くなります。`
 
 **例3**
 
 - リード EN: `Setting up an international project or study.`
-- リード JA: `海外との共同プロジェクト・研究の立ち上げ`
+- リード JA: `国際的なプロジェクト・研究の立ち上げ`
 - 本文 EN: `Researchers or clinicians with an international project or study in mind, who know the question they want to ask but not how a collaboration across two systems is set up and kept going. We can answer some of this from experience. Some of it we work out together.`
-- 本文 JA: `海外との共同プロジェクトや研究を考えている研究者・臨床家から。問いは決まっているが、二つの制度をまたぐ協働をどう立ち上げ、どう続けるかが分からない、というご相談です。経験から答えられる部分もあれば、一緒に考えながら進める部分もあります。`
+- 本文 JA: `国際的なプロジェクトや研究を考えている研究者・臨床家から。問いは決まっているが、二つの制度をまたぐ協働をどう立ち上げ、どう続けるかが分からない、というご相談です。経験から答えられる部分もあれば、一緒に考えながら進める部分もあります。`
 
 **結び**
 
@@ -129,9 +131,15 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 ### 6.4 EN と JA は必ず対で編集する
 
-2026-08-27、judge の指摘を反映する際に英語側の案と日本語側の案を別々に採用し、対になっていた6箇所がずれた（見出しは両言語が別の文になり、例1は EN が、例2は語義そのものが、カード③は主体が、例3は網羅性が、結びは約束の強さが食い違った）。
+2026-08-27、judge の指摘を反映する際に英語側の案と日本語側の案を別々に採用し、対になっていた6箇所がずれた（見出しは両言語が別の文になり、例1は EN が、例2は語義が、カード③は主体が、例3は網羅性が、結びは約束の強さが食い違った）。同日さらに、小見出しと例3リードを直した際に設計書の再生成を忘れ、正本と設計書がずれた。
 
-**片方の言語だけを直さない。** 対ごとに「何を言うか」を先に1つ決め、その1つに両言語を合わせる。文面の正本は `tools/verify_lp_copy.py` の定数であり、`index.html` はそこから生成する。定数を直したら必ず両方の要素を書き換えること。
+**片方の言語だけを直さない。設計書だけを直さない。** 手順は次の1本に固定する。
+
+1. 対ごとに「何を言うか」を1つ決める
+2. `tools/verify_lp_copy.py` の定数（正本）を両言語とも書き換える
+3. その定数から `index.html` を生成する
+4. その定数から設計書 §6.1 / §6.2 を生成する
+5. ガードと描画・印刷の検証を実行する
 
 この種のずれは機械では判定できない（日本語は英語1文を2文に割ることが普通にあるため、文数の一致は使えない）。反映のたびに対で読み直すこと。
 
@@ -184,28 +192,53 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 ```css
 /* ---------- examples of enquiries ---------- */
 /* deliberately not cards: the four areas above are the taxonomy; these three
-   cut across it. Equal visual weight would read as a fifth area. */
+   cut across it. Equal visual weight would read as a fifth area. The rules are
+   borders, not the dot divider, because the divider is hidden in print and the
+   separation has to survive the reference copy. */
+/* a label for the three below, not a peer of them: at the leads' size and
+   colour it read as a fourth item */
 .enquiries-title {
-  margin-top: 2.6rem; padding-top: 2.6rem;
+  margin-top: 2.6rem;
+  padding-top: 2.6rem;
   border-top: 1px solid var(--line);
-  font-size: var(--t-sm); font-weight: 600; color: var(--ink);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted-text);
 }
-.enquiries { margin-top: 1.2rem; max-width: 66ch; }
+/* the size sits on the list, not on the items: 66ch resolves against the
+   element's own font-size, so the list and the closing note below have to
+   carry the same one or the two measures drift apart (they did: 759 vs 707
+   at 880px, where the list inherited the 19px body size) */
+.enquiries {
+  margin-top: 1.8rem;
+  max-width: 66ch;
+  font-size: var(--t-sm);
+}
 .enquiries li {
-  border-left: 2px solid var(--card-accent);
+  border-left: 2px solid var(--peri);
   padding-left: 1.15rem;
-  font-size: var(--t-sm); color: var(--muted-text);
+  color: var(--muted-text);
 }
-.enquiries li + li { margin-top: 1.15rem; }
-.enquiries li:nth-child(1) { --card-accent: var(--mint); }
-.enquiries li:nth-child(2) { --card-accent: var(--peri); }
-.enquiries li:nth-child(3) { --card-accent: var(--peach); }
+.enquiries li + li { margin-top: 1.35rem; }
+/* a short scan line in ink above each detail: three cases that open the same
+   way cannot be told apart without reading all of them */
+.enquiry-lead {
+  display: block;
+  font-weight: 600;
+  color: var(--ink);
+}
+.enquiry-detail {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted-text);
+}
 .enquiries-note {
-  margin-top: 1.6rem; max-width: 66ch;
-  font-size: var(--t-sm); color: var(--muted-text);
+  margin-top: 2.4rem;
+  max-width: 66ch;
+  font-size: var(--t-sm);
+  color: var(--muted-text);
 }
-  .enquiry-lead   { display: block; font-weight: 600; color: var(--ink); }
-  .enquiry-detail { display: block; margin-top: 0.15rem; color: var(--muted-text); }
 ```
 
 `max-width: 66ch` は `.founder-bio` と `.name-logo` が使う既存の行長。新しい数値は導入しない。
@@ -302,3 +335,50 @@ Critical 0件・Major 4件。次を反映した。
 ### 10.4 公開判断への申し送り
 
 **`noindex` を解除する時点で、このブロックを再評価すること。** 現在 `noindex` が生きているため MVV §5 の「臨床・商業の前面化は検索時の印象リスク」は顕在化していないが、解除の判断はその前提を外す。Dashboard の公開前チェックリストに項目として追加する。
+
+## 11. 2回目の独立検査（2026-08-27）
+
+judge 3本（英日の対応 / 見た目 / 文脈）。
+
+| 検査 | 判定 |
+|---|---|
+| 英日の対応（12対を1対ずつ照合） | **PASS**（12対すべて一致） |
+| 見た目 | 要修正 → 反映済み |
+| 文脈 | 要修正 → 一部反映、一部は判断待ち |
+
+### 11.1 見た目の指摘と対応
+
+| 指摘 | 対応 |
+|---|---|
+| `.enquiries-title` が `.enquiry-lead` と同一（17px / 600 / `--ink`）で、小見出しが4件目の項目に見える | `--t-xs` ＋ `--muted-text` ＋ `letter-spacing: 0.04em` のラベルに。カード見出しと同値になる方向（19px）は採らない |
+| `.area-title` にサイズ指定がなく本文継承のため、日本語（18px）ではリード行（17px）との差が1pxしかない | `.area-title { font-size: 1.2rem; }` を明示 |
+| 縦罫の mint / peri / peach がカードのアクセント順（1・2・4番目）と一致し、例とカードの1対1対応に読める | 3本とも `var(--peri)` の単色に。3例は複数のカテゴリを要するので、色で分ける根拠がない |
+| 結びの `margin-top: 1.6rem` が項目間（1.35rem）とほぼ同じで、縦罫を失った4件目に見える | `2.4rem` に |
+| `#activities::before` だけが上下とも切れず、円形が完全に見えて「置かれた図形」になっている | `left: -215px; top: -70px; width/height: 460px` に。他の3つと同じく2辺で切る |
+| 印刷で背景グラフィックOFF（ブラウザ既定）だとカードの塗りが消え、縦罫の黒2pxが紙面で最も強い図形になり重みが反転する | 実際に検証して確認。縦罫を `#444` に落とし、`.areas li { border-color: #999 }` でカードの輪郭を保持 |
+
+### 11.2 文脈の指摘と対応
+
+反映したもの。
+
+- `Programme` → `Program`（豪州式。元のサイトは `Program` であり、こちらの差し替えで英国式に変えてしまっていた）
+- ①に受益者を明記。「名前に込めた想い」が語る一人ひとりの日常を受ける語がセクション全体に無かった → `what worked for the people using the service` /「サービスを使う人にとって何が機能し」
+- ②に対象者を明記。①③④は相手が書かれているのに②だけ無かった → `for health professionals and students` /「保健医療専門職と学生を対象とした」
+- JA の用語をページ全体の「保健医療」に統一（「医療サービス」→「保健医療サービス」、「医療・ヘルスケアの製品」→「保健医療の製品」）
+- JA「制度と資金の仕組み」→「資金とサービス提供の仕組み」。EN は `funding and service arrangements` であり、「制度」は法規制まで含意して §6.3 の方針から JA だけがずれていた
+- `organisation who` → `that`、`in Australia, or in Japan,` のコンマを削除
+- 例3の JA 本文「海外との共同プロジェクトや研究」→「国際的なプロジェクトや研究」（同じ例のリードと語が揃っていなかった）
+- 非カード化の根拠の書き方を修正（「4カテゴリを横断する」は不正確。正しくは「いずれも④に属しつつ①②③を組み合わせて使うので、どれか1枚の下には収まらない」）
+
+反映しなかったもの。理由とともに §12 に判断待ちとして記録する。
+
+### 11.3 反映しなかった指摘（Yuho の判断が要る）
+
+| 指摘 | 状況 |
+|---|---|
+| `#about` の lead は活動領域を3つ挙げ、`#activities` は4つ。読者は④が領域なのか重点なのか判別できない | 既存の不整合が4領域の書き直しで可視化されたもの。About lead は §9 でスコープ外と宣言済み。**別件として承認が要る** |
+| 小見出しの帰属。主語が省略された結果、2026年設立の会社のページ上では「当社が受けた相談」と読めうる | 「以下は創業者個人の仕事によるもので、会社としての受任実績ではありません」を1文足す案。信用確認のページに新しい会社であることを強調する注記を置く是非があり、**Yuho の判断** |
+| 3例がすべて越境案件のため、一方の国だけで完結する相談者が「非該当」と誤読しうる | 「以下の例はいずれも二国にまたがるものですが、一方の国だけで完結する仕事も同じ4領域で行います」を1文足す案。**Yuho の判断** |
+| Governance Pack の `PP-01_privacy-policy.md` が会社を "an occupational therapy practice in Melbourne" と定義しており、LP の名乗り（研究・教育・助言・日豪連携）と食い違う | §10.3 の AHPRA s133 の論点と同根。**どちらが現行の正かを確定してから**でないと文言を触れない |
+| 900〜1041px でカードが1列になり左レールが空洞化する（`--wrap` と `minmax(300px,1fr)` の噛み合わせ。ブレークポイントを跨いだ瞬間に劣化する） | **既存のバグで、全セクションに及ぶ。** 修正は `@media (min-width: 900px)` を 1040px に上げること。サイト全体のレイアウト変更なので別件 |
+
