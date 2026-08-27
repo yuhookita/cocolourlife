@@ -94,8 +94,8 @@ AREA_DESCS = [
      "講義・研修・教材の作成。英語と日本語の両方で行います。既存の教材は、そのまま"
      "訳すのではなく、使われる現場に合わせて作り直します。"),
     ("Advisory work with health services, universities and industry: shaping a "
-     "project before it starts, or reviewing one already running. We take on a "
-     "small number at a time.",
+     "project before it starts, or reviewing one already running. The "
+     "number we take on at a time is limited.",
      "医療サービス・大学・企業への助言。企画が始まる前の設計や、進行中の案件の点検を"
      "行います。同時にお受けする件数は限られます。"),
     ("Exchange of evidence, models of care and technology in both directions. "
@@ -110,7 +110,7 @@ AREA_DESCS = [
 
 # ---- approved copy, spec §6.2 ------------------------------------------------
 
-ENQUIRIES_TITLE = ("Examples of the enquiries this work usually begins with",
+ENQUIRIES_TITLE = ("Examples of enquiries this work has begun with",
                    "これまでに受けてきたご相談の例")
 
 # each item is (lead EN, lead JA, detail EN, detail JA). The lead is a short
@@ -119,8 +119,8 @@ ENQUIRIES_TITLE = ("Examples of the enquiries this work usually begins with",
 ENQUIRIES = [
     ("Taking a product or service into another country.",
      "製品やサービスの、別の国への展開",
-     "A company or research group with a healthcare product or service that "
-     "already works in one country, looking to introduce it in another. What "
+     "A company or research group with a healthcare product or service already "
+     "in use in one country, looking to introduce it in another. What "
      "they usually need first is a clear account of the evidence they will be "
      "asked for, and of the conditions in the setting where it would be used.",
      "ある国ですでに使われている医療・ヘルスケアの製品やサービスを、別の国で"
@@ -133,7 +133,7 @@ ENQUIRIES = [
      "colleagues there rather than on their own. In practice this often means "
      "joint presentations, co-authored writing, and rebuilding existing "
      "material together.",
-     "オーストラリア（あるいは日本）の現場で評価されている取り組みを、もう一方の国に"
+     "オーストラリア（あるいは日本）の現場で定着している取り組みを、もう一方の国に"
      "紹介したい実践者・団体から。ひとりで進めるのではなく、現地の人たちと一緒に"
      "進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を"
      "一緒に作り直すことが多くなります。"),
@@ -142,7 +142,7 @@ ENQUIRIES = [
      "Researchers or clinicians with an international project or study in mind, "
      "who know the question they want to ask but not how a collaboration across "
      "two systems is set up and kept going. We can answer some of this from "
-     "experience. The rest we work out together.",
+     "experience. Some of it we work out together.",
      "海外との共同プロジェクトや研究を考えている研究者・臨床家から。問いは決まって"
      "いるが、二つの制度をまたぐ協働をどう立ち上げ、どう続けるかが分からない、という"
      "ご相談です。経験から答えられる部分もあれば、一緒に考えながら進める部分も"
@@ -153,7 +153,7 @@ ENQUIRIES_NOTE = (
     "Not every enquiry is a fit. Where it is not, we say so, and, where we can, "
     "we point to someone better placed.",
     "すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、"
-    "可能であればより適した方をご紹介します。",
+    "可能であればより適した先をお示しします。",
 )
 
 

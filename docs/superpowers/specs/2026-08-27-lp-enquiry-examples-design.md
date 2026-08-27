@@ -78,7 +78,7 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 **③ Advisory and collaborative projects**
 
-- EN: `Advisory work with health services, universities and industry: shaping a project before it starts, or reviewing one already running. We take on a small number at a time.`
+- EN: `Advisory work with health services, universities and industry: shaping a project before it starts, or reviewing one already running. The number we take on at a time is limited.`
 - JA: `医療サービス・大学・企業への助言。企画が始まる前の設計や、進行中の案件の点検を行います。同時にお受けする件数は限られます。`
 
 **④ Australia–Japan collaboration in health and rehabilitation**
@@ -92,11 +92,11 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 ### 6.2 支援例ブロック（新規）
 
-**各例はリード行＋本文の2要素にする**（2026-08-27、比較検討の結果）。3例が同じ調子で始まるため、どれが自分の話か判断するのに全文を読む必要があった。本文を削って短くする案も作って比較したが、削れるのが「共同での発表や執筆」「経験から答えられる部分もあれば」といった具体性と限界の開示、つまりこのブロックが信用を作っている部分だったので却下した。リード行は濃い色（`--ink`・600）、本文は `--muted-text`。リード行は英日とも1行に収まる長さにする。
+**各例はリード行＋本文の2要素にする**（2026-08-27）。3例が同じ調子で始まるため、どれが自分の話か判断するのに全文を読む必要があった。本文を削って短くする案も作って比較したが、削れるのが「共同での発表や執筆」「経験から答えられる部分もあれば」といった具体性と限界の開示、つまりこのブロックが信用を作っている部分だったので却下した。リード行は濃い色（`--ink`・600）、本文は `--muted-text`。リード行は英日とも1行に収まる長さにする。
 
 **小見出し**
 
-- EN: `Examples of the enquiries this work usually begins with`
+- EN: `Examples of enquiries this work has begun with`
 - JA: `これまでに受けてきたご相談の例`
 
 見出しに現在習慣形（`we receive` /「いただく」）を使わない。**3例は Yuho 個人としての経験であり、会社（2026年設立）としての受任実績ではない**ことを本人が確認済み（2026-08-27）。会社が現に相談を受けていると読める表現は overstatement になる。
@@ -105,7 +105,7 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 - リード EN: `Taking a product or service into another country.`
 - リード JA: `製品やサービスの、別の国への展開`
-- 本文 EN: `A company or research group with a healthcare product or service that already works in one country, looking to introduce it in another. What they usually need first is a clear account of the evidence they will be asked for, and of the conditions in the setting where it would be used.`
+- 本文 EN: `A company or research group with a healthcare product or service already in use in one country, looking to introduce it in another. What they usually need first is a clear account of the evidence they will be asked for, and of the conditions in the setting where it would be used.`
 - 本文 JA: `ある国ですでに使われている医療・ヘルスケアの製品やサービスを、別の国で展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で求められるエビデンスと、実際に使われる現場の条件を把握することです。`
 
 **例2**
@@ -113,19 +113,27 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 - リード EN: `Introducing a way of working to the other country.`
 - リード JA: `取り組みの、もう一方の国への紹介`
 - 本文 EN: `A practitioner or organisation who has seen a way of working take hold in Australia, or in Japan, and wants to bring it to the other country with colleagues there rather than on their own. In practice this often means joint presentations, co-authored writing, and rebuilding existing material together.`
-- 本文 JA: `オーストラリア（あるいは日本）の現場で評価されている取り組みを、もう一方の国に紹介したい実践者・団体から。ひとりで進めるのではなく、現地の人たちと一緒に進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を一緒に作り直すことが多くなります。`
+- 本文 JA: `オーストラリア（あるいは日本）の現場で定着している取り組みを、もう一方の国に紹介したい実践者・団体から。ひとりで進めるのではなく、現地の人たちと一緒に進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を一緒に作り直すことが多くなります。`
 
 **例3**
 
 - リード EN: `Setting up an international project or study.`
 - リード JA: `海外との共同プロジェクト・研究の立ち上げ`
-- 本文 EN: `Researchers or clinicians with an international project or study in mind, who know the question they want to ask but not how a collaboration across two systems is set up and kept going. We can answer some of this from experience. The rest we work out together.`
+- 本文 EN: `Researchers or clinicians with an international project or study in mind, who know the question they want to ask but not how a collaboration across two systems is set up and kept going. We can answer some of this from experience. Some of it we work out together.`
 - 本文 JA: `海外との共同プロジェクトや研究を考えている研究者・臨床家から。問いは決まっているが、二つの制度をまたぐ協働をどう立ち上げ、どう続けるかが分からない、というご相談です。経験から答えられる部分もあれば、一緒に考えながら進める部分もあります。`
 
 **結び**
 
 - EN: `Not every enquiry is a fit. Where it is not, we say so, and, where we can, we point to someone better placed.`
-- JA: `すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、可能であればより適した方をご紹介します。`
+- JA: `すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、可能であればより適した先をお示しします。`
+
+### 6.4 EN と JA は必ず対で編集する
+
+2026-08-27、judge の指摘を反映する際に英語側の案と日本語側の案を別々に採用し、対になっていた6箇所がずれた（見出しは両言語が別の文になり、例1は EN が、例2は語義そのものが、カード③は主体が、例3は網羅性が、結びは約束の強さが食い違った）。
+
+**片方の言語だけを直さない。** 対ごとに「何を言うか」を先に1つ決め、その1つに両言語を合わせる。文面の正本は `tools/verify_lp_copy.py` の定数であり、`index.html` はそこから生成する。定数を直したら必ず両方の要素を書き換えること。
+
+この種のずれは機械では判定できない（日本語は英語1文を2文に割ることが普通にあるため、文数の一致は使えない）。反映のたびに対で読み直すこと。
 
 ### 6.3 意図的に書かないこと
 
