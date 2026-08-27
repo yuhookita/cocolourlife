@@ -82,10 +82,10 @@ def parse(path):
 # ---- approved copy, spec §6.1 ------------------------------------------------
 
 AREA_DESCS = [
-    ("Programme and service evaluation, workforce and cost analysis, and "
-     "implementation research. The usual output is a report that sets out what "
-     "worked, what did not, and what the evidence does not yet cover.",
-     "プログラム・サービスの評価、人材と費用の分析、実装研究。成果物は多くの場合、"
+    ("Programme and service evaluation, health workforce and cost analysis, and "
+     "implementation research. Evaluation work is delivered as a report setting "
+     "out what worked, what did not, and what the evidence does not yet cover.",
+     "プログラム・サービスの評価、保健医療人材と費用の分析、実装研究。評価の成果物は、"
      "何が機能し、何が機能しなかったか、そしてエビデンスがまだ及んでいない範囲を"
      "書いた報告書です。"),
     ("Lectures, workshops and teaching materials, in English and Japanese. "
@@ -96,12 +96,12 @@ AREA_DESCS = [
     ("Advisory work with health services, universities and industry: shaping a "
      "project before it starts, or reviewing one already running. We take on a "
      "small number at a time.",
-     "医療サービス・大学・企業への助言。企画が始まる前の設計と、進行中の案件の点検が"
-     "中心です。同時にお受けする件数は絞っています。"),
+     "医療サービス・大学・企業への助言。企画が始まる前の設計や、進行中の案件の点検を"
+     "行います。同時にお受けする件数は限られます。"),
     ("Exchange of evidence, models of care and technology in both directions. "
-     "Most of the effort goes into working out what has to change before "
-     "something that works in one country works under the other's funding and "
-     "service arrangements.",
+     "Most of the effort goes into working out what has to change for something "
+     "that works in one country to work under the funding and service "
+     "arrangements of the other.",
      "エビデンス・ケアモデル・テクノロジーの双方向の交流。労力の大半は、一方の国で"
      "機能しているものが、もう一方の国の制度と資金の仕組みの下でも機能するには何を"
      "変える必要があるかを詰めることに使われます。"),
@@ -110,7 +110,8 @@ AREA_DESCS = [
 
 # ---- approved copy, spec §6.2 ------------------------------------------------
 
-ENQUIRIES_TITLE = ("Examples of enquiries we receive", "いただくご相談の例")
+ENQUIRIES_TITLE = ("Examples of the enquiries this work usually begins with",
+                   "これまでに受けてきたご相談の例")
 
 # each item is (lead EN, lead JA, detail EN, detail JA). The lead is a short
 # scan line so a reader can find the case that matches theirs without reading
@@ -118,16 +119,16 @@ ENQUIRIES_TITLE = ("Examples of enquiries we receive", "いただくご相談の
 ENQUIRIES = [
     ("Taking a product or service into another country.",
      "製品やサービスの、別の国への展開",
-     "A company or research group whose healthcare product or service already "
-     "works in one country and who want to introduce it in another. What they "
-     "usually need first is a clear account of the evidence they will be asked "
-     "for, and of the conditions in the setting where it would be used.",
-     "ある国ですでに成果を上げている医療・ヘルスケアの製品やサービスを、別の国で"
+     "A company or research group with a healthcare product or service that "
+     "already works in one country, looking to introduce it in another. What "
+     "they usually need first is a clear account of the evidence they will be "
+     "asked for, and of the conditions in the setting where it would be used.",
+     "ある国ですでに使われている医療・ヘルスケアの製品やサービスを、別の国で"
      "展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で"
      "求められるエビデンスと、実際に使われる現場の条件を把握することです。"),
     ("Introducing a way of working to the other country.",
-     "現地の人たちと組んだ、もう一方の国への紹介",
-     "A practitioner or organisation who has seen a way of working succeed in "
+     "取り組みの、もう一方の国への紹介",
+     "A practitioner or organisation who has seen a way of working take hold in "
      "Australia, or in Japan, and wants to bring it to the other country with "
      "colleagues there rather than on their own. In practice this often means "
      "joint presentations, co-authored writing, and rebuilding existing "
@@ -140,16 +141,16 @@ ENQUIRIES = [
      "海外との共同プロジェクト・研究の立ち上げ",
      "Researchers or clinicians with an international project or study in mind, "
      "who know the question they want to ask but not how a collaboration across "
-     "two systems is set up, funded and kept going. Some of this we can answer "
-     "from experience. Some of it we work out together.",
+     "two systems is set up and kept going. We can answer some of this from "
+     "experience. The rest we work out together.",
      "海外との共同プロジェクトや研究を考えている研究者・臨床家から。問いは決まって"
-     "いるが、二つの制度をまたぐ協働をどう立ち上げ、どう資金を得て、どう続けるかが"
-     "分からない、というご相談です。経験から答えられる部分もあれば、一緒に考えながら"
-     "進める部分もあります。"),
+     "いるが、二つの制度をまたぐ協働をどう立ち上げ、どう続けるかが分からない、という"
+     "ご相談です。経験から答えられる部分もあれば、一緒に考えながら進める部分も"
+     "あります。"),
 ]
 
 ENQUIRIES_NOTE = (
-    "Not every enquiry is a fit. Where it is not, we say so, and where we can "
+    "Not every enquiry is a fit. Where it is not, we say so, and, where we can, "
     "we point to someone better placed.",
     "すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、"
     "可能であればより適した方をご紹介します。",

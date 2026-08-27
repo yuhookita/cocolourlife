@@ -68,8 +68,8 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 **① Research and evaluation**
 
-- EN: `Programme and service evaluation, workforce and cost analysis, and implementation research. The usual output is a report that sets out what worked, what did not, and what the evidence does not yet cover.`
-- JA: `プログラム・サービスの評価、人材と費用の分析、実装研究。成果物は多くの場合、何が機能し、何が機能しなかったか、そしてエビデンスがまだ及んでいない範囲を書いた報告書です。`
+- EN: `Programme and service evaluation, health workforce and cost analysis, and implementation research. Evaluation work is delivered as a report setting out what worked, what did not, and what the evidence does not yet cover.`
+- JA: `プログラム・サービスの評価、保健医療人材と費用の分析、実装研究。評価の成果物は、何が機能し、何が機能しなかったか、そしてエビデンスがまだ及んでいない範囲を書いた報告書です。`
 
 **② Education and knowledge translation**
 
@@ -79,14 +79,14 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 **③ Advisory and collaborative projects**
 
 - EN: `Advisory work with health services, universities and industry: shaping a project before it starts, or reviewing one already running. We take on a small number at a time.`
-- JA: `医療サービス・大学・企業への助言。企画が始まる前の設計と、進行中の案件の点検が中心です。同時にお受けする件数は絞っています。`
-
-「同時にお受けする件数は絞っています」は実態と一致することを Yuho が確認済み（2026-08-27）。
+- JA: `医療サービス・大学・企業への助言。企画が始まる前の設計や、進行中の案件の点検を行います。同時にお受けする件数は限られます。`
 
 **④ Australia–Japan collaboration in health and rehabilitation**
 
-- EN: `Exchange of evidence, models of care and technology in both directions. Most of the effort goes into working out what has to change before something that works in one country works under the other's funding and service arrangements.`
+- EN: `Exchange of evidence, models of care and technology in both directions. Most of the effort goes into working out what has to change for something that works in one country to work under the funding and service arrangements of the other.`
 - JA: `エビデンス・ケアモデル・テクノロジーの双方向の交流。労力の大半は、一方の国で機能しているものが、もう一方の国の制度と資金の仕組みの下でも機能するには何を変える必要があるかを詰めることに使われます。`
+
+「同時にお受けする件数は限られます」は実態と一致することを Yuho が確認済み（2026-08-27）。「医療サービス」への助言実績があることも確認済み（2026-08-27）。
 
 カテゴリ名（`.area-title`）は4つとも変更しない。
 
@@ -96,36 +96,35 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 **小見出し**
 
-- EN: `Examples of enquiries we receive`
-- JA: `いただくご相談の例`
+- EN: `Examples of the enquiries this work usually begins with`
+- JA: `これまでに受けてきたご相談の例`
+
+見出しに現在習慣形（`we receive` /「いただく」）を使わない。**3例は Yuho 個人としての経験であり、会社（2026年設立）としての受任実績ではない**ことを本人が確認済み（2026-08-27）。会社が現に相談を受けていると読める表現は overstatement になる。
 
 **例1**
 
 - リード EN: `Taking a product or service into another country.`
 - リード JA: `製品やサービスの、別の国への展開`
-
-- EN: `A company or research group whose healthcare product or service already works in one country and who want to introduce it in another. What they usually need first is a clear account of the evidence they will be asked for, and of the conditions in the setting where it would be used.`
-- JA: `ある国ですでに成果を上げている医療・ヘルスケアの製品やサービスを、別の国で展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で求められるエビデンスと、実際に使われる現場の条件を把握することです。`
+- 本文 EN: `A company or research group with a healthcare product or service that already works in one country, looking to introduce it in another. What they usually need first is a clear account of the evidence they will be asked for, and of the conditions in the setting where it would be used.`
+- 本文 JA: `ある国ですでに使われている医療・ヘルスケアの製品やサービスを、別の国で展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で求められるエビデンスと、実際に使われる現場の条件を把握することです。`
 
 **例2**
 
 - リード EN: `Introducing a way of working to the other country.`
-- リード JA: `現地の人たちと組んだ、もう一方の国への紹介`
-
-- EN: `A practitioner or organisation who has seen a way of working succeed in Australia, or in Japan, and wants to bring it to the other country with colleagues there rather than on their own. In practice this often means joint presentations, co-authored writing, and rebuilding existing material together.`
-- JA: `オーストラリア（あるいは日本）の現場で評価されている取り組みを、もう一方の国に紹介したい実践者・団体から。ひとりで進めるのではなく、現地の人たちと一緒に進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を一緒に作り直すことが多くなります。`
+- リード JA: `取り組みの、もう一方の国への紹介`
+- 本文 EN: `A practitioner or organisation who has seen a way of working take hold in Australia, or in Japan, and wants to bring it to the other country with colleagues there rather than on their own. In practice this often means joint presentations, co-authored writing, and rebuilding existing material together.`
+- 本文 JA: `オーストラリア（あるいは日本）の現場で評価されている取り組みを、もう一方の国に紹介したい実践者・団体から。ひとりで進めるのではなく、現地の人たちと一緒に進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を一緒に作り直すことが多くなります。`
 
 **例3**
 
 - リード EN: `Setting up an international project or study.`
 - リード JA: `海外との共同プロジェクト・研究の立ち上げ`
-
-- EN: `Researchers or clinicians with an international project or study in mind, who know the question they want to ask but not how a collaboration across two systems is set up, funded and kept going. Some of this we can answer from experience. Some of it we work out together.`
-- JA: `海外との共同プロジェクトや研究を考えている研究者・臨床家から。問いは決まっているが、二つの制度をまたぐ協働をどう立ち上げ、どう資金を得て、どう続けるかが分からない、というご相談です。経験から答えられる部分もあれば、一緒に考えながら進める部分もあります。`
+- 本文 EN: `Researchers or clinicians with an international project or study in mind, who know the question they want to ask but not how a collaboration across two systems is set up and kept going. We can answer some of this from experience. The rest we work out together.`
+- 本文 JA: `海外との共同プロジェクトや研究を考えている研究者・臨床家から。問いは決まっているが、二つの制度をまたぐ協働をどう立ち上げ、どう続けるかが分からない、というご相談です。経験から答えられる部分もあれば、一緒に考えながら進める部分もあります。`
 
 **結び**
 
-- EN: `Not every enquiry is a fit. Where it is not, we say so, and where we can we point to someone better placed.`
+- EN: `Not every enquiry is a fit. Where it is not, we say so, and, where we can, we point to someone better placed.`
 - JA: `すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、可能であればより適した方をご紹介します。`
 
 ### 6.3 意図的に書かないこと
@@ -241,3 +240,57 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 - `docs/superpowers/specs/2026-08-16-lp-brand-alignment-design.md`
 - Vault: `20_Projects/Cocolour Life/CoColour Life MVV・ポジショニング 2026-08.md`
 - Vault: `70_Portfolio/Yuho — 成果物から観察された像.md`
+
+## 10. 独立検査の記録（2026-08-27）
+
+自作の文面を自己採点しないという方針（`~/.claude/CLAUDE.md`）に従い、独立した judge 2本で検査した。
+
+### 10.1 文体・誇張の検査
+
+| 観点 | 判定 |
+|---|---|
+| Yuhoらしいか（観察ノート §3/§5/§7） | PASS |
+| 宣伝しすぎていないか（MVV §3/§4） | PASS |
+| overstatement | UNVERIFIED → 本人確認で解消 |
+| 英語表現の質 | PASS（Minor 5件） |
+
+Critical 0件・Major 0件。指摘のうち次を反映した。
+
+- `health` / 「保健医療」の欠落（Founder 略歴の既存訳語と不一致）
+- EN/JA の主張の強度のずれ3件（例1は JA が強い、例2は EN が強い、カード③は JA が強い）
+- 英語の粗さ3件（`works` の重複、`who want` の数の不一致、`where we can we` のコンマ欠落）
+- 「多くの場合」という頻度の主張を削除
+
+**反映しなかった指摘**: 結びの2文を崩す提案は、代案に `client`（顧客）という商業語が入るため不採用。1文目の倒置だけ解消した。`rather than` が2回出る点は、対比が内容そのものであり言い換えると不正確になるため維持。
+
+### 10.2 立場・規制リスクの検査
+
+| 観点 | 判定 |
+|---|---|
+| AHPRA 広告規制（s133） | UNVERIFIED |
+| 博士提出前のリスク | UNVERIFIED |
+| 事実の裏付け | UNVERIFIED → 本人確認で解消 |
+| 既存文書との矛盾 | FAIL → 一部反映 |
+
+Critical 0件・Major 4件。次を反映した。
+
+- **「どう資金を得て」/ `funded` を削除**（Major）。本人は同時期に研究助成に応募する側であり、「研究費獲得を有償で助言する主体」と読まれると審査・採用の場面で不利に働きうる。1語削るだけで回避できる。
+- **見出しから現在習慣形を削除**（Major）。§6.2 に記載。
+- JA「絞っています」→「限られます」（希少性の演出に読めるため EN の事実記述に揃える）
+- JA「成果を上げている」→「使われている」（医療製品の有効性評価に踏み込む語を避ける）
+
+**反映しなかった指摘**:
+
+- 「見出しを供給側に戻す」「結びの受付方針の記述を落とす」という2件の Major は不採用。これは設計の是非そのものへの異論であり、欠陥ではない。本LPの目的を「信用確認」と定め、読み手が自分の案件の該当を判断できるようにするのが本設計の核（§2・§4）。供給側の見出しに戻すとこの目的が失われる。結びの一文は、観察ノート §5 の「豪州を売り込まない」を体現する部分であり、削るとブロックが限定のない申し出に近づく。文体側の judge も同じ一文を PASS と判定している。
+- `.coi` 段落とプライバシー通知の拡張提案は、いずれも `#about` / `#privacy` という本設計のスコープ外（§9）であり、かつ実際の運用手続についての事実主張を含むため、こちらの判断では追加しない。**Yuho の判断待ちとして記録する。**
+
+### 10.3 未解決（専門家の確認が要る）
+
+| 項目 | 内容 |
+|---|---|
+| AHPRA s133 の適用範囲 | 「規制対象保健医療サービスを提供する事業の広告」に本サイト全体が分類されうるか。Governance Pack の `PP-01_privacy-policy.md` が自社を "an occupational therapy practice in Melbourne" と定義しているため論点になる。**弁護士または Ahpra への確認が要る。** なお追加文面の中身に s133(1)(a)-(e) 該当箇所は見当たらない。 |
+| 大学の外部業務・COI 規程 | 在籍大学の候補者外部業務規程および ANU の outside work / COI ポリシーが vault に記録なし。現在の `.coi` 段落で足りるかを確認できていない。 |
+
+### 10.4 公開判断への申し送り
+
+**`noindex` を解除する時点で、このブロックを再評価すること。** 現在 `noindex` が生きているため MVV §5 の「臨床・商業の前面化は検索時の印象リスク」は顕在化していないが、解除の判断はその前提を外す。Dashboard の公開前チェックリストに項目として追加する。
