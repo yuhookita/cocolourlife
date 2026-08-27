@@ -102,13 +102,12 @@ AREA_DESCS = [
      "保健医療サービス・大学・企業への助言。企画が始まる前の設計や、進行中の案件の点検を"
      "行います。同時にお受けする件数は限られます。"),
     ("Exchange of evidence, models of care and technology in both directions. "
-     "Most of the effort goes into working out what has to change for something "
-     "that works in one country to work under the funding and service "
-     "arrangements of the other.",
+     "Most of the effort goes into identifying what has to change before "
+     "something that works in one country can be used under the funding and "
+     "service arrangements of the other.",
      "エビデンス・ケアモデル・テクノロジーの双方向の交流。労力の大半は、一方の国で"
-     "機能しているものが、もう一方の国の資金とサービス提供の仕組みの下でも機能する"
-     "には何を"
-     "変える必要があるかを詰めることに使われます。"),
+     "機能しているものが、もう一方の国の資金とサービス提供の仕組みの下でも使える"
+     "ようになるには何を変える必要があるかを見極めることに費やされます。"),
 ]
 
 
@@ -154,11 +153,11 @@ ENQUIRIES = [
 ]
 
 ENQUIRIES_NOTE = (
-    "The examples above all involve both countries, but work within one country "
-    "follows the same four areas. Not every enquiry is a fit. Where it is not, we say so, and, where we can, "
+    "The examples above all involve both countries, but the same four areas "
+    "apply to work within one country. Not every enquiry is a fit. Where it is not, we say so, and, where we can, "
     "we point to someone better placed.",
-    "上の例はいずれも二国にまたがるものですが、一方の国だけで完結する仕事も同じ4領域で"
-    "行います。すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、"
+    "上の例はいずれも二国にまたがるものですが、同じ4領域は一方の国だけで完結する仕事にも"
+    "当てはまります。すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、"
     "可能であればより適した先をお示しします。",
 )
 

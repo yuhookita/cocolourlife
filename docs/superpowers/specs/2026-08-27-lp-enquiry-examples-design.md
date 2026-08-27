@@ -83,8 +83,8 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 **④ Australia–Japan collaboration in health and rehabilitation**
 
-- EN: `Exchange of evidence, models of care and technology in both directions. Most of the effort goes into working out what has to change for something that works in one country to work under the funding and service arrangements of the other.`
-- JA: `エビデンス・ケアモデル・テクノロジーの双方向の交流。労力の大半は、一方の国で機能しているものが、もう一方の国の資金とサービス提供の仕組みの下でも機能するには何を変える必要があるかを詰めることに使われます。`
+- EN: `Exchange of evidence, models of care and technology in both directions. Most of the effort goes into identifying what has to change before something that works in one country can be used under the funding and service arrangements of the other.`
+- JA: `エビデンス・ケアモデル・テクノロジーの双方向の交流。労力の大半は、一方の国で機能しているものが、もう一方の国の資金とサービス提供の仕組みの下でも使えるようになるには何を変える必要があるかを見極めることに費やされます。`
 
 「同時にお受けする件数は限られます」と「保健医療サービス」への助言実績は、いずれも Yuho が確認済み（2026-08-27）。
 
@@ -126,8 +126,8 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 **結び**
 
-- EN: `The examples above all involve both countries, but work within one country follows the same four areas. Not every enquiry is a fit. Where it is not, we say so, and, where we can, we point to someone better placed.`
-- JA: `上の例はいずれも二国にまたがるものですが、一方の国だけで完結する仕事も同じ4領域で行います。すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、可能であればより適した先をお示しします。`
+- EN: `The examples above all involve both countries, but the same four areas apply to work within one country. Not every enquiry is a fit. Where it is not, we say so, and, where we can, we point to someone better placed.`
+- JA: `上の例はいずれも二国にまたがるものですが、同じ4領域は一方の国だけで完結する仕事にも当てはまります。すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、可能であればより適した先をお示しします。`
 
 ### 6.4 EN と JA は必ず対で編集する
 
@@ -392,3 +392,24 @@ judge 3本（英日の対応 / 見た目 / 文脈）。
 | 1040 / 1200 / 1400 | 2 | あり | 0 / 0 |
 
 印刷は5ページ、支援例ブロック全体が4ページ目に収まる。ガード2種とも通過。
+
+## 12. deslop の3巡目（2026-08-27、公開後）
+
+パターン検出（em dash / not X but Y / leverage 等 / 三連構文 / 曖昧名詞）では、私が担当した範囲に該当なし。ヒットは Our name セクションに集中したが、あれは MVV仕様書 §2 の正典コピーであり、ダッシュも体言止めも 2026-08-09 に確定した意図的な文体なので触らない。
+
+読んで見つけた3件は**すべて当日の作業で持ち込んだもの**だった。
+
+| 箇所 | 何が起きていたか | 対応 |
+|---|---|---|
+| `#about` の lead | §11.3-1 で活動領域を4つにした際、直前の文が既に「特に日豪間の連携に重点を置き」と述べているのに列挙にも「保健医療・リハビリテーション領域における日豪連携」を足し、1段落に「日豪連携」2回・「保健医療・リハビリテーション」3回を作った。judge はこの重複を予告していたが「目的と領域で役割が違う」として退けていた | 列挙側を `Australia–Japan collaboration` /「日豪連携」に短縮 |
+| カード④ | `goes into working out … something that works … to work under` で work 系が3回。§10 で `works` の2連を直した際に別の形で持ち込んでいた | `identifying` と `can be used under` に。work 系1回 |
+| 結び | `but work within one country follows the same four areas` の `work` が名詞か動詞か読み手が一瞬迷う | `but the same four areas apply to work within one country` に。JA も受け身に揃えて「同じ4領域は…にも当てはまります」 |
+
+**触らなかったもの（理由つき）**
+
+- Our name セクション全体 — MVV仕様書 §2 の正典コピー
+- `#about` lead の第1・2文（`the responsible translation of…`、`We seek to contribute to…`）— `seek to contribute to` は二重の緩衝で確かに中身が薄いが、既存のポジショニング文言であり meta description にも使われている。書き換えは positioning の判断であってこちらでは決めない
+- `.coi` 段落（`Relevant… applicable…`）— 曖昧さが意図的な法務文言
+- `#founder` の略歴 — 既存文面。`and … and` の連鎖はあるが今回のスコープ外
+- カード①の `Evaluation work … what worked` — 名詞と動詞で12語離れており、これ以上いじると不自然になる
+
