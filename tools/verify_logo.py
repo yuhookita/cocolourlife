@@ -10,7 +10,7 @@ import fitz
 from PIL import Image, ImageChops
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_SRC = Path.home() / "Desktop/cocolour branding rev4/Logo Sourcefile/Logo Sourcefile.pdf"
+DEFAULT_SRC = Path.home() / "Desktop/03_CoColour Life/cocolour branding rev4/Logo Sourcefile/Logo Sourcefile.pdf"
 
 # viewBox of each generated asset, in page coordinates of the master
 FULL = (176.5360, 403.8279, 646.9281, 192.3438)

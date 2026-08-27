@@ -15,7 +15,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
-DEFAULT_SRC = Path.home() / "Desktop/cocolour branding rev4/Logo Sourcefile/Logo Sourcefile.pdf"
+DEFAULT_SRC = Path.home() / "Desktop/03_CoColour Life/cocolour branding rev4/Logo Sourcefile/Logo Sourcefile.pdf"
 
 # Measured from the rev 4 master (2026-08-22). Its ArtBox and the ink bbox of
 # page 1 agree exactly, and unlike the earlier master it carries no hidden
