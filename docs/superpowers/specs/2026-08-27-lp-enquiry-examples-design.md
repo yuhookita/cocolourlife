@@ -134,15 +134,19 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 ### 7.2 DOM 構造
 
-`#activities .wrap` の子として、既存の `ul.areas` の後ろに3要素を追加する。
+`#activities .wrap` の子として、既存の `ul.areas` の後ろに1要素（ラッパー）を追加する。
 
 ```html
-<h3 class="enquiries-title" data-en="…" data-ja="…">…</h3>
-<ul class="enquiries">
-  <li data-en="…" data-ja="…">…</li>   <!-- ×3 -->
-</ul>
-<p class="enquiries-note" data-en="…" data-ja="…">…</p>
+<div class="enquiries-block">
+  <h3 class="enquiries-title" data-en="…" data-ja="…">…</h3>
+  <ul class="enquiries">
+    <li class="enquiry" data-en="…" data-ja="…">…</li>   <!-- ×3 -->
+  </ul>
+  <p class="enquiries-note" data-en="…" data-ja="…">…</p>
+</div>
 ```
+
+**ラッパーは実装中の検証で追加した**（当初はラッパーなしの3要素を予定していた）。印刷したところ、3例が3ページ目、結びの「すべてはお受けできません」が4ページ目の先頭に取り残された。3例だけが載った紙が単独で渡ると、限定のない申し出として読まれる。`break-before: avoid` を結びに与える方法は Chrome の印刷エンジンが無視したため、ブロック全体を1ページに保つ方式に変えた（§7.6）。
 
 ### 7.3 既存レイアウトとの適合（変更不要な箇所）
 
@@ -186,15 +190,20 @@ EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` �
 
 `max-width: 66ch` は `.founder-bio` と `.name-logo` が使う既存の行長。新しい数値は導入しない。
 
+**`font-size` は `li` ではなく `ul` に置く。** `ch` は各要素自身の `font-size` で解決されるため、`ul` が本文サイズ（19px）を継承したまま結びだけ `--t-sm`（17px）だと、同じ「66ch」が別の幅になる。実装中の検証で 880px 幅において 759px 対 707px のズレとして表面化した。
+
 ### 7.6 印刷
 
-追加の print ルールは1行のみ。
+追加の print ルールは2行。
 
 ```css
-@media print { .enquiries li { border-left-color: #000; } }
+@media print {
+  .enquiries li { border-left-color: #000; }
+  .enquiries-block { break-inside: avoid; }
+}
 ```
 
-ヘアラインと縦罫はどちらも border なので印刷に残り、構造がそのまま紙に出る。
+ヘアラインと縦罫はどちらも border なので印刷に残り、構造がそのまま紙に出る。2行目は §7.2 の理由により実装中に追加した。副作用として、直前のページの下部に余白が出る（4カードで区切れる自然な位置なので許容する）。
 
 ## 8. 完了条件（実行して確認する）
 

@@ -357,14 +357,18 @@ section[id] { scroll-margin-top: 78px; }
   font-weight: 600;
   color: var(--ink);
 }
+/* the size sits on the list, not on the items: 66ch resolves against the
+   element's own font-size, so the list and the closing note below have to
+   carry the same one or the two measures drift apart (they did: 759 vs 707
+   at 880px, where the list inherited the 19px body size) */
 .enquiries {
   margin-top: 1.2rem;
   max-width: 66ch;
+  font-size: var(--t-sm);
 }
 .enquiries li {
   border-left: 2px solid var(--card-accent);
   padding-left: 1.15rem;
-  font-size: var(--t-sm);
   color: var(--muted-text);
 }
 .enquiries li + li { margin-top: 1.15rem; }
@@ -605,6 +609,10 @@ section[id] { scroll-margin-top: 78px; }
   /* the pastel rules go grey on a mono printer; force ink so the three
      enquiries stay visibly separate on paper */
   .enquiries li { border-left-color: #000; }
+  /* the closing line qualifies the three examples, so a printed page must
+     never carry them without it. Chrome ignores break-before: avoid here,
+     so the whole block is kept together instead. */
+  .enquiries-block { break-inside: avoid; }
   body { color: #000; }
   a { color: #000; text-decoration: underline; }
 }

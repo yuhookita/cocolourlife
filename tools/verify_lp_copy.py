@@ -242,6 +242,9 @@ def check_css():
     required = [
         (".enquiries-title", "border-top: 1px solid var(--line)"),
         (".enquiries li", "border-left: 2px solid var(--card-accent)"),
+        # 66ch resolves against the element's own font-size, so the list
+        # and the note must declare the same one or their measures drift
+        (".enquiries {", "font-size: var(--t-sm)"),
         (".enquiries li:nth-child(1)", "--card-accent: var(--mint)"),
         (".enquiries li:nth-child(2)", "--card-accent: var(--peri)"),
         (".enquiries li:nth-child(3)", "--card-accent: var(--peach)"),
@@ -260,6 +263,16 @@ def check_css():
         failures.append(
             "style.css: @media print must force .enquiries li border-left-color "
             "to #000")
+    # the closing line qualifies the three examples, so a printed page must
+    # never carry them without it
+    if "break-inside: avoid" not in print_block:
+        failures.append(
+            "style.css: @media print must keep .enquiries-block together with "
+            "break-inside: avoid")
+    if '<div class="enquiries-block">' not in HTML.read_text(encoding="utf-8"):
+        failures.append(
+            "index.html: the enquiries block must stay wrapped in "
+            ".enquiries-block, which is what the print rule holds together")
 
     # no card chrome: that is what tells a reader these are not a fifth area
     block = css.split("examples of enquiries")[-1].split("/* ----------")[0]
