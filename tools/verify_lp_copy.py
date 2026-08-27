@@ -287,6 +287,16 @@ def check_css():
             "index.html: the enquiries block must stay wrapped in "
             ".enquiries-block, which is what the print rule holds together")
 
+    # the soft ground circle every other body section carries
+    if "#activities::before" not in css:
+        failures.append(
+            "style.css: #activities must carry the same soft ground circle as "
+            "the hero, founder and contact sections")
+    elif "#activities::before" not in print_block:
+        failures.append(
+            "style.css: @media print must hide #activities::before, as it does "
+            "the other ground circles")
+
     # no card chrome: that is what tells a reader these are not a fifth area
     block = css.split("examples of enquiries")[-1].split("/* ----------")[0]
     for banned in ("background:", "border-radius:", "var(--surface)"):

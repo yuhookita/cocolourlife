@@ -455,9 +455,10 @@ section[id] { scroll-margin-top: 78px; }
    Very low contrast (5–7%), off-canvas — warmth, never decoration. */
 /* clip, not hidden: `hidden` would make these sections scroll containers and
    break the sticky section titles in the ≥900px two-column layout. */
-#founder, #contact { position: relative; overflow: clip; }
-#founder > .wrap, #contact > .wrap { position: relative; z-index: 1; }
+#activities, #founder, #contact { position: relative; overflow: clip; }
+#activities > .wrap, #founder > .wrap, #contact > .wrap { position: relative; z-index: 1; }
 .hero::after,
+#activities::before,
 #founder::before,
 #contact::before {
   content: "";
@@ -467,6 +468,7 @@ section[id] { scroll-margin-top: 78px; }
   z-index: 0;
 }
 .hero::after     { width: 340px; height: 340px; left: -150px; bottom: -160px; background: var(--peach);  opacity: 0.16; }
+#activities::before { width: 420px; height: 420px; left: -180px; top: 120px;  background: var(--mint);   opacity: 0.16; }
 #founder::before { width: 430px; height: 430px; right: -190px; top: -130px;   background: var(--peri);   opacity: 0.16; }
 #contact::before { width: 380px; height: 380px; left: -165px;  bottom: -165px; background: var(--butter); opacity: 0.22; }
 
@@ -604,7 +606,7 @@ section[id] { scroll-margin-top: 78px; }
 /* ---------- print — clean reference copy ---------- */
 @media print {
   .site-header, .skip-link, .hero-mark, .dot-divider, .footer-mark { display: none !important; }
-  .hero::after, #founder::before, #contact::before { display: none !important; }
+  .hero::after, #activities::before, #founder::before, #contact::before { display: none !important; }
   .hero { padding-block: 1.5rem; background: none; }
   .section--deep { background: none !important; color: #000 !important; }
   .section--deep .section-title,
