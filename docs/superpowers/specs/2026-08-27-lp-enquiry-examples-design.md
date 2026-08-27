@@ -1,0 +1,221 @@
+# LP「いただくご相談の例」追加 — 設計書
+
+作成日: 2026-08-27
+対象: `~/Documents/GitHub/cocolourlife`（単一ページLP）／ `#activities` セクション
+状態: 承認済み（2026-08-27、brainstormingセッション Yuho×Claude）
+
+---
+
+## 1. 背景と課題
+
+現行の Areas of activity は4カテゴリのカードで構成されている。すべて「供給側の言葉」で書かれており、読み手が自分の状況と結びつけられない。
+
+とくに次の2つは名詞句の羅列で、同業の研究者以外には像が結ばない。
+
+- ① Research and evaluation: "Program evaluation, health workforce and economic analysis, and implementation research."
+- ③ Advisory and collaborative projects: "Selected advisory work with health services, universities and industry."
+
+Yuho から「Areas of activity の下に支援例を足せばもっと分かりやすくなるのでは」という提案があり、3つの具体案が示された。3つとも実際に相談を受けた／実施した経験があることを本人が確認済み（2026-08-27）。
+
+## 2. サイトの役割と、それが決めたこと
+
+本LPの主目的は **信用確認の場**である。すでに接点のある相手（豪州の大学の研究者、日本の企業・団体の担当者、紹介者）が「この会社は何者か」を確かめに来る。新規の問い合わせを増やすための場ではない。
+
+この確認（2026-08-27）から、以下が決まった。
+
+- 支援例は「呼び込む装置」ではなく、抽象カテゴリを具体で理解させる**注釈**として設計する
+- 一人称の悩み調（「〜が不安」「〜してほしい」）は使わず、**第三者記述**にする
+- CTA・料金・実績数値・お客様の声は書かない
+- `noindex` は維持（本設計のスコープ外）
+
+## 3. MVV仕様書との関係（重要）
+
+[[CoColour Life MVV・ポジショニング 2026-08]] §4「変更しないこと」に **「サービスページ追加なし／CTA追加なし」**、スコープ外に「顧客獲得型LPへの改修（2027年の再評価まで凍結）」とある。
+
+本設計は §2 の3条件（第三者記述の事実／CTAなし／料金・実績数値・お客様の声なし）を守ることで、「静かな信頼性」の内側に収まると判断した。**支援例ブロックはサービスページではなく、既存カテゴリの注釈である。** この判断は 2026-08-27 に Yuho が承認した。
+
+MVV仕様書側にも本判断を追記すること（実装計画に含める）。
+
+## 4. 起こしたい認識変化
+
+想定読者：紹介・照会でこのサイトに来た人。すでに Yuho 個人のことは少し知っており、「会社としては何なのか」を確かめに来ている。
+
+| | 読む前 | 読んだ後 |
+|---|---|---|
+| 実体 | 研究者が作った会社らしい。何を請け負うのかは曖昧 | 評価・教育・助言・日豪連携の4領域で、実際に仕事が動いている |
+| 自分との関係 | 自分の案件が該当するか判断できない | 自分の話がこの3例のどれかに近い／近くない、が判断できる |
+| 信頼の質 | 肩書きは立派だが実務は未知数 | 具体的な相談が来ており、受けない場合は受けないと言う会社だ |
+
+## 5. 文体の根拠
+
+[[Yuho — 成果物から観察された像]] §3「媒体を確認してから文体を決める」に従い、本媒体は**教科書・学術誌に近い層**（自己開示ゼロ・主語抑制・抑制的な事実記述）を採る。X文体ガイドは口語媒体の仕様なので適用しない。
+
+効かせた観察は3点。
+
+| 観察ノート | 本設計への反映 |
+|---|---|
+| §5「自分に不利な数字も出す／豪州を売り込まない」 | 各項目に限界を書く。ブロック末に「すべては受けられない」を置く |
+| §7「架け橋は比喩ではなく、登壇者構成・共著者の抄録・教材の編集という具体的な作業」 | 抽象語を実際の作業名（共同発表・共著・教材の作り直し）に置換 |
+| §11-6「成果を過大に書かない」 | 効果や成功を約束する表現を置かない |
+
+**deslop 方針**：em dash（—）を新規文面では使わない（Our name セクションの正典コピーは対象外、変更しない）。"not X but Y" の対比構文を使わない。"something a practitioner can act on" のような曖昧名詞を具体物に置き換える。日本語の体言止めを連打しない。
+
+## 6. 確定文面
+
+EN が DOM の既定テキスト（JS無効時の表示）、JA は `data-ja` 属性。
+
+### 6.1 4カテゴリの説明文（差し替え）
+
+**① Research and evaluation**
+
+- EN: `Programme and service evaluation, workforce and cost analysis, and implementation research. The usual output is a report that sets out what worked, what did not, and what the evidence does not yet cover.`
+- JA: `プログラム・サービスの評価、人材と費用の分析、実装研究。成果物は多くの場合、何が機能し、何が機能しなかったか、そしてエビデンスがまだ及んでいない範囲を書いた報告書です。`
+
+**② Education and knowledge translation**
+
+- EN: `Lectures, workshops and teaching materials, in English and Japanese. Existing material is rebuilt for the setting where it will be used rather than translated as it stands.`
+- JA: `講義・研修・教材の作成。英語と日本語の両方で行います。既存の教材は、そのまま訳すのではなく、使われる現場に合わせて作り直します。`
+
+**③ Advisory and collaborative projects**
+
+- EN: `Advisory work with health services, universities and industry: shaping a project before it starts, or reviewing one already running. We take on a small number at a time.`
+- JA: `医療サービス・大学・企業への助言。企画が始まる前の設計と、進行中の案件の点検が中心です。同時にお受けする件数は絞っています。`
+
+「同時にお受けする件数は絞っています」は実態と一致することを Yuho が確認済み（2026-08-27）。
+
+**④ Australia–Japan collaboration in health and rehabilitation**
+
+- EN: `Exchange of evidence, models of care and technology in both directions. Most of the effort goes into working out what has to change before something that works in one country works under the other's funding and service arrangements.`
+- JA: `エビデンス・ケアモデル・テクノロジーの双方向の交流。労力の大半は、一方の国で機能しているものが、もう一方の国の制度と資金の仕組みの下でも機能するには何を変える必要があるかを詰めることに使われます。`
+
+カテゴリ名（`.area-title`）は4つとも変更しない。
+
+### 6.2 支援例ブロック（新規）
+
+**小見出し**
+
+- EN: `Examples of enquiries we receive`
+- JA: `いただくご相談の例`
+
+**例1**
+
+- EN: `A company or research group whose healthcare product or service already works in one country and who want to introduce it in another. What they usually need first is a clear account of the evidence they will be asked for, and of the conditions in the setting where it would be used.`
+- JA: `ある国ですでに成果を上げている医療・ヘルスケアの製品やサービスを、別の国で展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で求められるエビデンスと、実際に使われる現場の条件を把握することです。`
+
+**例2**
+
+- EN: `A practitioner or organisation who has seen a way of working succeed in Australia, or in Japan, and wants to bring it to the other country with colleagues there rather than on their own. In practice this often means joint presentations, co-authored writing, and rebuilding existing material together.`
+- JA: `オーストラリア（あるいは日本）の現場で評価されている取り組みを、もう一方の国に紹介したい実践者・団体から。ひとりで進めるのではなく、現地の人たちと一緒に進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を一緒に作り直すことが多くなります。`
+
+**例3**
+
+- EN: `Researchers or clinicians with an international project or study in mind, who know the question they want to ask but not how a collaboration across two systems is set up, funded and kept going. Some of this we can answer from experience. Some of it we work out together.`
+- JA: `海外との共同プロジェクトや研究を考えている研究者・臨床家から。問いは決まっているが、二つの制度をまたぐ協働をどう立ち上げ、どう資金を得て、どう続けるかが分からない、というご相談です。経験から答えられる部分もあれば、一緒に考えながら進める部分もあります。`
+
+**結び**
+
+- EN: `Not every enquiry is a fit. Where it is not, we say so, and where we can we point to someone better placed.`
+- JA: `すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、可能であればより適した方をご紹介します。`
+
+### 6.3 意図的に書かないこと
+
+**"regulatory"（規制）という語を例1から外している。** 「規制条件の把握を支援する」と書くと、TGA等の薬機・医療機器規制への助言と読まれうる。責任の重い領域であり、実際に受けている相談の内容とも異なるため、`evidence and service conditions`（エビデンスと現場の受け入れ条件）に留める。Yuho 確認済み（2026-08-27）。
+
+## 7. 実装方針
+
+### 7.1 区切りにドットディバイダを使わない（設計中に撤回した案）
+
+当初は既存の `.dot-divider` の流用を検討したが、次の2点により却下した。
+
+1. `style.css:556` で `.dot-divider` は `@media print` の `display: none` に入っている。本LPは印刷参照版を明示的に設計している（`/* print — clean reference copy */`）ため、印刷で消える部品は構造の区切りに使えない。
+2. MVV仕様書 §2 の実装注記により、ドットディバイダは「コーダの前に一拍置く」ための Our name セクション固有の記号として定義されている。他所で使うと記号としての意味が薄まる。
+
+代わりに **1px のヘアライン**を使う。border は印刷時に落ちない（ブラウザが印刷で落とすのは背景色と背景画像）。
+
+### 7.2 DOM 構造
+
+`#activities .wrap` の子として、既存の `ul.areas` の後ろに3要素を追加する。
+
+```html
+<h3 class="enquiries-title" data-en="…" data-ja="…">…</h3>
+<ul class="enquiries">
+  <li data-en="…" data-ja="…">…</li>   <!-- ×3 -->
+</ul>
+<p class="enquiries-note" data-en="…" data-ja="…">…</p>
+```
+
+### 7.3 既存レイアウトとの適合（変更不要な箇所）
+
+- **広幅（≥900px）の左レール**: `style.css:449` の `.section > .wrap > *:not(.section-title) { grid-column: 2 }` により、追加要素は自動で本文カラムに入る。
+- **sticky タイトルの行スパン**: `grid-row: 1 / span 20`。コメントは「最長セクション（`#name` の7要素）を超えていればよい」と記す。`#activities` は2要素から5要素になるが 20 の枠内であり、コメントの記述も引き続き正確なので、どちらも変更しない。
+
+### 7.4 i18n の制約
+
+`script.js` の `apply()` は `[data-en][data-ja]` のノードを **`textContent` で丸ごと置換**する。したがって追加要素は**子マークアップを持たないリーフ**でなければならない（既存の `.area-title` / `.area-desc` と同じ形）。本設計の文面はすべてプレーンテキストで、この制約を満たす。
+
+### 7.5 見た目
+
+カード chrome（`--surface` の背景、`--line` の枠、`border-top: 3px` のアクセント、円モチーフの透かし）を**一切与えない**。これが「5つ目の活動領域ではない」ことを伝える主要な手段である。
+
+各項目には左に 2px の縦罫を1本引き、色はロゴのパステル（mint / peri / peach）を順に当てる。カードのアクセントと同じ色系統なので上のブロックとの血縁は保たれるが、面ではなく線なので重さが違い、並列とは読まれない。
+
+```css
+/* ---------- examples of enquiries ---------- */
+/* deliberately not cards: the four areas above are the taxonomy; these three
+   cut across it. Equal visual weight would read as a fifth area. */
+.enquiries-title {
+  margin-top: 2.6rem; padding-top: 2.6rem;
+  border-top: 1px solid var(--line);
+  font-size: var(--t-sm); font-weight: 600; color: var(--ink);
+}
+.enquiries { margin-top: 1.2rem; max-width: 66ch; }
+.enquiries li {
+  border-left: 2px solid var(--card-accent);
+  padding-left: 1.15rem;
+  font-size: var(--t-sm); color: var(--muted-text);
+}
+.enquiries li + li { margin-top: 1.15rem; }
+.enquiries li:nth-child(1) { --card-accent: var(--mint); }
+.enquiries li:nth-child(2) { --card-accent: var(--peri); }
+.enquiries li:nth-child(3) { --card-accent: var(--peach); }
+.enquiries-note {
+  margin-top: 1.6rem; max-width: 66ch;
+  font-size: var(--t-sm); color: var(--muted-text);
+}
+```
+
+`max-width: 66ch` は `.founder-bio` と `.name-logo` が使う既存の行長。新しい数値は導入しない。
+
+### 7.6 印刷
+
+追加の print ルールは1行のみ。
+
+```css
+@media print { .enquiries li { border-left-color: #000; } }
+```
+
+ヘアラインと縦罫はどちらも border なので印刷に残り、構造がそのまま紙に出る。
+
+## 8. 完了条件（実行して確認する）
+
+感想ではなく実行結果で判定する。
+
+1. `index.html` をパースし、`[data-en][data-ja]` を持つ全ノードが子要素を持たない（`textContent` 方式が壊れない）
+2. 新規5要素（小見出し・例3つ・結び）と差し替えた4つの `.area-desc` すべてに `data-en` と `data-ja` が存在し、DOM の既定テキストが `data-en` と完全一致する
+3. Chrome headless で 360 / 600 / 900 / 1400px の4幅をレンダリングし、`document.documentElement.scrollWidth <= clientWidth`（横スクロールなし）
+4. Chrome headless の PDF 出力に、ヘアラインと3本の縦罫が残っている
+5. EN / JA 両方でレイアウトが崩れない（日本語は行が長くなる）
+6. 新規文面に em dash（`—`）が含まれない
+
+## 9. スコープ外
+
+- Hero のタグライン、About の lead 段落（今回は触らない）
+- `noindex` の解除
+- 解析・CTA・料金表・お客様の声・SEO（MVV仕様書のスコープ外を踏襲）
+- 本設計の `main` への push とデプロイ（Yuho の判断を待つ）
+
+## 関連
+
+- `docs/superpowers/specs/2026-08-16-lp-brand-alignment-design.md`
+- Vault: `20_Projects/Cocolour Life/CoColour Life MVV・ポジショニング 2026-08.md`
+- Vault: `70_Portfolio/Yuho — 成果物から観察された像.md`
