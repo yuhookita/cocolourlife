@@ -344,6 +344,40 @@ section[id] { scroll-margin-top: 78px; }
 .areas li:nth-child(3) { --card-accent: var(--butter); --motif: var(--motif-pair); }
 .areas li:nth-child(4) { --card-accent: var(--peach);  --motif: var(--motif-bridge); }
 
+/* ---------- examples of enquiries ---------- */
+/* deliberately not cards: the four areas above are the taxonomy; these three
+   cut across it. Equal visual weight would read as a fifth area. The rules are
+   borders, not the dot divider, because the divider is hidden in print and the
+   separation has to survive the reference copy. */
+.enquiries-title {
+  margin-top: 2.6rem;
+  padding-top: 2.6rem;
+  border-top: 1px solid var(--line);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+.enquiries {
+  margin-top: 1.2rem;
+  max-width: 66ch;
+}
+.enquiries li {
+  border-left: 2px solid var(--card-accent);
+  padding-left: 1.15rem;
+  font-size: var(--t-sm);
+  color: var(--muted-text);
+}
+.enquiries li + li { margin-top: 1.15rem; }
+.enquiries li:nth-child(1) { --card-accent: var(--mint); }
+.enquiries li:nth-child(2) { --card-accent: var(--peri); }
+.enquiries li:nth-child(3) { --card-accent: var(--peach); }
+.enquiries-note {
+  margin-top: 1.6rem;
+  max-width: 66ch;
+  font-size: var(--t-sm);
+  color: var(--muted-text);
+}
+
 /* ---------- founder ---------- */
 .founder-name { font-weight: 600; color: var(--ink); margin-bottom: 0.75rem; }
 .founder-bio { color: var(--muted-text); max-width: 66ch; }
@@ -568,6 +602,9 @@ section[id] { scroll-margin-top: 78px; }
      invisible once the navy ground is gone */
   #name .section-title::after { background: #000 !important; }
   .section { padding-block: 1.2rem; }
+  /* the pastel rules go grey on a mono printer; force ink so the three
+     enquiries stay visibly separate on paper */
+  .enquiries li { border-left-color: #000; }
   body { color: #000; }
   a { color: #000; text-decoration: underline; }
 }

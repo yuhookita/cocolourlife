@@ -18,6 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 HTML = ROOT / "index.html"
+CSS = ROOT / "style.css"
 
 EM_DASH = "—"
 
@@ -107,6 +108,45 @@ AREA_DESCS = [
 ]
 
 
+# ---- approved copy, spec §6.2 ------------------------------------------------
+
+ENQUIRIES_TITLE = ("Examples of enquiries we receive", "いただくご相談の例")
+
+ENQUIRIES = [
+    ("A company or research group whose healthcare product or service already "
+     "works in one country and who want to introduce it in another. What they "
+     "usually need first is a clear account of the evidence they will be asked "
+     "for, and of the conditions in the setting where it would be used.",
+     "ある国ですでに成果を上げている医療・ヘルスケアの製品やサービスを、別の国で"
+     "展開したい企業・研究グループから。最初に必要になるのはたいてい、導入先で"
+     "求められるエビデンスと、実際に使われる現場の条件を把握することです。"),
+    ("A practitioner or organisation who has seen a way of working succeed in "
+     "Australia, or in Japan, and wants to bring it to the other country with "
+     "colleagues there rather than on their own. In practice this often means "
+     "joint presentations, co-authored writing, and rebuilding existing "
+     "material together.",
+     "オーストラリア（あるいは日本）の現場で評価されている取り組みを、もう一方の国に"
+     "紹介したい実践者・団体から。ひとりで進めるのではなく、現地の人たちと一緒に"
+     "進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を"
+     "一緒に作り直すことが多くなります。"),
+    ("Researchers or clinicians with an international project or study in mind, "
+     "who know the question they want to ask but not how a collaboration across "
+     "two systems is set up, funded and kept going. Some of this we can answer "
+     "from experience. Some of it we work out together.",
+     "海外との共同プロジェクトや研究を考えている研究者・臨床家から。問いは決まって"
+     "いるが、二つの制度をまたぐ協働をどう立ち上げ、どう資金を得て、どう続けるかが"
+     "分からない、というご相談です。経験から答えられる部分もあれば、一緒に考えながら"
+     "進める部分もあります。"),
+]
+
+ENQUIRIES_NOTE = (
+    "Not every enquiry is a fit. Where it is not, we say so, and where we can "
+    "we point to someone better placed.",
+    "すべてのご相談をお受けできるわけではありません。適さない場合はその旨をお伝えし、"
+    "可能であればより適した方をご紹介します。",
+)
+
+
 # ---- checks ------------------------------------------------------------------
 
 def check_i18n_invariants(nodes):
@@ -148,6 +188,89 @@ def check_area_descs(nodes):
     return failures
 
 
+def check_enquiries(nodes):
+    failures = []
+
+    titles = _by_class(nodes, "enquiries-title")
+    if len(titles) != 1:
+        failures.append(
+            "expected 1 .enquiries-title, found {}".format(len(titles)))
+    else:
+        if titles[0]["tag"] != "h3":
+            failures.append(
+                ".enquiries-title must be an <h3> (it sits under the section's "
+                "<h2>), found <{}>".format(titles[0]["tag"]))
+        en, ja = ENQUIRIES_TITLE
+        if titles[0]["en"] != en or titles[0]["ja"] != ja:
+            failures.append(".enquiries-title is not the approved copy")
+
+    items = _by_class(nodes, "enquiry")
+    if len(items) != 3:
+        failures.append("expected 3 .enquiry items, found {}".format(len(items)))
+    else:
+        for i, (en, ja) in enumerate(ENQUIRIES):
+            if items[i]["en"] != en:
+                failures.append(
+                    "enquiry {}: data-en is not the approved copy\n    found: "
+                    "{!r}".format(i + 1, items[i]["en"]))
+            if items[i]["ja"] != ja:
+                failures.append(
+                    "enquiry {}: data-ja is not the approved copy\n    found: "
+                    "{!r}".format(i + 1, items[i]["ja"]))
+
+    notes = _by_class(nodes, "enquiries-note")
+    if len(notes) != 1:
+        failures.append(
+            "expected 1 .enquiries-note, found {}".format(len(notes)))
+    else:
+        en, ja = ENQUIRIES_NOTE
+        if notes[0]["en"] != en or notes[0]["ja"] != ja:
+            failures.append(".enquiries-note is not the approved copy")
+
+    # the block must carry no call to action of any kind
+    for n in items + notes:
+        if n["children"]:
+            failures.append(
+                "the enquiries block must hold no links or other markup")
+    return failures
+
+
+def check_css():
+    css = CSS.read_text(encoding="utf-8")
+    failures = []
+
+    required = [
+        (".enquiries-title", "border-top: 1px solid var(--line)"),
+        (".enquiries li", "border-left: 2px solid var(--card-accent)"),
+        (".enquiries li:nth-child(1)", "--card-accent: var(--mint)"),
+        (".enquiries li:nth-child(2)", "--card-accent: var(--peri)"),
+        (".enquiries li:nth-child(3)", "--card-accent: var(--peach)"),
+    ]
+    for selector, declaration in required:
+        if selector not in css:
+            failures.append("style.css: missing selector {}".format(selector))
+        elif declaration not in css:
+            failures.append(
+                "style.css: {} must declare {}".format(selector, declaration))
+
+    # the separator and the rules have to survive the print stylesheet, which is
+    # why they are borders and not the dot divider (spec §7.1)
+    print_block = css.split("@media print")[-1]
+    if "border-left-color: #000" not in print_block:
+        failures.append(
+            "style.css: @media print must force .enquiries li border-left-color "
+            "to #000")
+
+    # no card chrome: that is what tells a reader these are not a fifth area
+    block = css.split("examples of enquiries")[-1].split("/* ----------")[0]
+    for banned in ("background:", "border-radius:", "var(--surface)"):
+        if banned in block:
+            failures.append(
+                "style.css: the enquiries block must carry no card chrome, "
+                "found {}".format(banned))
+    return failures
+
+
 def check_no_em_dash(nodes, classes):
     """The new copy must not carry em dashes. Scoped to the classes this spec
     introduces, so the Our name canon keeps its own."""
@@ -166,7 +289,10 @@ def main():
     failures = []
     failures += check_i18n_invariants(nodes)
     failures += check_area_descs(nodes)
-    failures += check_no_em_dash(nodes, ["area-desc"])
+    failures += check_enquiries(nodes)
+    failures += check_no_em_dash(
+        nodes, ["area-desc", "enquiries-title", "enquiry", "enquiries-note"])
+    failures += check_css()
 
     if failures:
         print("index.html copy guard: {} failure(s)\n".format(len(failures)))
