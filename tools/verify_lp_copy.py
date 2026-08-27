@@ -110,8 +110,7 @@ AREA_DESCS = [
 
 # ---- approved copy, spec §6.2 ------------------------------------------------
 
-ENQUIRIES_TITLE = ("Examples of enquiries this work has begun with",
-                   "これまでに受けてきたご相談の例")
+ENQUIRIES_TITLE = ("Examples of past enquiries", "これまでのご相談の例")
 
 # each item is (lead EN, lead JA, detail EN, detail JA). The lead is a short
 # scan line so a reader can find the case that matches theirs without reading
@@ -138,7 +137,7 @@ ENQUIRIES = [
      "進めたいというご相談です。実際の作業は、共同での発表や執筆、既存の教材を"
      "一緒に作り直すことが多くなります。"),
     ("Setting up an international project or study.",
-     "海外との共同プロジェクト・研究の立ち上げ",
+     "国際的なプロジェクト・研究の立ち上げ",
      "Researchers or clinicians with an international project or study in mind, "
      "who know the question they want to ask but not how a collaboration across "
      "two systems is set up and kept going. We can answer some of this from "
